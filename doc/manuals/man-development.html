@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Installing OS.js | OS.js Documentation</title>
+    <title>Development Environments | OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Installing OS.js" />
+    <meta name="description" content="OS.js -- Development Environments" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -36,79 +36,38 @@
 
     <main>
 
-<h1>Installing OS.js</h1>
+<h1>Development Environments</h1>
+
+For more information about configuration see <a href="/doc/manuals/man-configuration.html">the configuration section</a>.
+
+If you run <pre>grunt watch</pre> in the background it will automatically configure the environment when files are changed (or added/removed).
+
+<h2>dist (production)</h1>
 
 <p>
-  Please look at <a href="//github.com/andersevenrud/OS.js-v2/blob/master/INSTALL.md"><b>INSTALL.md</b></a> for <i>full instructions</i>. This is just a simplified guide.
+  This is the production build of OS.js. All files have been compiled into single files (and can be compressed) to increase loading speed. This will however make it harder to debug.
 </p>
-
 <p>
-  There are also automated installers for both <a href="/installer">UNIX-like systems</a> and <a href="/installer.exe">Windows</a>. More information in <a href="https://github.com/andersevenrud/OS.js-v2#installation">README.md</a>. After running the installer you can skip to "Start" and "View" steps below.
+  To build simply do:
 </p>
-
-<h2>Download</h2>
-
-<p>
-  Download and extract or clone with git. Then enter the directory
-</p>
-<pre class="code">
-# Use a terminal/command-line and find the correct directory where you downloaded
-cd OS.js-v2
-</pre>
-
-<h2>Install dependencies</h2>
-
-<p>
-  Before you can build OS.js you need to install the dependencies.
-</p>
-
-<p>
-  First you need <b>Grunt</b>:
-</p>
-<pre class="code">
-# Unix
-sudo npm install -g node-cli
-
-# Windows (as administrator)
-npm install -g node-cli
-</pre>
-
-<p>
-  Then install dependencies:
-</p>
-<pre class="code">
-npm install
-</pre>
-
-<h2>Build</h2>
-
-<p>
-  Simply run:
-</p>
-
 <pre class="code">
 grunt
+
+# or:
+grunt dist
 </pre>
 
-<h2>Start</h2>
+<h2>dist-dev (development)</h1>
 
+<p>
+  This is what you should use when developing or testing changes. It will load all files directly from source (with exception of config and theme files).
+</p>
+<p>
+  This command is a shortcut to perform all tasks that dist-dev requires:
+</p>
 <pre class="code">
-# Unix
-./bin/start-dist.sh
-
-# Windows
-bin\win-start-dist
+grunt dist-dev
 </pre>
-
-<h2>View</h2>
-
-<p>
-  If the server started successfully simply open <a href="http://localhost:8000">http://localhost:8000</a>
-</p>
-
-<p>
-  <i>Wondering about <a href="/doc/manuals/man-configuration.html">development environments</a> ?</i>
-</p>
 
 
       <div class="adddshere">

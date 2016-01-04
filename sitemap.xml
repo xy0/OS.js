@@ -237,6 +237,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/man-development.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/man-dropbox.html</loc>
     <priority>0.7</priority>
   </url>
