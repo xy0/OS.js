@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Build system and Grunt | OS.js Documentation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="OS.js -- Build system and Grunt" />
+    <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
+    <link rel="author" href="https://plus.google.com/101576798387217383063" />
+    <link rel="publisher" href="https://plus.google.com/101576798387217383063" />
+
+    <script type="text/javascript">
+      if ( window.location.hostname === 'andersevenrud.github.io' ) {
+        window.location = '//os.js.org' + window.location.pathname.replace(/\/OS\.js-v2/, '');
+      }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link href="/stylesheets/doc.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <h1>%TITLE%</h1>
+      <ul>
+        <li><a href="/doc/">Index</a></li>
+        <li><a href="/doc/client/">Client API</a></li>
+        <li><a href="/doc/server/">Server API</a></li>
+        <li><a href="/doc/manuals/">Manuals</a></li>
+        <li><a href="/doc/tutorials/">Tutorials</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+<h1>Build system and Grunt</h1>
+<p>
+  OS.js uses the <a href="http://gruntjs.com/">Grunt</a> Task Runner for buidling and configuring.
+</p>
+
+<h2>Code Quality Tasks</h2>
+
+<h3>jshint</h3>
+<p>
+  Checks the JavaScript code for errors.
+</p>
+
+<h3>jscs</h3>
+<p>
+  Checks if the JavaScript code follows the <a href="https://github.com/andersevenrud/OS.js-v2/wiki/Style-guide">style guidelines</a>.
+</p>
+
+<h3>mochaTest</h3>
+<p>
+  Runs server-side tests with <a href="https://mochajs.org/">mocha</a>.
+</p>
+
+<h2>Developer Tasks</h2>
+
+<h3>test</h3>
+<p>
+  Runs all the tasks defined above in "Code Quality Tasks"
+</p>
+
+<h3>watch</h3>
+<p>
+  Makes Grunt watch for changes in the source-code (modifications, additions and removals) and runs the appropriate task for you. Very helpful when you're making changes.
+</p>
+
+<h3>create-package</h3>
+<p>
+  Create a new package.
+</p>
+<pre class="code">
+
+# Create normal application
+grunt create-package:PACKAGENAME
+grunt create-package:REPONAME/PACKAGENAME
+
+# Create iframe application
+grunt create-package:PACKAGENAME:iframe
+
+# Create a service
+grunt create-package:PACKAGENAME:service
+
+# Create a extension
+grunt create-package:PACKAGENAME:extension
+
+</pre>
+
+<h3>dist-index</h3>
+<p>
+  Regenerate dist/index.html
+</p>
+
+<h3>dist-dev-index</h3>
+<p>
+  Regenerate dist-dev/index.html
+</p>
+
+<h2>Build Tasks</h2>
+
+<h3>config</h3>
+<p>
+  Build and modify config files for server and client.
+</p>
+<pre class="code">
+
+# Set a config value
+grunt config:set:PATH:VALUE
+grunt config:set:client.Locale:en_EN
+
+# Get a config value
+grunt config:get:PATH
+grunt config:get:client.Locale
+
+# Get entire config
+grunt config:get
+
+# Rebuild config files
+grunt config
+
+</pre>
+
+<h3>packages</h3>
+<p>
+  Builds all packages in src/packages to dist/
+</p>
+<pre class="code">
+
+# Builds all packages
+grunt packages
+
+# Builds spesific package
+grunt packages:REPONAME/PACKAGENAME
+
+# Enables given package
+grunt packages:enable:REPONAME/PACKAGENAME
+
+# Disables given package
+grunt packages:disable:REPONAME/PACKAGENAME
+
+</pre>
+
+<h3>manifest</h3>
+<p>
+  Builds the manifest file from package.json in src/packages
+</p>
+
+<h3>core</h3>
+<p>
+  Builds all files in src/client/javascript to dist/
+</p>
+
+<h3>themes</h3>
+<p>
+  Builds all files in src/client/javascript to dist/
+</p>
+
+<h2>Misc build Tasks</h2>
+
+<h3>standalone</h3>
+<p>
+  Build a standalone version of dist/ into .standalone.
+</p>
+<pre class="code">
+
+# Normal
+grunt standalone
+
+# For NW.js
+grunt standalone:nw
+
+</pre>
+
+<h3>nw</h3>
+<p>
+  Builds NW.js deployables (OSX, Linux and Windows) into .nw
+</p>
+
+<h3>dist</h3>
+<p>
+  Shortcut for running all tasks required for dist/ to run
+</p>
+
+<h3>dist-dev</h3>
+<p>
+  Shortcut for running all tasks required for dist-dev/ to run
+</p>
+
+
+      <div class="adddshere">
+        <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;height:250px"
+          data-ad-client="ca-pub-6145716264521226"
+          data-ad-slot="3789905596"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </div>
+
+
+    </main>
+
+
+    <footer>
+      <div class="wrapper">
+        <img alt="" src="/images/logo-footer.png" />
+        <p>
+          OS.js &copy; Anders Evenrud 2011-2015
+          <br />
+          Hosting by Github
+        </p>
+      </div>
+    </footer>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46087265-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'andersevenrud/OS.js-v2'
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  </body>
+</html>
