@@ -233,6 +233,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/man-build-grunt.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/man-configuration.html</loc>
     <priority>0.7</priority>
   </url>
