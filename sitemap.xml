@@ -313,6 +313,26 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsconfigjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsvfsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsapijs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsosjsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/server/srcservernodehttpjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/server/</loc>
     <priority>0.7</priority>
   </url>
