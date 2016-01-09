@@ -32,7 +32,7 @@
       <h1>Namespace</h1>
       <ul>
 
-<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-fs">fs</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodenode_modulesosjsosjsjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodenode_modulesosjsconfigjs.html#config-init">init</a></li></ul></li>
+<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-fs">fs</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-logout">logout</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodenode_modulesosjsosjsjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodenode_modulesosjsconfigjs.html#config-init">init</a></li></ul></li>
 
       </ul>
 
@@ -48,7 +48,7 @@
 
 <h1>Server API Documentation</h1>
 <p>
-  A brief overview on the OS.js Server APIs.
+  The OS.js server is really simple. It consists of Core API (internal functions), Application API (application functions) and VFS (filesystem functions).
 </p>
 <p>
   Official home page: <a href="http://os.js.org/">http://os.js.org/</a>
@@ -58,62 +58,12 @@
 </p>
 
 
-<h1>Overview</h1>
-
-The OS.js server is really simple.
-
-It only serves files and handles requests via GET/POST with JSON.
-
-<h2>API Requests</h2>
+<h2>HTTP API Requests</h2>
 <div class="indent">
-
   <pre>POST //osjs-host.net/API</pre>
 
   Request example:
   <pre class="code">
-  //
-  // Available methods and their arguments:
-  //
-  //  application:
-  //    All applications support their own internal API
-  //
-  //    Arguments:
-  //      String    path            Application path (ex: repo/PackageName)
-  //      String    application     Class name
-  //      String    method          Class static method to call
-  //      Object    arguments       Tuple/JSON of arguments
-  //
-  //  fs:
-  //    Call the OS.js internal VFS
-  //
-  //    Arguments:
-  //      String    method      The VFS function name
-  //      Array     arguments   List of arguments
-  //
-  //    Available VFS methods: scandir, write, read, delete, copy, move, mkdir, fileinfo exist
-  //    Arguments can be found in the client API documentation
-  //
-  //  curl:
-  //    Do a HTTP call
-  //
-  //    Arguments:
-  //      String    url           URL to call
-  //      String    method        HTTP Method (POST/GET)
-  //      Object    query         If POST. Payload tuple
-  //      int       timeout       (Optional) Define timeout in seconds
-  //      boolean   binary        (Optional) Return a binary ?
-  //      String    mime          (Optional) If a binary, which MIME?
-  //
-  //  login:
-  //    Depends on the Handler implementation
-  //
-  //    Arguments:
-  //      String    username
-  //      String    password
-  //
-  //  logout:
-  //    Depends on the Handler implementation
-  //
   {
     "method": "method_you_want_to_call",
     "arguments: {"arg": "value"}
@@ -129,7 +79,7 @@ It only serves files and handles requests via GET/POST with JSON.
   </pre>
 </div>
 
-<h2>Files</h2>
+<h2>HTTP File Requests</h2>
 <div class="indent">
 
   <h3>Resources</h3>
