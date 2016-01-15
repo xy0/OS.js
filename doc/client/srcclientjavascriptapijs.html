@@ -220,12 +220,16 @@ Perform cURL call
 
 </div>
 <div class="section-function" id="osjs-api-call">
-<h2 id="osjs-api-call-m-a-cok-cerror-">OSjs.API.call(m, a, cok, cerror)</h2>
+<h2 id="osjs-api-call-m-a-cok-cerror-options-">OSjs.API.call(m, a, cok, cerror, options)</h2>
 <pre>
 Global function for calling API (backend)
 </pre>
 
 
+<h4 id="see">See</h4>
+<ul>
+<li>OSjs.Core.Handler.callAPI()</li>
+</ul>
 <h4 id="parameters">Parameters</h4>
 <table>
 <thead>
@@ -254,7 +258,12 @@ Global function for calling API (backend)
 <tr>
 <td>cerror</td>
 <td>Function</td>
-<td>Callback on error</td>
+<td>(Optional) Callback on HTTP error</td>
+</tr>
+<tr>
+<td>options</td>
+<td>Object</td>
+<td>(Optional) Options to send to the XHR request</td>
 </tr>
 </tbody>
 </table>
