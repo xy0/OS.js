@@ -189,7 +189,7 @@ Lists contents of a ZIP file
 
 </div>
 <div class="section-method" id="ziparchiver-create">
-<h3 id="ziparchiver-create-file-cb-">ZipArchiver::create(file, cb)</h3>
+<h3 id="ziparchiver-create-file-cb-appref-">ZipArchiver::create(file, cb, appRef)</h3>
 <pre>
 Create a new blank ZIP file
 </pre>
@@ -214,6 +214,11 @@ Create a new blank ZIP file
 <td>cb</td>
 <td>Function</td>
 <td>Callback function =&gt; fn(error)</td>
+</tr>
+<tr>
+<td>appRef</td>
+<td>Application</td>
+<td>(Optional) Application reference</td>
 </tr>
 </tbody>
 </table>
@@ -292,8 +297,6 @@ TODO: Adding directory does not actually add files inside dirs yet
 <h3 id="ziparchiver-remove-file-path-cb-">ZipArchiver::remove(file, path, cb)</h3>
 <pre>
 Removes an entry from ZIP file
-
-TODO
 </pre>
 
 
@@ -381,6 +384,11 @@ Extract a File to destination
 <td>oncomplete</td>
 <td>Function</td>
 <td>Callback on complete =&gt; fn(error, warnings, result)</td>
+</tr>
+<tr>
+<td>app</td>
+<td>Application</td>
+<td>(Optional) Application reference</td>
 </tr>
 </tbody>
 </table>
