@@ -32,7 +32,7 @@
       <h1>Namespace</h1>
       <ul>
 
-<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-fs">fs</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-logout">logout</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-settings">settings</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodenode_modulesosjsosjsjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodenode_modulesosjsconfigjs.html#config-init">init</a></li></ul></li>
+<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-logout">logout</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-settings">settings</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodenode_modulesosjsosjsjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodenode_modulesosjsconfigjs.html#config-init">init</a></li></ul></li>
 
       </ul>
 
@@ -60,13 +60,13 @@
 
 <h2>HTTP API Requests</h2>
 <div class="indent">
-  <pre>POST //osjs-host.net/API</pre>
+  <pre>POST //osjs-host.net/API/{method}</pre>
+  <pre>POST //osjs-host.net/FS/{method}</pre>
 
   Request example:
   <pre class="code">
   {
-    "method": "method_you_want_to_call",
-    "arguments: {"arg": "value"}
+    "arg": "value"
   }
   </pre>
 
@@ -104,7 +104,7 @@ Content-Type:text/plain; charset=utf-8
   </p>
 
   <p>Example Request:</p>
-  <pre>GET //osjs-host.net/FS/osjs/vfs/path/file.ext</pre>
+  <pre>GET //osjs-host.net/FSosjs:////vfs/path/file.ext</pre>
 
   <p>Example Response:</p>
   <pre class="code">
@@ -116,7 +116,7 @@ Content-Type:text/plain; charset=utf-8
 
   <h3>Uploading</h3>
 
-  <pre>POST //osjs-host.net/FS</pre>
+  <pre>POST //osjs-host.net/FS/upload</pre>
 
   With form data (multipart/form-data)
   <pre class="code">
