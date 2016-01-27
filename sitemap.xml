@@ -25,6 +25,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsonedrivejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileprogressjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -97,6 +101,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsinternaljs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptutilsxhrjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -133,6 +141,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsappsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptapplicationjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -154,6 +166,10 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptprocessjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsdropboxjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -181,11 +197,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfswebdavjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileuploadjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogscolorjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsgoogledrivejs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -210,6 +234,10 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptguimiscjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsosjsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -242,6 +270,10 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsuserjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
