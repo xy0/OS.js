@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsonedrivejs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascripthelperszip-archiverjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -30,10 +26,6 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileprogressjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsgoogledrivejs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -81,10 +73,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfs_davjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfontjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -94,10 +82,6 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileinfojs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsdropboxjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -181,10 +165,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsuserjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsapplicationchooserjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -245,10 +225,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfs_nulljs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-applicationjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -262,10 +238,6 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptguiiconviewjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsosjsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>

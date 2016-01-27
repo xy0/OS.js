@@ -1,0 +1,24 @@
+On branch gh-pages
+Your branch is up-to-date with 'origin/gh-pages'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   Makefile
+	deleted:    doc/client/srcclientjavascriptvfs_davjs.html
+	deleted:    doc/client/srcclientjavascriptvfs_nulljs.html
+	deleted:    doc/client/srcclientjavascriptvfsdropboxjs.html
+	deleted:    doc/client/srcclientjavascriptvfsgoogledrivejs.html
+	deleted:    doc/client/srcclientjavascriptvfsonedrivejs.html
+	deleted:    doc/client/srcclientjavascriptvfsosjsjs.html
+	deleted:    doc/client/srcclientjavascriptvfsuserjs.html
+	modified:   robots.txt
+	modified:   sitemap.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	git-status.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
