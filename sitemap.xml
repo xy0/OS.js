@@ -357,6 +357,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjshandlerjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsapijs.html</loc>
     <priority>0.7</priority>
   </url>
