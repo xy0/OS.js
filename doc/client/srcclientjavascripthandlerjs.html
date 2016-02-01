@@ -63,6 +63,7 @@
 <li><a href="#_handler-login">login()</a></li>
 <li><a href="#_handler-logout">logout()</a></li>
 <li><a href="#_handler-loadsession">loadSession()</a></li>
+<li><a href="#_handler-loadsession">loadSession()</a></li>
 <li><a href="#_handler-getvfspath">getVFSPath()</a></li>
 <li><a href="#_handler-callapi">callAPI()</a></li>
 <li><a href="#_handler-__callnw">__callNW()</a></li>
@@ -75,7 +76,6 @@
 <li><a href="#_handler-onvfsrequest">onVFSRequest()</a></li>
 <li><a href="#_handler-ononline">onOnline()</a></li>
 <li><a href="#_handler-onoffline">onOffline()</a></li>
-<li><a href="#_handler-savesettings">saveSettings()</a></li>
 <li><a href="#_handler-getuserdata">getUserData()</a></li>
 <li><a href="#_handler-initloginscreen">initLoginScreen()</a></li>
 </ul>
@@ -195,10 +195,6 @@ Called after the Handler is initialized
 <h3 id="_handler-login-username-password-callback-">_Handler::login(username, password, callback)</h3>
 <pre>
 Default login method
-
-NOTE: This is just a placeholder. The actual method
-
- is in the currently assigned (ex: handlers/demo/handler.js)
 </pre>
 
 
@@ -237,10 +233,6 @@ NOTE: This is just a placeholder. The actual method
 <h3 id="_handler-logout-save-callback-">_Handler::logout(save, callback)</h3>
 <pre>
 Default logout method
-
-NOTE: You should call this in your implemented handler
-
- or else your data will not be stored
 </pre>
 
 
@@ -287,6 +279,44 @@ Default method to restore last running session
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>Callback function</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-method" id="_handler-loadsession">
+<h3 id="_handler-loadsession-pool-storage-callback-">_Handler::loadSession(pool, storage, callback)</h3>
+<pre>
+Default method to save given settings pool
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pool</td>
+<td>String</td>
+<td>(optional) Pool Name</td>
+</tr>
+<tr>
+<td>storage</td>
+<td>Mixed</td>
+<td>Storage data</td>
+</tr>
 <tr>
 <td>callback</td>
 <td>Function</td>
@@ -540,42 +570,6 @@ When browser goes offline
 </pre>
 
 
-
-</div>
-<div class="section-method" id="_handler-savesettings">
-<h3 id="_handler-savesettings-pool-storage-callback-">_Handler::saveSettings(pool, storage, callback)</h3>
-<pre>
-Method for saving your settings
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>pool</td>
-<td>String</td>
-<td>(Optional) Which pool to store</td>
-</tr>
-<tr>
-<td>storage</td>
-<td>Object</td>
-<td>Storage tree</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback function</td>
-</tr>
-</tbody>
-</table>
 
 </div>
 <div class="section-method" id="_handler-getuserdata">
