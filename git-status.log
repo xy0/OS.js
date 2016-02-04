@@ -7,10 +7,6 @@ Changes not staged for commit:
 
 	modified:   doc/server/index.html
 	modified:   git-status.log
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	images/dia-server-api.png
+	modified:   stylesheets/api.css
 
 no changes added to commit (use "git add" and/or "git commit -a")
