@@ -472,7 +472,7 @@ Does a HTTP GET via XHR (For file downloading);
 
 </div>
 <div class="section-method" id="_handler-onlogin">
-<h3 id="_handler-onlogin-userdata-usersettings-callback-">_Handler::onLogin(userData, userSettings, callback)</h3>
+<h3 id="_handler-onlogin-data-callback-">_Handler::onLogin(data, callback)</h3>
 <pre>
 Called when login() is finished
 </pre>
@@ -489,14 +489,9 @@ Called when login() is finished
 </thead>
 <tbody>
 <tr>
-<td>userData</td>
+<td>data</td>
 <td>Object</td>
-<td>JSON User Data</td>
-</tr>
-<tr>
-<td>userSettings</td>
-<td>Object</td>
-<td>JSON User Settings</td>
+<td>JSON Data from login action (userData, userSettings, etc)</td>
 </tr>
 <tr>
 <td>callback</td>
