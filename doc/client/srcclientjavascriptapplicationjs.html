@@ -62,7 +62,7 @@
 <li><a href="#application-_addwindow">_addWindow()</a></li>
 <li><a href="#application-_removewindow">_removeWindow()</a></li>
 <li><a href="#application-_getwindow">_getWindow()</a></li>
-<li><a href="#application-_getwindowsbyname">_getWindowsByName()</a></li>
+<li><a href="#application-_getwindowbyname">_getWindowByName()</a></li>
 <li><a href="#application-_getwindowsbytag">_getWindowsByTag()</a></li>
 <li><a href="#application-_getwindows">_getWindows()</a></li>
 <li><a href="#application-_getmainwindow">_getMainWindow()</a></li>
@@ -322,8 +322,8 @@ If you specify 'null' it will try to return the 'main' window.
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Window</u> <em>Or null on error or nothing</em></p>
 
 </div>
-<div class="section-method" id="application-_getwindowsbyname">
-<h3 id="application-_getwindowsbyname-">Application::_getWindowsByName()</h3>
+<div class="section-method" id="application-_getwindowbyname">
+<h3 id="application-_getwindowbyname-name-">Application::_getWindowByName(name)</h3>
 <pre>
 Get a Window by Name
 </pre>
@@ -333,10 +333,27 @@ Get a Window by Name
 <ul>
 <li>Application::_getWindow()</li>
 </ul>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>String</td>
+<td>Window Name</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 <div class="section-method" id="application-_getwindowsbytag">
-<h3 id="application-_getwindowsbytag-">Application::_getWindowsByTag()</h3>
+<h3 id="application-_getwindowsbytag-tag-">Application::_getWindowsByTag(tag)</h3>
 <pre>
 Get Windows(!) by Tag
 </pre>
@@ -346,6 +363,23 @@ Get Windows(!) by Tag
 <ul>
 <li>Application::_getWindow()</li>
 </ul>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tag</td>
+<td>String</td>
+<td>Tag name</td>
+</tr>
+</tbody>
+</table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Array</u></p>
 
@@ -374,13 +408,29 @@ Get the "main" window
 
 </div>
 <div class="section-method" id="application-_getsettings">
-<h3 id="application-_getsettings-">Application::_getSettings()</h3>
+<h3 id="application-_getsettings-k-">Application::_getSettings(k)</h3>
 <pre>
 Get the sessions JSON
 </pre>
 
 
-
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>String</td>
+<td>The settings key</td>
+</tr>
+</tbody>
+</table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Object</u> <em>the current settings</em></p>
 
