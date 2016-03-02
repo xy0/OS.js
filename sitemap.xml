@@ -261,6 +261,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/tutorials/custom-build.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/tutorials/create-service.html</loc>
     <priority>0.7</priority>
   </url>

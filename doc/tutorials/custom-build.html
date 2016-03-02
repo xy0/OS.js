@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Tutorial - Create IFrame Application | OS.js Documentation</title>
+    <title>Tutorial - Custom build(s) | OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Tutorial - Create IFrame Application" />
+    <meta name="description" content="OS.js -- Tutorial - Custom build(s)" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -36,74 +36,12 @@
 
     <main>
 
-<h1>Tutorial: Create IFrame Application</h1>
+<h1>Tutorial: Custom build(s)</h1>
 <div class="indent">
+
   <p>
-    Very useful if you want to convert something you already made or don't want to use the OS.js API.
+    TODO
   </p>
-
-  <h2>Create</h2>
-  <div class="indent">
-    <pre class="code">
-  grunt create-package:default/MyPackageName:iframe
-    </pre>
-    <p>
-      The "default" is the name of the repository folder you want to place your package in.
-    </p>
-
-    <p>
-      You will end up with "main.js" (for client) and "metadata.json" (see below)
-    </p>
-  </div>
-
-  <h2>Update metadata</h2>
-  <div class="indent">
-    <p>
-      See <a href="/doc/tutorials/create-application.html">Application Tutorial page</a> for more information on this.
-    </p>
-  </div>
-
-  <h2>Create your application</h2>
-  <div class="indent">
-    <p>
-      Simply create the directory "data" in your application directory (src/packages/MyPackageName) with the file "index.html".
-    </p>
-    <p>
-      Then go ahead and write your app in the "index.html" file.
-    </p>
-  </div>
-
-  <h2>Bi-directional communication</h2>
-  <div class="indent">
-    <p>
-      You can communicate between OS.js and your IFrame application using the browser APIs and some helper methods.
-    </p>
-    <ul>
-      <li><a href="https://gist.github.com/andersevenrud/dd5b2ef49eb8c3888629">IFrame Application Code example</a></li>
-      <li><a href="https://gist.github.com/andersevenrud/3ce81c9be9d8a6b8aa08">OS.js Application Code example</a></li>
-    </ul>
-  </div>
-
-  <h2>Including resources</h2>
-  <div class="indent">
-    <p>
-      If you want to include resources into your application, make sure to use relative paths.
-    </p>
-    <pre class="code">
-
-  &lt;script src="mylib.js"&gt;&lt;/script&gt;
-
-  &lt;link rel="stylesheet" type="text/css" src="mylib.css" /&gt;
-
-    </pre>
-  </div>
-
-  <h2>Tips</h2>
-  <div class="indent">
-    <p>
-      If you want to reaload your application when it has been updated simply run "OSjs.API.relaunch('ApplicationMyName')" in the developer console of your browser.
-    </p>
-  </div>
 
 </div>
 

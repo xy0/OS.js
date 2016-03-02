@@ -37,21 +37,21 @@
     <main>
 
 <h1>Tutorial: Extend Client API</h1>
+<div class="indent">
+  <p>
+    This tutorial show you how to add client (javscript) API extensions.
+  </p>
 
-<p>
-  This tutorial show you how to add client (javscript) API extensions.
-</p>
+  <ol>
+    <li>Create a new file, ex: src/client/javascript/helpers/my-module.js</li>
+    <li>Add the file to: src/conf/200-compile.json</li>
+    <li>Rebuild with <b>grunt core dist-files</b></li>
+  </ol>
 
-<ol>
-  <li>Create a new file, ex: src/client/javascript/helpers/my-module.js</li>
-  <li>Add the file to: src/conf/200-compile.json</li>
-  <li>Rebuild with <b>grunt core dist-files</b></li>
-</ol>
-
-<p>
-  Example file:
-</p>
-<pre class="code">
+  <p>
+    Example file:
+  </p>
+  <pre class="code">
 (function(Utils, VFS, API) {
 
   /////////////////////////////////////////////////////////////////////////////
@@ -73,7 +73,8 @@
   OSjs.Helpers.MyModule = MyModule;
 
 })(OSjs.Utils, OSjs.VFS, OSjs.API);
-</pre>
+  </pre>
+</div>
 
 
       <div class="adddshere">

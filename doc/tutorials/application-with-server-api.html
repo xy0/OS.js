@@ -36,21 +36,22 @@
 
     <main>
 
-      <h1>Tutorial: Create your own Application with server API</h1>
+<h1>Tutorial: Create your own Application with server API</h1>
+<div class="indent">
 
-      <h2>Set up server method</h2>
+  <h2>Set up server method</h2>
+  <div class="indent">
+    <p>
+      <i>You don't have to use both PHP and Node, use the one appropriate for your setup</i>
+    </p>
+
+    <h3>Node</h3>
+    <div class="indent">
 
       <p>
-        <i>You don't have to use both PHP and Node, use the one appropriate for your setup</i>
+        Create the file "api.js" inside the package directory and use this as a template:
       </p>
-
-      <h3>Node</h3>
-      <div class="indent">
-
-        <p>
-          Create the file "api.js" inside the package directory and use this as a template:
-        </p>
-        <pre class="code">
+      <pre class="code">
 
 (function() {
 
@@ -65,16 +66,16 @@
 
 })();
 
-        </pre>
-      </div>
+      </pre>
+    </div>
 
-      <h3>PHP</h3>
-      <div class="indent">
+    <h3>PHP</h3>
+    <div class="indent">
 
-        <p>
-          Create the file "api.php" inside the package directory and use this as a template:
-        </p>
-        <pre class="code">
+      <p>
+        Create the file "api.php" inside the package directory and use this as a template:
+      </p>
+      <pre class="code">
 
 class ApplicationMyName // As you defined in metadata.json
 {
@@ -93,16 +94,16 @@ class ApplicationMyName // As you defined in metadata.json
 
 }
 
-        </pre>
-      </div>
+      </pre>
+    </div>
 
-      <h2>Set up application method</h2>
-      <div class="indent">
+    <h2>Set up application method</h2>
+    <div class="indent">
 
-        <p>
-          To call the method you just created, simply create a new method in your Application:
-        </p>
-        <pre class="code">
+      <p>
+        To call the method you just created, simply create a new method in your Application:
+      </p>
+      <pre class="code">
 
 ApplicationMyName.prototype.myServerMethod = function(callback) {
   this._call('MyServerMethod', {'Argument': 'Some Value'}, function(response) {
@@ -112,16 +113,16 @@ ApplicationMyName.prototype.myServerMethod = function(callback) {
   });
 };
 
-        </pre>
-      </div>
+      </pre>
+    </div>
 
-      <h2>Calling the method</h2>
-      <div class="indent">
+    <h2>Calling the method</h2>
+    <div class="indent">
 
-        <p>
-          For example, when you click a button in your window:
-        </p>
-        <pre class="code">
+      <p>
+        For example, when you click a button in your window:
+      </p>
+      <pre class="code">
 
 scheme.find(this, 'Button').on('click', function() {
   self._app.myServerMethod(function(error, result) {
@@ -136,8 +137,10 @@ scheme.find(this, 'Button').on('click', function() {
   });
 });
 
-        </pre>
-      </div>
+      </pre>
+    </div>
+  </div>
+</div>
 
 
       <div class="adddshere">
