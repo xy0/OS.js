@@ -42,7 +42,7 @@
     Very useful if you want to convert something you already made or don't want to use the OS.js API.
   </p>
 
-  <h2>Create</h2>
+  <h2>Create Package</h2>
   <div class="indent">
     <pre class="code">
   grunt create-package:default/MyPackageName:iframe
@@ -63,7 +63,7 @@
     </p>
   </div>
 
-  <h2>Create your application</h2>
+  <h2>Code your Application</h2>
   <div class="indent">
     <p>
       Simply create the directory "data" in your application directory (src/packages/MyPackageName) with the file "index.html".
@@ -71,31 +71,31 @@
     <p>
       Then go ahead and write your app in the "index.html" file.
     </p>
-  </div>
 
-  <h2>Bi-directional communication</h2>
-  <div class="indent">
-    <p>
-      You can communicate between OS.js and your IFrame application using the browser APIs and some helper methods.
-    </p>
-    <ul>
-      <li><a href="https://gist.github.com/andersevenrud/dd5b2ef49eb8c3888629">IFrame Application Code example</a></li>
-      <li><a href="https://gist.github.com/andersevenrud/3ce81c9be9d8a6b8aa08">OS.js Application Code example</a></li>
-    </ul>
-  </div>
+    <h3>Bi-directional communication</h3>
+    <div class="indent">
+      <p>
+        You can communicate between OS.js and your IFrame application using the browser APIs and some helper methods.
+      </p>
+      <ul>
+        <li><a href="https://gist.github.com/andersevenrud/dd5b2ef49eb8c3888629">IFrame Application Code example</a></li>
+        <li><a href="https://gist.github.com/andersevenrud/3ce81c9be9d8a6b8aa08">OS.js Application Code example</a></li>
+      </ul>
+    </div>
 
-  <h2>Including resources</h2>
-  <div class="indent">
-    <p>
-      If you want to include resources into your application, make sure to use relative paths.
-    </p>
-    <pre class="code">
+    <h3>Including resources</h3>
+    <div class="indent">
+      <p>
+        If you want to include resources into your application, make sure to use relative paths.
+      </p>
+      <pre class="code">
 
   &lt;script src="mylib.js"&gt;&lt;/script&gt;
 
   &lt;link rel="stylesheet" type="text/css" src="mylib.css" /&gt;
 
-    </pre>
+      </pre>
+    </div>
   </div>
 
   <h2>Tips</h2>
