@@ -49,10 +49,8 @@
     <pre class="code">
 
 API.curl({
-  body: {
-    url: 'http://your-url-here',
-    method: 'GET'
-  }
+  url: 'http://your-url-here',
+  method: 'GET'
 }, function(error, response) {
   console.log(response.body); // What you get back
 });
