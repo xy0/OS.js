@@ -5,95 +5,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelperszip-archiverjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguitreeviewjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersgoogle-apijs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptpackage-managerjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsconfirmjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsonedrivejs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileprogressjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptwindowmanagerjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelperswindows-live-apijs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthandlerjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguijs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsmiscjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguivisualjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguifileviewjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptapijs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdatejs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsinputjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfontjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsalertjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileinfojs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsinternaljs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsxhrjs.html</loc>
+    <loc>http://os.js.org/</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -101,39 +13,15 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersfirefox-marketplacejs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsfsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_elementsjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelperswindows-live-apijs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptutilscompabilityjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguiinputsjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsdomjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptinitjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogserrorjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsappsjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptapplicationjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsconfirmjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -141,7 +29,27 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsfsjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfswebdavjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileprogressjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdatejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilscompabilityjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsappsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_elementsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -149,43 +57,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsxhrjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptsettings-managerjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptprocessjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsdropboxjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-application-windowjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_schemejs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsapplicationchooserjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersiframe-applicationjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_dataviewjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfswebdavjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileuploadjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -193,11 +69,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsgoogledrivejs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfilejs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguiiconviewjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -205,15 +77,15 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelperssettings-fragmentjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptapplicationjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfs_filejs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptpackage-managerjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguilistviewjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptinitjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -221,15 +93,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsosjsjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthandlerjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguicontainersjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfs_filejs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-applicationjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfilejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptwindowmanagerjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -237,15 +113,59 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptservicejs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguicontainersjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptguiiconviewjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelperszip-archiverjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsinternaljs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsonedrivejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguitreeviewjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsmiscjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilsdomjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileinfojs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptprocessjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-applicationjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsosjsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersiframe-applicationjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguilistviewjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-application-windowjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -253,63 +173,87 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/iframe-application.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsgoogledrivejs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/extend-client-api.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptservicejs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/custom-build.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-service.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfontjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/extend-server-api.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_dataviewjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-panelitem.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsinputjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-application-continued.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsapplicationchooserjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-extension.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguiinputsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-theme.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersgoogle-apijs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/using-curl.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsdropboxjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/application-with-server-api.html</loc>
+    <loc>http://os.js.org/doc/client/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-handler.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguivisualjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/create-application.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsalertjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/tutorials/</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguijs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/manuals/man-dropbox.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptguifileviewjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelpersfirefox-marketplacejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascripthelperssettings-fragmentjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogserrorjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_schemejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptapijs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileuploadjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -317,39 +261,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/manuals/man-package-manager.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/man-build-grunt.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/man-zip.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/app-corewm.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/man-mountpoints.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/man-google-api.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/manuals/app-filemanager.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/overview.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/manuals/man-windows-live-api.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -357,7 +269,39 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/man-windows-live-api.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-dropbox.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/man-broadway.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-google-api.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/overview.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-mountpoints.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-package-manager.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/app-corewm.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-build-grunt.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -365,11 +309,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsconfigjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsvfsjs.html</loc>
+    <loc>http://os.js.org/doc/manuals/man-zip.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -377,7 +317,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsapijs.html</loc>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsvfsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -385,7 +325,15 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsapijs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/server/srcservernodehttpjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/server/srcservernodenode_modulesosjsconfigjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -397,7 +345,59 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/</loc>
+    <loc>http://os.js.org/doc/tutorials/create-service.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/using-curl.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/application-with-server-api.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/extend-client-api.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-extension.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-application.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-theme.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-panelitem.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-application-continued.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/extend-server-api.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/create-handler.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/custom-build.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/tutorials/iframe-application.html</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

@@ -45,7 +45,8 @@ header, footer {
 
 header {
   height : 380px;
-  background : #572a79;
+  background : #572a79 url('/images/header.png') no-repeat center center;
+  background-size : auto 100%;
   color : #fff;
 }
 header h1 {
@@ -152,6 +153,7 @@ iframe {
   header {
     height : auto;
     padding-bottom : 40px;
+    background-position : left center;
   }
 
   header h1 {
