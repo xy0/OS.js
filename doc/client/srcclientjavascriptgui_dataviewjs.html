@@ -69,14 +69,6 @@ Element: '_dataview'
 This is an abstraction layer for Icon, Tree and List views.
 
 See `ev.detail` for more information on events.
-
-@action add Add elements(s) => fn(entries)
-
-@action patch Patch/Update elements => fn(entries)
-
-@action remove Removes element => fn(arg)
-
-@action clear Clear elements => fn()
 </pre>
 
 <h4 id="namespace">Namespace</h4>
@@ -148,6 +140,26 @@ See `ev.detail` for more information on events.
 <td>activate</td>
 <td></td>
 <td>When entry was activated =&gt; fn(ev)</td>
+</tr>
+<tr>
+<td>add</td>
+<td></td>
+<td>Add elements(s) =&gt; fn(entries)</td>
+</tr>
+<tr>
+<td>patch</td>
+<td></td>
+<td>Patch/Update elements =&gt; fn(entries)</td>
+</tr>
+<tr>
+<td>remove</td>
+<td></td>
+<td>Removes element =&gt; fn(arg)</td>
+</tr>
+<tr>
+<td>clear</td>
+<td></td>
+<td>Clear elements =&gt; fn()</td>
 </tr>
 </tbody>
 </table>
