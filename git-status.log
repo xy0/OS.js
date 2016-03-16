@@ -5,7 +5,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
-	modified:   doc/client/index.html
 	modified:   git-status.log
+	modified:   images/dia-application-apis.png
 
 no changes added to commit (use "git add" and/or "git commit -a")
