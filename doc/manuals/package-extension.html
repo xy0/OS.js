@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Adding custom mountpoints | OS.js Documentation</title>
+    <title>Packages - Extension | OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Adding custom mountpoints" />
+    <meta name="description" content="OS.js -- Packages - Extension" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -80,17 +80,114 @@
 
     <content>
 
-<h1>Adding custom mountpoints</h1>
-
+<h1>Extension</h1>
 <p>
-  Simply update the configuration:
+  For extending the client and server APIs. Can also be used as a plugin in the client (that will be loaded on startup).
 </p>
-<pre class="code">
-# Replace 'your_name' with a identifier of your own
-grunt config:set:client.VFS.Mountpoints.your_name.description:"Your description here"
-grunt config:set:server.vfs.mounts.your_name:/path/to/mountpoint
-grunt config
-</pre>
+
+<h2>Metadata</h2>
+<div class="indent">
+  <table class="manual">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>enabled</td>
+        <td>If your package is enabled or not</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of your package</td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>The description of your package</td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>preload</td>
+        <td>
+          The list of resources to preload
+          <pre>
+"preload":    [
+  {"src": "main.js", "type": "javascript"},
+  {"src": "main.css", "type": "stylesheet"},
+  {"src": "foo.js", "type": "javascript", combine: false} // Do not combine this script in 'dist'
+],
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>copy</td>
+        <td>
+          List of files to copy into your 'dist' (useful for removing sensitive server-side stuff)
+          <pre>
+"dist": {
+  "copy": [
+    "extension.js"
+  ]
+},
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>conf</td>
+        <td>
+          List of config files that are applied just like src/conf. (Note: These are loaded with lowest priority)
+          <pre>
+"conf": [
+  "mycustomconfig.json"
+]
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>depends</td>
+        <td>
+          A list of dependencies you want to load. A dependency is a package name (classname). It only loads the sources, it will not run the application.
+          <pre>
+"depends":    [
+  "ApplicationSettings"
+],
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>uses</td>
+        <td>
+          If you set this, this extension will be loaded when the defined application is launched. This is useful if you want to have "plug-ins"
+          <pre>
+"uses":    "ApplicationSettings"
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
       <div class="adddshere">

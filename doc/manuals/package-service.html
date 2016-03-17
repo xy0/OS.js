@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Adding custom mountpoints | OS.js Documentation</title>
+    <title>Packages - Service | OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Adding custom mountpoints" />
+    <meta name="description" content="OS.js -- Packages - Service" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -80,17 +80,78 @@
 
     <content>
 
-<h1>Adding custom mountpoints</h1>
-
+<h1>Service</h1>
 <p>
-  Simply update the configuration:
+  Works like a normal Application, only without windows and runs in the "background".
 </p>
-<pre class="code">
-# Replace 'your_name' with a identifier of your own
-grunt config:set:client.VFS.Mountpoints.your_name.description:"Your description here"
-grunt config:set:server.vfs.mounts.your_name:/path/to/mountpoint
-grunt config
-</pre>
+
+<h2>Metadata</h2>
+<div class="indent">
+  <table class="manual">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>className</td>
+        <td>The name of your JavaScript namespace</td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>enabled</td>
+        <td>If your package is enabled or not</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>singular</td>
+        <td>Allow only one instance of the application running</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>autostart</td>
+        <td>If you want to start package on login</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of your package</td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>The description of your package</td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+
+      <tr>
+        <td>preload</td>
+        <td>
+          The list of resources to preload
+          <pre>
+"preload":    [
+  {"src": "main.js", "type": "javascript"},
+  {"src": "main.css", "type": "stylesheet"},
+  {"src": "foo.js", "type": "javascript", combine: false} // Do not combine this script in 'dist'
+],
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
       <div class="adddshere">

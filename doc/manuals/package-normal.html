@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Adding custom mountpoints | OS.js Documentation</title>
+    <title>Packages - Normal Application | OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Adding custom mountpoints" />
+    <meta name="description" content="OS.js -- Packages - Normal Application" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -80,17 +80,178 @@
 
     <content>
 
-<h1>Adding custom mountpoints</h1>
-
+<h1>Normal Application</h1>
 <p>
-  Simply update the configuration:
+  A normal application using the internal OS.js APIs.
 </p>
-<pre class="code">
-# Replace 'your_name' with a identifier of your own
-grunt config:set:client.VFS.Mountpoints.your_name.description:"Your description here"
-grunt config:set:server.vfs.mounts.your_name:/path/to/mountpoint
-grunt config
-</pre>
+
+<h2>Metadata</h2>
+<div class="indent">
+  <table class="manual">
+    <thead>
+      <tr>
+        <th>Key</th>
+        <th>Description</th>
+        <th>Required</th>
+        <th>Default</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>className</td>
+        <td>The name of your JavaScript namespace</td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>enabled</td>
+        <td>If your package is enabled or not</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>singular</td>
+        <td>Allow only one instance of the application running</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>autostart</td>
+        <td>If you want to start package on login</td>
+        <td>No</td>
+        <td>false</td>
+      </tr>
+      <tr>
+        <td>name</td>
+        <td>The name of your package</td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>description</td>
+        <td>The description of your package</td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>category</td>
+        <td>The category of your package</td>
+        <td>No</td>
+        <td>other</td>
+      </tr>
+      <tr>
+        <td>icon</td>
+        <td>
+          The icon filename
+          <pre>
+# From icon theme:
+"icon": "category/name.png",
+
+# From application directory
+"icon": "./name.png",
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>splash</td>
+        <td>Show a splash screen when application starts</td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+      <tr>
+        <td>names</td>
+        <td>
+          Localization of the 'name' attribute
+          <pre>
+"names" : {
+  "no_NO" : "Norwegian name"
+}
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>descriptions</td>
+        <td>
+          Localization of the 'description' attribute
+          <pre>
+"names" : {
+  "no_NO" : "Norwegian description"
+}
+          </pre>
+        </td>
+        <td>No</td>
+        <td>true</td>
+      </tr>
+
+      <tr>
+        <td>mime</td>
+        <td>
+          What MIME types your package supports (Array with regexp)
+          <pre>
+"mime": [
+  "^text",
+  "inode\\/x\\-empty",
+  "application\\/x\\-empty",
+  "application\\/x\\-lua",
+  "application\\/x\\-python",
+  "application\\/javascript",
+  "application\\/json"
+],
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>compability</td>
+        <td>
+          Check for these browser features when starting application (Array of strings)
+          <pre>
+# See OSjs.Utils.getCompability()
+
+"compabiltiy": [
+  "canvas", "blob", "audio", "video"
+],
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>preload</td>
+        <td>
+          The list of resources to preload
+          <pre>
+"preload":    [
+  {"src": "main.js", "type": "javascript"},
+  {"src": "main.css", "type": "stylesheet"},
+  {"src": "foo.js", "type": "javascript", combine: false} // Do not combine this script in 'dist'
+],
+          </pre>
+        </td>
+        <td>Yes</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>depends</td>
+        <td>
+          A list of dependencies you want to load. A dependency is a package name (classname). It only loads the sources, it will not run the application.
+          <pre>
+"depends":    [
+  "ApplicationSettings"
+],
+          </pre>
+        </td>
+        <td>No</td>
+        <td>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 
       <div class="adddshere">

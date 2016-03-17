@@ -265,6 +265,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/package-service.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/man-install.html</loc>
     <priority>0.7</priority>
   </url>
@@ -297,6 +301,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/package-extension.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/app-corewm.html</loc>
     <priority>0.7</priority>
   </url>
@@ -306,6 +314,14 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/manuals/</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/man-development.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/manuals/package-normal.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
