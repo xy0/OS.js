@@ -140,6 +140,30 @@
           <td>Yes</td>
           <td>&nbsp;</td>
         </tr>
+        <tr>
+          <td>depends</td>
+          <td>
+            A list of dependencies you want to load. A dependency is a package name (classname). It only loads the sources, it will not run the application.
+            <pre>
+"depends":    [
+  "ApplicationSettings"
+],
+            </pre>
+          </td>
+          <td>No</td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>uses</td>
+          <td>
+            If you set this, this extension will be loaded when the defined application is launched. This is useful if you want to have "plug-ins"
+            <pre>
+"uses":    "ApplicationSettings"
+            </pre>
+          </td>
+          <td>No</td>
+          <td>&nbsp;</td>
+        </tr>
       </tbody>
     </table>
   </div>
