@@ -1,0 +1,207 @@
+/***************************************************************************** */
+/*                                    MAIN                                     */
+/***************************************************************************** */
+
+
+html {
+  height : 100%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size : 14px;
+  margin : 0;
+  padding : 0;
+  color : #4D4545;
+  height : calc(100% - 60px);
+}
+
+a {
+  color : #572A79;
+}
+
+li {
+  padding : 5px;
+}
+
+li a {
+  text-decoration : none;
+}
+
+pre {
+  font-weight : bold;
+  font-family : Monospace;
+  background : #f2f2f2;
+  padding : 20px;
+}
+
+pre.code {
+  font-weight : normal;
+  background-color : #12001F;
+  color : #FCF9FF;
+}
+
+div.indent {
+  padding-left : 20px;
+}
+
+.center {
+  text-align : center;
+}
+
+/***************************************************************************** */
+/*                                    MAIN                                     */
+/***************************************************************************** */
+
+header {
+  color : #fff;
+  display : block;
+  height : 60px;
+  background : #572a79 url('/images/header.png') no-repeat center center;
+  position : fixed;
+  width : 100%;
+  top : 0;
+  left : 0;
+}
+
+  header img {
+    position : absolute;
+    top : 10px;
+    left : 10px;
+    height : calc(100% - 20px);
+  }
+
+  header ul {
+    list-style-type : none;
+    display : block;
+    margin : 0;
+    padding : 0;
+    text-align : right;
+  }
+
+    header li {
+      display : inline-block;
+      margin : 0;
+      padding : 0;
+    }
+
+      header li a {
+        color : #fff;
+        text-decoration : none;
+        padding : 20px;
+        display : inline-block;
+      }
+
+nav {
+  background : #f2f2f2 url('/images/doc/logo.png') no-repeat 20px center;
+  position : fixed;
+  left : 0px;
+  top : 60px;
+  bottom : 0px;
+  width : 300px;
+  background : #f2f2f2;
+  box-sizing : border-box;
+  padding : 20px;
+  overflow : auto;
+}
+
+  nav ul {
+    padding-left : 15px;
+  }
+
+    nav > ul ul {
+      padding-top : 5px;
+    }
+
+    nav li a.Class {
+      font-weight : bold;
+    }
+
+content {
+  margin-left : 300px;
+  margin-top : 60px;
+  overflow : auto;
+  box-sizing : border-box;
+  padding : 20px;
+  display : block;
+  min-height : calc(100% - 160px);
+}
+
+footer {
+  text-align : center;
+  font-size : 80%;
+  display : block;
+  margin-left : 300px;
+}
+
+/***************************************************************************** */
+/*                                    API                                      */
+/***************************************************************************** */
+
+  content div.section-function {
+    background : #f2f2f2;
+    padding : 20px;
+    margin-bottom : 20px;
+  }
+
+  content div.section-class {
+    background : #f2f2f2;
+    padding : 20px;
+    margin-bottom : 20px;
+  }
+    content div.section-class > div {
+      background : #fff;
+      padding : 20px;
+      margin-bottom : 20px;
+    }
+
+content.api table {
+  border : 0 none;
+  border-collapse : collapse;
+  margin-left : 20px;
+}
+content.api thead * {
+  text-align : left;
+  font-weight : bold;
+  padding : 10px;
+  background : #aaa;
+}
+content.api tbody * {
+  padding : 10px;
+  background : #ccc;
+}
+content.api tbody td:nth-child(1) {
+  width : 100px;
+}
+content.api tbody td:nth-child(2) {
+  width : 100px;
+  text-decoration : underline;
+}
+content.api tbody td:nth-child(3) {
+  min-width : 400px;
+  font-style : italic;
+}
+
+/***************************************************************************** */
+/*                                    MAIN                                     */
+/***************************************************************************** */
+
+table.manual {
+  width : 100%;
+}
+table.manual th,
+table.manual td {
+  vertical-align : top;
+  padding : 5px;
+}
+table.manual tr {
+  background : #eee;
+}
+table.manual tr:nth-child(2n+1) {
+  background : #e6e6e6;
+}
+table.manual pre {
+  background-color : #fff;
+  margin : 5px;
+  padding : 5px;
+}
