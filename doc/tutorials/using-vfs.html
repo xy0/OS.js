@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Tutorial - Using cURL API - OS.js Documentation</title>
+    <title>Tutorial - Using VFS - OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Tutorial - Using cURL API" />
+    <meta name="description" content="OS.js -- Tutorial - Using VFS" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -64,108 +64,92 @@
 
     <content>
 
-<h1>Tutorial: Using cURL API</h1>
+<h1>Tutorial: Using VFS</h1>
 <div>
+  <p>
+    With the VFS you can manipulate files over HTTP. For a full overview of available methods, look at the <a href="/doc/client/srcclientjavascriptvfsjs.html">API documentation</a>.
+  </p>
+  <p>
+    You can either specify paths as <i>strings</i> or an instance of <a href="/doc/client/srcclientjavascriptvfs_filejs.html#osjs-vfs-file">File Metadata</a>:
+  </p>
+  <pre>
+var path = 'home:///file.txt';
+// or
+var path = new VFS.File('home:///file.txt');
+  </pre>
+  <p>
+    This will show you the basics:
+  </p>
 
-  <p>You can do HTTP calls using cURL with the internal API.</p>
-
-  <p>All the parameters are documented in the <a href="/doc/server/">Server API</a></p>
-
-  <h2>Examples</h2>
+  <h2>Reading a File</h2>
   <div class="indent">
-    <p>A typical response would look like:</p>
-    <pre class="code">
-{
-  httpCode: -1,
-  body: ''
-}
-    </pre>
-
-  <h3>GET request</h3>
-  <div class="indent">
-
-    <pre class="code">
-
-API.curl({
-  url: 'http://your-url-here',
-  method: 'GET'
-}, function(error, response) {
-  console.log(response.body); // What you get back
-});
-
-    </pre>
-  </div>
-
-  <h3>POST request</h3>
-  <div class="indent">
-
-    <pre class="code">
-
-API.curl({
-  url: 'http://your-url-here',
-  method: 'POST',
-  query: 'HELLO FROM OS.js'
-}, function(error, response) {
-  console.log(response.body); // What you get back
-});
-
-    </pre>
-  </div>
-
-  <h3>POST request w/JSON</h3>
-  <div class="indent">
-
     <p>
-      The format will automatically be detected
+      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-read">API documentation</a>
     </p>
     <pre class="code">
-
-API.curl({
-  url: 'http://your-url-here',
-  method: 'POST',
-  query: {
-    foo: 'bar'
+VFS.read(path, function(err, res) {
+  if ( err ) {
+    alert(err);
+    return;
   }
-}, function(error, response) {
-  console.log(response.body); // What you get back
-});
 
+  console.log(res); // The file data
+}, {});
     </pre>
   </div>
 
-  <h3>Handling Binary Data</h3>
+  <h2>Writing a File</h2>
   <div class="indent">
+    <p>
+      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-write">API documentation</a>
+    </p>
     <pre class="code">
-
-API.curl({
-  url: 'http://your-url-here/some-file.png',
-  method: 'GET',
-  binary: true,
-  mime: 'image/png'
-}, function(error, response) {
-  console.log(response.body); // A binary representation
-});
-
-    </pre>
-  </div>
-
-  <h3>Sending Custom Headers</h3>
-  <div class="indent">
-    <pre class="code">
-
-API.curl({
-  url: 'http://your-url-here/',
-  method: 'GET',
-  headers: {
-    'Content-Type': 'text/plain'
-    // ...
+// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
+VFS.write(path, data, function(err, res) {
+  if ( err || !res ) {
+    alert(err || 'Failed to write file');
+    return;
   }
-}, function(error, response) {
-  console.log(response.body); // What you get back
-});
 
+  // Success!
+}, {/* options */});
     </pre>
   </div>
+
+  <h2>Copy a File</h2>
+  <div class="indent">
+    <p>
+      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-copy">API documentation</a>
+    </p>
+    <pre class="code">
+VFS.copy(src, dest, function(err, res) {
+  if ( err || !res ) {
+    alert(err || 'Failed to copy file');
+    return;
+  }
+
+  // Success!
+}, {/* options */});
+    </pre>
+  </div>
+
+  <h2>Scan a directory</h2>
+  <div class="indent">
+    <p>
+      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-scandir">API documentation</a>
+    </p>
+    <pre class="code">
+VFS.scandir(path, function(err, res) {
+  if ( err ) {
+    alert(err);
+    return;
+  }
+
+  console.log(res); // A list of 'VFS.File' instances
+}, {/* options */});
+    </pre>
+  </div>
+
 </div>
 
 </div>
