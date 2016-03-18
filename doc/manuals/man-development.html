@@ -124,6 +124,19 @@ $ ./bin/start-dev.sh
     <p>
       You can read more about this on <a href="https://github.com/os-js/OS.js/wiki/Style-guide">wiki</a>.
     </p>
+    <p>
+      You can check your code style for "problems" by using automated tools:
+    </p>
+    <pre class="code">
+# Check your javascript
+grunt jshint jscs
+
+# Check your css
+grunt csslint
+
+# Check your schemes (html)
+grunt xml_validator
+    </pre>
   </div>
 
   <h2>Code locations</h2>
@@ -156,6 +169,27 @@ dist-dev                          # Development environment
   <p>
     You can look at the <a href="/doc/tutorials/">tutorials</a>, to get started creating your own apps and extensions.
   </p>
+  <p>
+    For contributions, look at the document over at the <a href="https://github.com/os-js/OS.js/blob/master/CONTRIBUTING.md">Github repository</a>.
+  </p>
+
+  <h2>Tips</h2>
+  <div class="indent">
+    <h3>Restart your application</h3>
+    <p>
+      You can reload and relaunch your application with:
+    </p>
+    <pre class="code">
+OSjs.API.relaunch('MyApplicationClassName')
+    </pre>
+    <h3>TEST ALL THE THINGS!</h3>
+    <p>
+      To run all tests on the code, just use:
+    </p>
+    <pre class="code">
+grunt test
+    </pre>
+  </div>
 
 </div>
 
