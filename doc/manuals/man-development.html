@@ -77,17 +77,87 @@
     <content>
 
 <h1>Development Introduction</h1>
-<p>
-  There's some manual pages that explains some aspects of the development process of OS.js:
-</p>
-<ul>
-  <li><a href="/doc/manuals/man-configuration.html">Configuration system</a></li>
-  <li><a href="/doc/manuals/man-build-grunt.html">Build system</a></li>
-</ul>
-<p>
-  <b>Please check back in a couple of days for more information, this document is going through final stages of QA</b>
-</p>
+<div>
+  <p>
+    There's some manual pages that explains some aspects of the development process of OS.js:
+  </p>
+  <ul>
+    <li><a href="/doc/manuals/man-configuration.html">Configuration system</a></li>
+    <li><a href="/doc/manuals/man-build-grunt.html">Build system</a></li>
+  </ul>
+  <p>
+    Below you can find some information on how to get started with developing for OS.js:
+  </p>
 
+  <h2>Setting up a development environment</h2>
+  <div class="indent">
+    <p>
+      OS.js already comes with a development environment, using <b>dist-dev</b>.
+    </p>
+    <p>
+      To install all utilities, do:
+    </p>
+    <pre class="code">
+# Install all grunt tasks etc
+$ npm install --development
+
+# To automatically restart server when changes in codebase occur
+$ npm install -g supervisor
+
+# Unit testing support
+$ sudo npm install -g mocha
+    </pre>
+  </div>
+
+  <h2>Running the development server</h2>
+  <div class="indent">
+    <p>
+      Just use the launcher:
+    </p>
+    <pre class="code">
+$ ./bin/start-dev.sh
+    </pre>
+  </div>
+
+  <h2>Style guide</h2>
+  <div class="indent">
+    <p>
+      You can read more about this on <a href="https://github.com/os-js/OS.js/wiki/Style-guide">wiki</a>.
+    </p>
+  </div>
+
+  <h2>Code locations</h2>
+  <div class="indent">
+    <pre>
+src/client/javascript             # Client JavaScript
+src/client/stylesheets            # Client Stylesheets
+src/client/themes                 # Client theme resources
+src/server/node                   # Server code
+src/packages                      # Package sources (applications)
+src/conf                          # Configuration files
+src/build.js                      # Build system codebase
+Gruntfile.js                      # Build system setup
+bin                               # General scripts
+doc                               # General documentation
+dist                              # Production build output
+dist-dev                          # Development environment
+    </pre>
+  </div>
+
+
+  <h2>Using the build system</h2>
+  <div class="indent">
+    <p>
+      More information about this in the <a href="/doc/manuals/man-build-grunt.html">build manual</a>.
+    </p>
+  </div>
+
+  <h2>Getting started with development</h2>
+  <p>
+    You can look at the <a href="/doc/tutorials/">tutorials</a>, to get started creating your own apps and extensions.
+  </p>
+
+</div>
 
 
       <div class="adddshere">
