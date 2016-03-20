@@ -88,25 +88,21 @@
     <p>
       You can add it directly to index.html by modifying <pre>src/templates/dist/default/index.html</pre> then run:
     </p>
-    <pre class="code">
-grunt dist-files
-    </pre>
+    <pre class="code">grunt dist-files</pre>
   </div>
 
   <h2>Add to build</h2>
   <div class="indent">
     <p>
-      You can also put it into <pre>dist/vendor</pre> then modify <pre>src/conf/200-compile.json</pre> and run:
+      You can also put it into <pre>vendor</pre> then modify <pre>src/conf/200-compile.json</pre> and run:
     </p>
-    <pre class="code">
-grunt core dist-files
-    </pre>
+    <pre class="code">grunt core dist-files</pre>
   </div>
 
   <h2>Add to boot</h2>
   <div class="indent">
     <p>
-      You can also load it dynamically via config (ex) <pre>src/conf/900-custom.json</pre>
+      You can also load it dynamically via config (ex) <pre>src/conf/900-custom.json</pre>:
     </p>
     <pre>
 {
@@ -114,7 +110,7 @@ grunt core dist-files
     "Preloads": {
       "MyPreloadName": [
         {"type": "javascript", "src": "local/script/file.js"},
-        {"type": "stylesheet", "src": "/local/stylesheet.css"},
+        {"type": "stylesheet", "src": "/vendor/stylesheet.css"},
         {"type": "javascript", "src": "http://external/javascript/file.js"}
       ]
     }
@@ -124,9 +120,10 @@ grunt core dist-files
     <p>
       Then run:
     </p>
-    <pre class="code">
-grunt config
-    </pre>
+    <pre class="code">grunt config</pre>
+    <p>
+      <i>It is prefered that you store the files in your "dist/vendor" folder and load them from there</i>.
+    </p>
   </div>
 
   <h2>Add to your package</h2>
@@ -134,9 +131,10 @@ grunt config
     <p>
       If you only want to use it in your app, just add it to the "preload" section of your <pre>src/packages/REPO/NAME/metadata.json</pre> file (example above, and below), and run:
     </p>
-    <pre class="code">
-grunt manifest packages:REPO/NAME
-    </pre>
+    <pre class="code">grunt manifest packages:REPO/NAME</pre>
+    <p>
+      <i>It is prefered that you store the files in your app folder and load them from there</i>.
+    </p>
   </div>
 
   <h2>Load via JavaScript</h2>
@@ -144,19 +142,15 @@ grunt manifest packages:REPO/NAME
     <p>
       You can also include files without touching the build system or template files programatically:
     </p>
-    <pre class="code">
-
-var list = [
+    <pre class="code">var list = [
   {type: 'javascript', src: 'local/script/file.js'},
-  {type: 'stylesheet', src: '/local/stylesheet.css'},
+  {type: 'stylesheet', src: '/vendor/stylesheet.css'},
   {type: 'javascript', src: 'http://external/javascript/file.js'}
 ];
 
 Utils.preload(list, function() {
   /* done */
-});
-
-    </pre>
+});</pre>
   </div>
 
 </div>
