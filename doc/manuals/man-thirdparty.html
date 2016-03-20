@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Multi-user and authentication - OS.js Documentation</title>
+    <title>Adding 3rd party content - OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Multi-user and authentication" />
+    <meta name="description" content="OS.js -- Adding 3rd party content" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -77,55 +77,88 @@
 
     <content>
 
-<h1>Multi-user and authentication</h1>
-<p>
-  OS.js supports <i>multiple user environments</i> and <i>authentication</i>.
-</p>
-
-<h2>Included handlers</h2>
-<div class="indent">
-
+<h1>Adding 3rd party content</h1>
+<div>
   <p>
-    The <i>Handler</i> is what handles authentication and other sets of user functions. You can <a href="/doc/tutorials/create-handler.html">create your own</a>, or use one of the included ones:
+    You have a couple of choices, depending on your situation:
   </p>
 
-  <h3>Demo (demo)</h3>
-  <p>
-    The default handler. Does not have any authentication and the user data lives entirely within the browser (except VFS files). This means that if a user clears the browser cache, all data is lost.
-  </p>
+  <h2>Add to template</h2>
+  <div class="indent">
+    <p>
+      You can add it directly to index.html by modifying <pre>src/templates/dist/default.index.html</pre> then run:
+    </p>
+    <pre class="code">
+grunt dist-files
+    </pre>
+  </div>
 
-  <h3>Mysql (mysql)</h3>
-  <p>
-    Handles authentication via mysql. This is more of an example/template, but can be used out of the box for a simple multi-user environment.
-  </p>
-  <p>
-    You need the <b>node-mysql</b> node module.
-  </p>
-  <p>
-    More <a href="https://github.com/os-js/OS.js/blob/master/doc/handler-mysql.md">information here</a> about setup and usage.
-  </p>
+  <h2>Add to build</h2>
+  <div class="indent">
+    <p>
+      You can also put it into <pre>dist/vendor</pre> then modify <pre>src/conf/200-compile.json</pre> and run:
+    </p>
+    <pre class="code">
+grunt core dist-files
+    </pre>
+  </div>
 
-  <h3>PAM (pam)</h3>
-  <p>
-    PAM is the default athentication for many Linux and BSD systems. OS.js supports logging in this way and store the userdata in users home-directory (under .osjs).
-  </p>
-  <p>
-    You need the <b>authenticate-pam</b> node module.
-  </p>
-  <p>
-    More <a href="https://github.com/os-js/OS.js/blob/master/doc/handler-pam.md">information here</a> about setup and usage.
-  </p>
-
-  <h2>Choosing a handler</h2>
-
-  <p>
-    Simply change the <a href="/doc/manuals/man-configuration.html">configuration</a>.
-  </p>
-  <pre class="code">
-grunt config:set:handler:handler-name
+  <h2>Add to boot</h2>
+  <div class="indent">
+    <p>
+      You can also load it dynamically via config (ex) <pre>src/conf/900-custom.json</pre>
+    </p>
+    <pre>
+{
+  "client": {
+    "Preloads": {
+      "MyPreloadName": [
+        {"type": "javascript", "src": "local/script/file.js"},
+        {"type": "stylesheet", "src": "/local/stylesheet.css"},
+        {"type": "javascript", "src": "http://external/javascript/file.js"}
+      ]
+    }
+  }
+}
+    </pre>
+    <p>
+      Then run:
+    </p>
+    <pre class="code">
 grunt config
-grunt dist # if you use 'dist' (production)
-  </pre>
+    </pre>
+  </div>
+
+  <h2>Add to your package</h2>
+  <div class="indent">
+    <p>
+      If you only want to use it in your app, just add it to the "preload" section of your <pre>src/packages/REPO/NAME/metadata.json</pre> file (example above, and below), and run:
+    </p>
+    <pre class="code">
+grunt manifest packages:REPO/NAME
+    </pre>
+  </div>
+
+  <h2>Load via JavaScript</h2>
+  <div class="indent">
+    <p>
+      You can also include files without touching the build system or template files programatically:
+    </p>
+    <pre class="code">
+
+var list = [
+  {type: 'javascript', src: 'local/script/file.js'},
+  {type: 'stylesheet', src: '/local/stylesheet.css'},
+  {type: 'javascript', src: 'http://external/javascript/file.js'}
+];
+
+Utils.preload(list, function() {
+  /* done */
+});
+
+    </pre>
+  </div>
+
 </div>
 
 
