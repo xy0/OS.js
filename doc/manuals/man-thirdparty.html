@@ -102,7 +102,7 @@
   <h2>Add to boot</h2>
   <div class="indent">
     <p>
-      You can also load it dynamically via config (ex) <pre>src/conf/900-custom.json</pre>:
+      You can also load it dynamically via config (ex) <pre>src/conf/900-custom.json</pre>
     </p>
     <pre>
 {
@@ -129,8 +129,17 @@
   <h2>Add to your package</h2>
   <div class="indent">
     <p>
-      If you only want to use it in your app, just add it to the "preload" section of your <pre>src/packages/REPO/NAME/metadata.json</pre> file (example above, and below), and run:
+      If you only want to use it in your app, just add it to the "preload" section of your <pre>src/packages/REPO/NAME/metadata.json</pre> file:
     </p>
+    <pre>
+{
+  "preload": [
+      {"type": "javascript", "src": "./app-script.js"},
+      {"type": "stylesheet", "src": "/vendor/stylesheet.css"},
+      {"type": "javascript", "src": "http://external/javascript/file.js"}
+  ]
+}
+    </pre>
     <pre class="code">grunt manifest packages:REPO/NAME</pre>
     <p>
       <i>It is prefered that you store the files in your app folder and load them from there</i>.
