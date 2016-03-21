@@ -107,8 +107,7 @@ VFS.read(path, function(err, res) {
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-write">API documentation</a>
     </p>
-    <pre class="code">
-// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
+    <pre class="code">// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
 VFS.write(path, data, function(err, res) {
   if ( err || !res ) {
     alert(err || 'Failed to write file');
@@ -116,8 +115,7 @@ VFS.write(path, data, function(err, res) {
   }
 
   // Success!
-}, {/* options */});
-    </pre>
+}, {/* options */});</pre>
   </div>
 
   <h2>Copy a File</h2>
@@ -125,16 +123,14 @@ VFS.write(path, data, function(err, res) {
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-copy">API documentation</a>
     </p>
-    <pre class="code">
-VFS.copy(src, dest, function(err, res) {
+    <pre class="code">VFS.copy(src, dest, function(err, res) {
   if ( err || !res ) {
     alert(err || 'Failed to copy file');
     return;
   }
 
   // Success!
-}, {/* options */});
-    </pre>
+}, {/* options */});</pre>
   </div>
 
   <h2>Scan a directory</h2>
@@ -142,16 +138,14 @@ VFS.copy(src, dest, function(err, res) {
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-scandir">API documentation</a>
     </p>
-    <pre class="code">
-VFS.scandir(path, function(err, res) {
+    <pre class="code">VFS.scandir(path, function(err, res) {
   if ( err ) {
     alert(err);
     return;
   }
 
   console.log(res); // A list of 'VFS.File' instances
-}, {/* options */});
-    </pre>
+}, {/* options */});</pre>
   </div>
 
 </div>
