@@ -65,6 +65,7 @@
 <li><a href="#element-get">get()</a></li>
 <li><a href="#element-fn">fn()</a></li>
 <li><a href="#element-append">append()</a></li>
+<li><a href="#element-appendhtml">appendHTML()</a></li>
 <li><a href="#element-queryselector">querySelector()</a></li>
 <li><a href="#element-queryselectorall">querySelectorAll()</a></li>
 </ul>
@@ -309,6 +310,49 @@ Appends a childNode to this element
 <td>el</td>
 <td>Mixed</td>
 <td>DOMEelement or UIElement</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-method" id="element-appendhtml">
+<h3 id="element-appendhtml-html-scheme-win-args-">Element::appendHTML(html, scheme, win, args)</h3>
+<pre>
+Appends (and builds) HTML into the node
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>html</td>
+<td>String</td>
+<td>HTML code</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>OSjs.GUI.Scheme</td>
+<td>(Optional) Reference to the Scheme</td>
+</tr>
+<tr>
+<td>win</td>
+<td>OSjs.Core.Window</td>
+<td>(Optional) Reference to the Window</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Object</td>
+<td>(Optional) List of arguments to send to the parser</td>
 </tr>
 </tbody>
 </table>

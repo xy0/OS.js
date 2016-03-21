@@ -71,6 +71,7 @@
 <li><a href="#scheme-has">has()</a></li>
 <li><a href="#scheme-get">get()</a></li>
 <li><a href="#scheme-gethtml">getHTML()</a></li>
+<li><a href="#scheme-parsenode">parseNode()</a></li>
 </ul>
 </li>
 </ul>
@@ -556,6 +557,61 @@ Get HTML from Scheme
 
 
 
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>String</u></p>
+
+</div>
+<div class="section-method" id="scheme-parsenode">
+<h3 id="scheme-parsenode-scheme-win-node-args-onparse-id-">Scheme::parseNode(scheme, win, node, args, onparse, id)</h3>
+<pre>
+Parses the given HTML node and makes OS.js compatible markup
+
+PLEASE NOTE THAT THIS METHOD IS STATIC!
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scheme</td>
+<td>OSjs.GUI.Scheme</td>
+<td>Reference to the Scheme</td>
+</tr>
+<tr>
+<td>win</td>
+<td>OSjs.Core.Window</td>
+<td>Reference to the Window</td>
+</tr>
+<tr>
+<td>node</td>
+<td>DOMElement</td>
+<td>The HTML node to parse</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Object</td>
+<td>List of arguments to send to the parser</td>
+</tr>
+<tr>
+<td>onparse</td>
+<td>Function</td>
+<td>Method to signal when parsing has started</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Mixed</td>
+<td>(Optional) The id of the source (for debugging)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>String</u></p>
 
