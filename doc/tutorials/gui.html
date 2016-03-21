@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>GUI System - OS.js Documentation</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="OS.js -- GUI System" />
+    <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
+    <link rel="author" href="https://plus.google.com/101576798387217383063" />
+    <link rel="publisher" href="https://plus.google.com/101576798387217383063" />
+
+    <script type="text/javascript">
+      if ( window.location.hostname === 'andersevenrud.github.io' ) {
+        window.location = '//os.js.org' + window.location.pathname.replace(/\/OS\.js-v2/, '');
+      }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link href="/stylesheets/codex.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <img alt="" src="/images/doc/logo.png" />
+      <ul>
+        <li><a href="/doc/">Index</a></li>
+        <li><a href="/doc/client/">Client API</a></li>
+        <li><a href="/doc/server/">Server API</a></li>
+        <li><a href="/doc/manuals/">Manuals</a></li>
+        <li><a href="/doc/tutorials/">Tutorials</a></li>
+      </ul>
+    </header>
+
+    <nav>
+      <h2>Index</h2>
+
+
+      <b>Development Tutorials</b>
+      <ul>
+        <li><a href="/doc/tutorials/create-application.html">Create an Application (setup)</a></li>
+        <li><a href="/doc/tutorials/create-application-continued.html">Create an Application (continued)</a></li>
+        <li><a href="/doc/tutorials/application-with-server-api.html">Create an Application with server API</a></li>
+        <li><a href="/doc/tutorials/iframe-application.html">Create an IFrame Application</a></li>
+        <li><a href="/doc/tutorials/create-extension.html">Create an Extension</a></li>
+        <li><a href="/doc/tutorials/create-service.html">Create a Service</a></li>
+        <li><a href="/doc/tutorials/create-theme.html">Create a Theme</a></li>
+        <li><a href="/doc/tutorials/create-panelitem.html">Create a Panel Item</a></li>
+        <li><a href="/doc/tutorials/create-handler.html">Create a Handler</a></li>
+      </ul>
+
+      <b>Development Other</b>
+      <ul>
+        <li><a href="/doc/tutorials/using-curl.html">Using cURL</a></li>
+        <li><a href="/doc/tutorials/using-vfs.html">Using VFS</a></li>
+        <li><a href="/doc/tutorials/extend-client-api.html">Extend Client API</a></li>
+        <li><a href="/doc/tutorials/gui.html">GUI</a></li>
+      </ul>
+
+
+    </nav>
+
+
+    <content>
+
+<h1>GUI</h1>
+<div>
+  <p>
+  </p>
+
+  <h2>Rendering a template</h2>
+  <div class="indent">
+    <pre class="code">
+var url = 'YOUR URL HERE';
+var win = /* Your Window Here */;
+var parentElement = /* Root DOM element to append to (win._$content is default) */;
+
+var scheme = GUI.createScheme(url);
+scheme.load(function(error, scheme) {
+  scheme.render(win, 'AboutWindow', parentElement);
+});
+    </pre>
+  </div>
+
+  <h2>Creating elements programatically</h2>
+  <div class="indent">
+    <pre class="code">
+scheme.create(win, 'gui-element-name', {
+  parameter: 'value'
+}, parentElement);
+    </pre>
+  </div>
+
+  <h2>Available Elements</h2>
+  <div class="indent">
+    <h3>Containers</h3>
+    <div>
+      <h4>gui-vbox</h4>
+      <div class="gui-element">
+        <p>
+          A container with vertical (rows) that you can shrink/expand, also make content expand or fill.
+        </p>
+        <p>
+          <img alt="gui-vbox" src="/images/gui/gui-vbox.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-vbox-container</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguicontainersjs.html#osjs-gui-elements-gui-vbox">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-hbox</h4>
+      <div class="gui-element">
+        <p>
+          A container with horizontal (columns) that you can shrink/expand, also make content expand or fill.
+        </p>
+        <p>
+          <img alt="gui-hbox" src="/images/gui/gui-hbox.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-hbox-container</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguicontainersjs.html#osjs-gui-elements-gui-hbox">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-paned-view</h4>
+      <div class="gui-element">
+        <p>
+          A container that works like a vbox/hbox, only you can resize the containers with a handle.
+        </p>
+        <p>
+          <img alt="gui-paned-view" src="/images/gui/gui-paned-view.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-paned-view-container</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguicontainersjs.html#osjs-gui-elements-gui-paned-view">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-tabs</h4>
+      <div class="gui-element">
+        <p>
+          A tabbed container.
+        </p>
+        <p>
+          <img alt="gui-tabs" src="/images/gui/gui-tabs.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-tab-container</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguitabsjs.html#osjs-gui-elements-gui-tabs">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-toolbar</h4>
+      <div class="gui-element">
+        <p>
+          A container for holding buttons, etc.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>all</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguicontainersjs.html#osjs-gui-elements-toolbar">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-button-bar</h4>
+      <div class="gui-element">
+        <p>
+          Works like a toolbar, but is made for holding buttons with user-defined position(s).
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>all</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguicontainersjs.html#osjs-gui-elements-button-bar">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+    </div>
+
+    <h3>Media</h3>
+    <div>
+      <h4>gui-image</h4>
+      <div class="gui-element">
+        <p>
+          A normal image.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguivisualjs.html#osjs-gui-elements-gui-image">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-canvas</h4>
+      <div class="gui-element">
+        <p>
+          A paintable image (no actual painting included)
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguivisualjs.html#osjs-gui-elements-gui-canvas">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-audio</h4>
+      <div class="gui-element">
+        <p>
+          Play sounds or music.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguivisualjs.html#osjs-gui-elements-gui-audio">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-video</h4>
+      <div class="gui-element">
+        <p>
+          Display a video.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguivisualjs.html#osjs-gui-elements-gui-video">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-iframe</h4>
+      <div class="gui-element">
+        <p>
+          Include external content with an iframe.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+      </div>
+
+    <h3>Input</h3>
+    <div>
+      <h4>gui-label</h4>
+      <div class="gui-element">
+        <p>
+          Display a normal text label.
+        </p>
+        <p>
+          <img alt="gui-label" src="/images/gui/gui-label.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-label">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-button</h4>
+      <div class="gui-element">
+        <p>
+          A button made for clicking!
+        </p>
+        <p>
+          <img alt="gui-button" src="/images/gui/gui-button.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-button">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-switch</h4>
+      <div class="gui-element">
+        <p>
+          A button, but works more like a light-switch.
+        </p>
+        <p>
+          <img alt="gui-switch" src="/images/gui/gui-switch.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-switch">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-radio</h4>
+      <div class="gui-element">
+        <p>
+          A radio button.
+        </p>
+        <p>
+          <img alt="gui-radio" src="/images/gui/gui-radio.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-radio">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-checkbox</h4>
+      <div class="gui-element">
+        <p>
+          A checbox.
+        </p>
+        <p>
+          <img alt="gui-checkbox" src="/images/gui/gui-checkbox.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-checkbox">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-select</h4>
+      <div class="gui-element">
+        <p>
+          A dropdown input.
+        </p>
+        <p>
+          <img alt="gui-select" src="/images/gui/gui-select.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-select">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-select-list</h4>
+      <div class="gui-element">
+        <p>
+          A selectable list.
+        </p>
+        <p>
+          <img alt="gui-select-list" src="/images/gui/gui-select-list.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-select-list">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-slider</h4>
+      <div class="gui-element">
+        <p>
+          A slider for giving a variable input.
+        </p>
+        <p>
+          <img alt="gui-slider" src="/images/gui/gui-slider.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-slider">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-text</h4>
+      <div class="gui-element">
+        <p>
+          A text entry box.
+        </p>
+        <p>
+          <img alt="gui-text" src="/images/gui/gui-text.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-text">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-password</h4>
+      <div class="gui-element">
+        <p>
+          A password entry box.
+        </p>
+        <p>
+          <img alt="gui-password" src="/images/gui/gui-password.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-password">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-textarea</h4>
+      <div class="gui-element">
+        <p>
+          A big text entry area.
+        </p>
+        <p>
+          <img alt="gui-textarea" src="/images/gui/gui-textarea.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-textarea">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-richtext</h4>
+      <div class="gui-element">
+        <p>
+          A big text entry area, with support for HTML.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguirichtextjs.html#osjs-gui-elements-gui-richtext">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+    </div>
+
+    <h3>Views</h3>
+    <div>
+      <h4>gui-tree-view</h4>
+      <div class="gui-element">
+        <p>
+          A view with tree display (nested).
+        </p>
+        <p>
+          <img alt="gui-tree-view" src="/images/gui/gui-tree-view.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguitreeviewjs.html#osjs-gui-elements-gui-tree-view">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-icon-view</h4>
+      <div class="gui-element">
+        <p>
+          A view with icon display.
+        </p>
+        <p>
+          <img alt="gui-icon-view" src="/images/gui/gui-icon-view.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiiconviewjs.html#osjs-gui-elements-gui-icon-view">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-list-view</h4>
+      <div class="gui-element">
+        <p>
+          A view with list display.
+        </p>
+        <p>
+          <img alt="gui-list-view" src="/images/gui/gui-list-view.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguilistviewjs.html#osjs-gui-elements-gui-list-view">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-file-view</h4>
+      <div class="gui-element">
+        <p>
+          A combination of all views above, with direct connection to the VFS. For file browsing.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguifileviewjs.html#osjs-gui-elements-gui-file-view">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+    </div>
+
+    <h3>Misc</h3>
+    <div>
+      <h4>gui-progressbar</h4>
+      <div class="gui-element">
+        <p>
+          A box for showing progress.
+        </p>
+        <p>
+          <img alt="gui-progress" src="/images/gui/gui-progress.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimiscjs.html#osjs-gui-elements-gui-progress-bar">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-color-swatch</h4>
+      <div class="gui-element">
+        <p>
+          A box for selecting colors from a palette.
+        </p>
+        <p>
+          <img alt="gui-color-swatch" src="/images/gui/gui-color-swatch.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimiscjs.html#osjs-gui-elements-gui-color-swatch">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-menu-bar</h4>
+      <div class="gui-element">
+        <p>
+          A bar for showing menus with.
+        </p>
+        <p>
+          <img alt="gui-menu-bar" src="/images/gui/gui-menu-bar.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-menu-bar-entry</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimenusjs.html#osjs-gui-elements-gui-menu-bar">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-menu</h4>
+      <div class="gui-element">
+        <p>
+          A menu box.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Supported Parents</td>
+              <td>gui-menu-bar-entry</td>
+            </tr>
+            <tr>
+              <td>Allowed Children</td>
+              <td>gui-menu-entry</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimenusjs.html#osjs-gui-elements-gui-menu">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-statusbar</h4>
+      <div class="gui-element">
+        <p>
+          A bar for showing statuses.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimiscjs.html#osjs-gui-elements-gui-statusbar">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-file-upload</h4>
+      <div class="gui-element">
+        <p>
+          Creates a button for uploading files.
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-file-upload">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-input-modal</h4>
+      <div class="gui-element">
+        <p>
+          A textbox with an attached button designed for bringing up dialogs to set values.
+        </p>
+        <p>
+          <img alt="gui-input-modal" src="/images/gui/gui-input-modal.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguiinputsjs.html#osjs-gui-elements-gui-input-modal">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+
+      <h4>gui-color-box</h4>
+      <div class="gui-element">
+        <p>
+          A button, but instead of text shows the color assigned.
+        </p>
+        <p>
+          <img alt="gui-color-box" src="/images/gui/gui-color-box.png" />
+        </p>
+        <table>
+          <tbody>
+            <tr>
+              <td>Allowed Children</td>
+              <td>none</td>
+            </tr>
+            <tr>
+              <td>API Reference</td>
+              <td><a href="/doc/client/srcclientjavascriptguimiscjs.html#osjs-gui-elements-gui-color-box">Overview</a></td>
+            </tr>
+          </tbody>
+        </table>
+       </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="adddshere">
+        <ins class="adsbygoogle"
+          style="display:inline-block;width:100%;height:250px"
+          data-ad-client="ca-pub-6145716264521226"
+          data-ad-slot="3789905596"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      </div>
+
+
+    </content>
+
+
+    <footer>
+      <img alt="" src="/images/logo-footer.png" />
+      <p>
+        OS.js &copy; Anders Evenrud 2011-2016
+        <br />
+        Hosting by Github
+      </p>
+    </footer>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-46087265-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'os-js/OS.js'
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+
+
+  </body>
+</html>

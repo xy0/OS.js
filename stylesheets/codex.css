@@ -205,3 +205,18 @@ table.manual pre {
   margin : 5px;
   padding : 5px;
 }
+
+.gui-element {
+  background : #e6e6e6;
+  padding : 20px;
+  margin-left : 20px;
+}
+.gui-element table {
+  background : #eee;
+}
+.gui-element tr > td:first-child {
+  font-weight : bold;
+}
+.gui-element td {
+  padding : 5px;
+}
