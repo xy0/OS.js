@@ -97,6 +97,9 @@ VFS.read(path, function(err, res) {
   console.log(res); // The file data
 }, {/* options */});
     </pre>
+    <p>
+      <i>NOTE: If you don't specify the 'type' option this function will return an ArrayBuffer by default</i>
+    </p>
   </div>
 
   <h2>Writing a File</h2>
