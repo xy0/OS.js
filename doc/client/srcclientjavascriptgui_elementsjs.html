@@ -56,6 +56,8 @@
 <li>
 <a href="#osjs-gui-element">Element</a> (OSjs.GUI.Element)
 <ul>
+<li><a href="#element-remove">remove()</a></li>
+<li><a href="#element-empty">empty()</a></li>
 <li><a href="#element-blur">blur()</a></li>
 <li><a href="#element-focus">focus()</a></li>
 <li><a href="#element-show">show()</a></li>
@@ -89,6 +91,30 @@ Base UIElement Class
 <li>OSjs.GUI.Element</li>
 </ul>
 
+<div class="section-method" id="element-remove">
+<h3 id="element-remove-">Element::remove()</h3>
+<pre>
+Removes element from the DOM
+</pre>
+
+
+
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-method" id="element-empty">
+<h3 id="element-empty-">Element::empty()</h3>
+<pre>
+Empties the DOM element
+</pre>
+
+
+
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Element</u> <em>this</em></p>
+
+</div>
 <div class="section-method" id="element-blur">
 <h3 id="element-blur-">Element::blur()</h3>
 <pre>
@@ -361,7 +387,7 @@ Appends (and builds) HTML into the node
 
 </div>
 <div class="section-method" id="element-queryselector">
-<h3 id="element-queryselector-q-">Element::querySelector(q)</h3>
+<h3 id="element-queryselector-q-rui-">Element::querySelector(q, rui)</h3>
 <pre>
 Perform `querySelector`
 </pre>
@@ -382,6 +408,11 @@ Perform `querySelector`
 <td>String</td>
 <td>Query</td>
 </tr>
+<tr>
+<td>rui</td>
+<td>boolean</td>
+<td>Return UI Element if possible (default=false)</td>
+</tr>
 </tbody>
 </table>
 <h4 id="returns">Returns</h4>
@@ -389,7 +420,7 @@ Perform `querySelector`
 
 </div>
 <div class="section-method" id="element-queryselectorall">
-<h3 id="element-queryselectorall-q-">Element::querySelectorAll(q)</h3>
+<h3 id="element-queryselectorall-q-rui-">Element::querySelectorAll(q, rui)</h3>
 <pre>
 Perform `querySelectorAll`
 </pre>
@@ -409,6 +440,11 @@ Perform `querySelectorAll`
 <td>q</td>
 <td>String</td>
 <td>Query</td>
+</tr>
+<tr>
+<td>rui</td>
+<td>boolean</td>
+<td>Return UI Element if possible (default=false)</td>
 </tr>
 </tbody>
 </table>
