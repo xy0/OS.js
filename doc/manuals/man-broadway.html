@@ -84,28 +84,24 @@
 <p>This is not yet ready for production: <a href="https://github.com/os-js/OS.js/issues/29">Github issue</a></p>
 
 <h2>Enable and build</h2>
-<pre class="code">
-# Enable package
+<pre class="code"># Enable package
 grunt packages:enable:Broadway
 
 # If you run 'dist'
 grunt dist
 
 # If you run 'dist-dev'
-grunt config manifest # or simply dist-dev
-</pre>
+grunt config manifest # or simply dist-dev</pre>
 
 <h2>Prepare X server</h2>
 
 <p>
   Run these commands on the server:
 </p>
-<pre class="code">
-cd Broadway/vendor/
+<pre class="code">cd Broadway/vendor/
 npm install
 xhost +
-./broadway-server.sh
-</pre>
+./broadway-server.sh</pre>
 
 <h2>Usage</h2>
 <p>

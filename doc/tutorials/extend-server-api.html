@@ -83,8 +83,7 @@
 </ol>
 
 <h3>metadata.json</h3>
-<pre class="code">
-{
+<pre class="code">{
   "className": "ExtensionMyModule",
   "type": "extension",
   "build": {
@@ -96,13 +95,10 @@
   },
   "sources": [
   ]
-}
-</pre>
+}</pre>
 
 <h3>Node: api.js</h3>
-<pre class="code">
-
-(function() {
+<pre class="code">(function() {
 
   exports.register = function(API, VFS, instance) {
     API.myMethodName = function(args, callback, request, response) {
@@ -110,23 +106,17 @@
     };
   };
 
-})();
-
-</pre>
+})();</pre>
 
 <h3>PHP: api.php</h3>
 
-<pre class="code">
-
-class MyModuleAPI {
+<pre class="code">class MyModuleAPI {
   public static function myMethodName(Array $arguments) {
     return Array(false, false);
   }
 }
 
-API::AddHandler('myMethodName', Array('MyModuleAPI', 'myMethodName'));
-
-</pre>
+API::AddHandler('myMethodName', Array('MyModuleAPI', 'myMethodName'));</pre>
 
 
       <div class="adddshere">

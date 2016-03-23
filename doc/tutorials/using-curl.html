@@ -75,7 +75,7 @@
   <h2>Examples</h2>
   <div class="indent">
     <p>A typical response would look like:</p>
-    <pre class="code">
+    <pre>
 {
   httpCode: -1,
   body: ''
@@ -85,32 +85,24 @@
   <h3>GET request</h3>
   <div class="indent">
 
-    <pre class="code">
-
-API.curl({
+    <pre class="code">API.curl({
   url: 'http://your-url-here',
   method: 'GET'
 }, function(error, response) {
   console.log(response.body); // What you get back
-});
-
-    </pre>
+});</pre>
   </div>
 
   <h3>POST request</h3>
   <div class="indent">
 
-    <pre class="code">
-
-API.curl({
+    <pre class="code">API.curl({
   url: 'http://your-url-here',
   method: 'POST',
   query: 'HELLO FROM OS.js'
 }, function(error, response) {
   console.log(response.body); // What you get back
-});
-
-    </pre>
+});</pre>
   </div>
 
   <h3>POST request w/JSON</h3>
@@ -119,9 +111,7 @@ API.curl({
     <p>
       The format will automatically be detected
     </p>
-    <pre class="code">
-
-API.curl({
+    <pre class="code">API.curl({
   url: 'http://your-url-here',
   method: 'POST',
   query: {
@@ -129,32 +119,24 @@ API.curl({
   }
 }, function(error, response) {
   console.log(response.body); // What you get back
-});
-
-    </pre>
+});</pre>
   </div>
 
   <h3>Handling Binary Data</h3>
   <div class="indent">
-    <pre class="code">
-
-API.curl({
+    <pre class="code">API.curl({
   url: 'http://your-url-here/some-file.png',
   method: 'GET',
   binary: true,
   mime: 'image/png'
 }, function(error, response) {
   console.log(response.body); // A binary representation
-});
-
-    </pre>
+});</pre>
   </div>
 
   <h3>Sending Custom Headers</h3>
   <div class="indent">
-    <pre class="code">
-
-API.curl({
+    <pre class="code">API.curl({
   url: 'http://your-url-here/',
   method: 'GET',
   headers: {
@@ -163,9 +145,7 @@ API.curl({
   }
 }, function(error, response) {
   console.log(response.body); // What you get back
-});
-
-    </pre>
+});</pre>
   </div>
 </div>
 

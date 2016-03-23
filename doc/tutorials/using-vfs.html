@@ -87,16 +87,14 @@ var path = new VFS.File('home:///file.txt');
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-read">API documentation</a>
     </p>
-    <pre class="code">
-VFS.read(path, function(err, res) {
+    <pre class="code">VFS.read(path, function(err, res) {
   if ( err ) {
     alert(err);
     return;
   }
 
   console.log(res); // The file data
-}, {/* options */});
-    </pre>
+}, {/* options */});</pre>
     <p>
       <i>NOTE: If you don't specify the 'type' option this function will return an ArrayBuffer by default</i>
     </p>

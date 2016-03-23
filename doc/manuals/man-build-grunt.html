@@ -121,19 +121,13 @@
   <p>
     Create a new handler.
   </p>
-  <pre class="code">
-
-  grunt create-handler:Test
-
-  </pre>
+  <pre class="code">grunt create-handler:Test</pre>
 
   <h3>create-package</h3>
   <p>
     Create a new package.
   </p>
-  <pre class="code">
-
-  # Create normal application
+  <pre class="code"># Create normal application
   grunt create-package:PACKAGENAME
   grunt create-package:REPONAME/PACKAGENAME
 
@@ -144,9 +138,7 @@
   grunt create-package:PACKAGENAME:service
 
   # Create a extension
-  grunt create-package:PACKAGENAME:extension
-
-  </pre>
+  grunt create-package:PACKAGENAME:extension</pre>
 
   <h3>dist-files</h3>
   <p>
@@ -161,9 +153,7 @@
   <p>
     Build and modify config files for server and client.
   </p>
-  <pre class="code">
-
-# Set a config value
+  <pre class="code"># Set a config value
 grunt config:set:PATH:VALUE
 grunt config:set:client.Locale:en_EN
 
@@ -184,17 +174,13 @@ grunt config:add-repository:NAME
 grunt config:remove-repository:NAME
 
 # Rebuild config files
-grunt config
-
-  </pre>
+grunt config</pre>
 
   <h3>packages</h3>
   <p>
     Builds all packages in src/packages to dist/
   </p>
-  <pre class="code">
-
-# Builds all packages
+  <pre class="code"># Builds all packages
 grunt packages
 
 # Builds spesific package
@@ -204,9 +190,7 @@ grunt packages:REPONAME/PACKAGENAME
 grunt packages:enable:REPONAME/PACKAGENAME
 
 # Disables given package
-grunt packages:disable:REPONAME/PACKAGENAME
-
-  </pre>
+grunt packages:disable:REPONAME/PACKAGENAME</pre>
 
   <h3>manifest</h3>
   <p>
@@ -231,15 +215,11 @@ grunt packages:disable:REPONAME/PACKAGENAME
   <p>
     Build a standalone version of dist/ into .standalone.
   </p>
-  <pre class="code">
-
-# Normal
+  <pre class="code"># Normal
 grunt standalone
 
 # For NW.js
-grunt standalone:nw
-
-  </pre>
+grunt standalone:nw</pre>
 
   <h3>nw</h3>
   <p>

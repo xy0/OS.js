@@ -74,13 +74,11 @@
     <p>
       Simply copy the default theme and modify how you want it:
     </p>
-    <pre>
-cp -r src/themes/styles/default src/themes/styles/mytheme
+    <pre class="code">cp -r src/themes/styles/default src/themes/styles/mytheme
 edit src/themes/styles/mytheme/metadata.json
 edit src/themes/styles/mytheme/style.less
 edit src/conf/112-themes.json # Or https://os.js.org/doc/manuals/man-configuration.html
-grunt config themes:styles:mytheme
-    </pre>
+grunt config themes:styles:mytheme</pre>
     <p>
       Then update the theme manifest and LESS manually
     </p>
@@ -91,12 +89,10 @@ grunt config themes:styles:mytheme
     <p>
       Simply copy the default theme and modify how you want it (remember to change the manifest file):
     </p>
-    <pre>
-cp -r src/themes/icons/default src/themes/icons/mytheme
+    <pre class="code">cp -r src/themes/icons/default src/themes/icons/mytheme
 edit src/themes/icons/mytheme/metadata.json
 edit src/conf/112-themes.json # Or https://os.js.org/doc/manuals/man-configuration.html
-grunt config themes:resources
-    </pre>
+grunt config themes:resources</pre>
   </div>
 
   <h2>Create your own Sound theme</h2>
@@ -104,12 +100,10 @@ grunt config themes:resources
     <p>
       Simply copy the default theme and modify how you want it (remember to change the manifest file):
     </p>
-    <pre>
-cp -r src/themes/sounds/default src/themes/sound/mytheme
+    <pre class="code">cp -r src/themes/sounds/default src/themes/sound/mytheme
 edit src/themes/sound/mytheme/metadata.json
 edit src/conf/112-themes.json # Or https://os.js.org/doc/manuals/man-configuration.html
-grunt config themes:resources
-    </pre>
+grunt config themes:resources</pre>
   </div>
 
 
@@ -118,10 +112,8 @@ grunt config themes:resources
     <p>
       Just add your fonts in a sub-folder like <b>Karla</b>. Then update the included stylesheet with correct name(s).
     </p>
-    <pre>
-edit src/conf/112-themes.json # Or https://os.js.org/doc/manuals/man-configuration.html
-grunt config themes:fonts
-    </pre>
+    <pre class="code">edit src/conf/112-themes.json # Or https://os.js.org/doc/manuals/man-configuration.html
+grunt config themes:fonts</pre>
   </div>
 </div>
 

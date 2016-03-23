@@ -86,30 +86,24 @@
 <p>
   First you need to <a href="https://www.dropbox.com/developers/apps">register an application</a>. Make sure to set your redirect URL to:
 </p>
-<pre class="code">
-http://your-host/vendor/dropboxOauthReceiver.html
-</pre>
+<pre>http://your-host/vendor/dropboxOauthReceiver.html</pre>
 
 <p>
   Dropbox support requires you to install an external repository:
 </p>
 
-<pre class="code">
-git clone https://github.com/dropbox/dropbox-js.git vendor/dropbox-js
+<pre class="code">git clone https://github.com/dropbox/dropbox-js.git vendor/dropbox-js
 
 # You may have to build dropbox.js manually before continuing
-# Windows users: You'd have to use resolve the symlinks in "dist/vendor"
-</pre>
+# Windows users: You'd have to use resolve the symlinks in "dist/vendor"</pre>
 
 <p>
   Simply update the configuration:
 </p>
-<pre class="code">
-grunt config:set:client.DropboxAPI.ClientKey:YOUR_CLIENT_KEY
+<pre class="code">grunt config:set:client.DropboxAPI.ClientKey:YOUR_CLIENT_KEY
 grunt config:set:client.VFS.Dropbox.Enabled:true
 grunt config:preload:dropbox:/vendor/dropbox.js
-grunt config
-</pre>
+grunt config</pre>
 
 
       <div class="adddshere">

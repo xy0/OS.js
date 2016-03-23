@@ -80,9 +80,7 @@
     <p>
       The entire GUI API is <a href="/doc/client/">documented</a> (scroll down in the left column until you reach the "GUI" section).
     </p>
-    <pre class="code">
-
-&lt;application-window data-id="MyNameWindow"&gt;
+    <pre class="code">&lt;application-window data-id="MyNameWindow"&gt;
 
   &lt;gui-vbox&gt;
     &lt;gui-vbox-container data-grow="0" data-shrink="1" data-basis="auto"&gt;
@@ -111,9 +109,7 @@
   &lt;/gui-vbox&gt;
 
 
-&lt;/application-window&gt;
-
-    </pre>
+&lt;/application-window&gt;</pre>
   </div>
 
 
@@ -122,9 +118,7 @@
     <p>
       In <i>main.js</i> you can add events and make interactions with the UI you just created. In this example we just handle some buttons and menus.
     </p>
-    <pre class="code">
-
-ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
+    <pre class="code">ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
   var self = this;
   var root = Window.prototype.init.apply(this, arguments);
 
@@ -152,9 +146,7 @@ ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
   });
 
   return root;
-};
-
-    </pre>
+};</pre>
   </div>
 
   <h2>More advanced examples</h2>

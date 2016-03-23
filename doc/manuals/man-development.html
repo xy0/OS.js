@@ -98,16 +98,14 @@
     <p>
       To install all utilities, do:
     </p>
-    <pre class="code">
-# Install all grunt tasks etc
+    <pre class="code"># Install all grunt tasks etc
 $ npm install --development
 
 # To automatically restart server when changes in codebase occur
 $ npm install -g supervisor
 
 # Unit testing support
-$ sudo npm install -g mocha
-    </pre>
+$ sudo npm install -g mocha</pre>
   </div>
 
   <h2>Running the development server</h2>
@@ -115,9 +113,7 @@ $ sudo npm install -g mocha
     <p>
       Just use the launcher:
     </p>
-    <pre class="code">
-$ ./bin/start-dev.sh
-    </pre>
+    <pre class="code">./bin/start-dev.sh</pre>
   </div>
 
   <h2>Style guide</h2>
@@ -128,16 +124,14 @@ $ ./bin/start-dev.sh
     <p>
       You can check your code style for "problems" by using automated tools:
     </p>
-    <pre class="code">
-# Check your javascript
+    <pre class="code"># Check your javascript
 grunt jshint jscs
 
 # Check your css
 grunt csslint
 
 # Check your schemes (html)
-grunt xml_validator
-    </pre>
+grunt xml_validator</pre>
   </div>
 
   <h2>Code locations</h2>
@@ -182,16 +176,18 @@ dist-dev                          # Development environment
     <p>
       You can reload and relaunch your application with:
     </p>
-    <pre class="code">
-OSjs.API.relaunch('MyApplicationClassName')
-    </pre>
+    <pre class="code">OSjs.API.relaunch('MyApplicationClassName')</pre>
+    <h3>Automatically restart server on changes</h3>
+    <p>
+      Run this grunt task to automatically restart server when codebase or configs changes (with exception of apps):
+    </p>
+    <pre class="code">grunt watch</pre>
+
     <h3>TEST ALL THE THINGS!</h3>
     <p>
       To run all tests on the code, just use:
     </p>
-    <pre class="code">
-grunt test
-    </pre>
+    <pre class="code">grunt test</pre>
   </div>
 
 </div>
