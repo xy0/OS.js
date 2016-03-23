@@ -116,11 +116,41 @@ $ sudo npm install -g mocha</pre>
     <pre class="code">./bin/start-dev.sh</pre>
   </div>
 
-  <h2>Style guide</h2>
+  <h2>How to contribute</h2>
   <div class="indent">
     <p>
-      You can read more about this on <a href="https://github.com/os-js/OS.js/wiki/Style-guide">wiki</a>.
+      If you want to contribute to the official codebase, this is a basic overview of all the steps:
     </p>
+    <ul>
+      <li>Create a <a href="https://github.com/">Github account</a>.</li>
+      <li><a href="https://github.com/os-js/OS.js#fork-destination-box">Fork OS.js to your account</a></li>
+      <li>Proceed to clone your repository on your computer</li>
+      <li>Create a <a href="rk">new branch</a> (ex: 'translate-turkish')</li>
+      <li>Make any changes you want. <b>Follow the style guide and test everything</b> (see below for more info).</li>
+      <li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository">Commit</a> any changes you have and <a href="https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes#Pushing-to-Your-Remotes">push them</a>.</li>
+      <li>Create a <a href="https://github.com/os-js/OS.js/compare">pull-request</a> on Github.</li>
+    </ul>
+    <p>
+      <i>Make sure that your commit messages are <a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">useful</a> and to the point.</i>.
+    </p>
+    <p>
+      If you make multiple commits regarding one feature, or bug, make sure to <a href="http://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit">squash</a> them.
+    </p>
+    <p>
+      <b>If you don't follow these rules or steps, your pull-request might be rejected</b>
+    </p>
+  </div>
+
+  <h2>Style guide</h2>
+  <div class="indent">
+    <ul>
+      <li>Use <b>UTF-8</b> for your file encoding</li>
+      <li>Use <b>2 spaces</b>, not <i>tabs</i> for indentation.</li>
+      <li><a href="https://github.com/os-js/OS.js/blob/master/src/client/javascript/vfs.js">Example JavaScript file</a></li>
+      <li><a href="https://github.com/os-js/OS.js/blob/master/src/client/stylesheets/core.css">Example CSS file</a></li>
+      <li><a href="https://github.com/os-js/OS.js/blob/master/src/client/dialogs.html">Example HTML file</a></li>
+      <li><a href="https://github.com/os-js/OS.js/blob/master/src/conf/110-client.json">Example JSON file</a></li>
+    </ul>
     <p>
       You can check your code style for "problems" by using automated tools:
     </p>
