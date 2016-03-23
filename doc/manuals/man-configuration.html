@@ -121,11 +121,7 @@
   <p>
     To build, simply run:
   </p>
-  <pre class="code">
-
-grunt
-
-  </pre>
+  <pre class="code">grunt</pre>
 
   <h3>Building spesific components</h3>
   <p>
@@ -150,17 +146,13 @@ grunt
   <p>
     See the <a href="/doc/manuals/man-build-grunt.html">configuration manual page</a> for full instructions.
   </p>
-  <pre class="code">
-
-# Basic examples
+  <pre class="code"># Basic examples
 
 grunt config:get:client.Connection.RootURI
 
 grunt config:set:client.Connection.RootURI:/custom/path
 
-grunt config # rebuild config files
-
-  </pre>
+grunt config # rebuild config files</pre>
 
 
   <h3>Manually</h3>
@@ -180,11 +172,33 @@ grunt config # rebuild config files
   <p>
     If you make any changes, issue this command to rebuild configuration files (not needed if you run "grunt watch"):
   </p>
-  <pre class="code">
+  <pre class="code">grunt config</pre>
+</div>
 
+<h2>Adding proxies</h2>
+<div class="indent">
+  <p>
+    You can proxy requests through OS.js webserver natively by simply adding a configuration.
+  </p>
+  <p>
+    Create a file called (ex) src/conf/900-proxies.json and add
+  </p>
+  <pre class="code">{
+  "server": {
+    "proxies": {
+      "/^\\/starts\\-with/": "http://remote-service/somewhere",
+      "match-only/": "http://localhost:5000/here"
+    }
+  }
+}</pre>
+  <p>
+    Then run:
+  </p>
+  <pre class="code"># For node server
 grunt config
 
-  </pre>
+# For php server behind apache (note that this does not generate regex rules yet)
+grunt apache-htaccess</pre>
 </div>
 
 
