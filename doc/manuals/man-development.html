@@ -161,7 +161,10 @@ grunt jshint jscs
 grunt csslint
 
 # Check your schemes (html)
-grunt xml_validator</pre>
+grunt xml_validator
+
+# Run server unit tests
+grunt mochaTest</pre>
   </div>
 
   <h2>Code locations</h2>
@@ -173,8 +176,13 @@ src/client/themes                 # Client theme resources
 src/server/node                   # Server code
 src/packages                      # Package sources (applications)
 src/conf                          # Configuration files
+src/templates                     # Templates for the build system
+src/gfx                           # Graphic sources
 src/build.js                      # Build system codebase
 Gruntfile.js                      # Build system setup
+vendor                            # Third party libraries etc.
+vfs                               # Default file storage paths (for users)
+test                              # Test files
 bin                               # General scripts
 doc                               # General documentation
 dist                              # Production build output
