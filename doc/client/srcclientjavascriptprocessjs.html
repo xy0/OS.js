@@ -63,6 +63,7 @@
 <ul>
 <li><a href="#process-destroy">destroy()</a></li>
 <li><a href="#process-_onmessage">_onMessage()</a></li>
+<li><a href="#process-_api">_api()</a></li>
 <li><a href="#process-_call">_call()</a></li>
 <li><a href="#process-_getargument">_getArgument()</a></li>
 <li><a href="#process-_getarguments">_getArguments()</a></li>
@@ -286,6 +287,53 @@ Placeholder for messages sendt via API
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
 
 </div>
+<div class="section-method" id="process-_api">
+<h3 id="process-_api-method-args-callback-showloading-">Process::_api(method, args, callback, showLoading)</h3>
+<pre>
+Call the ApplicationAPI
+
+This is used for calling 'api.php' or 'api.js' in your Application.
+
+On Lua or Arduino it is called 'server.lua'
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>String</td>
+<td>Name of method</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Object</td>
+<td>Arguments in JSON</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>Callback method =&gt; fn(error, result)</td>
+</tr>
+<tr>
+<td>showLoading</td>
+<td>boolean</td>
+<td>Show loading indication (default=true)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>boolean</u></p>
+
+</div>
 <div class="section-method" id="process-_call">
 <h3 id="process-_call-method-args-onsuccess-onerror-showloading-">Process::_call(method, args, onSuccess, onError, showLoading)</h3>
 <pre>
@@ -294,6 +342,8 @@ Call the ApplicationAPI
 This is used for calling 'api.php' or 'api.js' in your Application.
 
 On Lua or Arduino it is called 'server.lua'
+
+WARNING: THIS METHOD WILL BE DEPRECATED
 </pre>
 
 

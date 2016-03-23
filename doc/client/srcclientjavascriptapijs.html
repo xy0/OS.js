@@ -223,13 +223,11 @@ The response is in form of: {httpCode, body}
 
 </div>
 <div class="section-function" id="osjs-api-call">
-<h2 id="osjs-api-call-m-a-cok-cerror-options-">OSjs.API.call(m, a, cok, cerror, options)</h2>
+<h2 id="osjs-api-call-m-a-cb-options-">OSjs.API.call(m, a, cb, options)</h2>
 <pre>
 Global function for calling API (backend)
 
 You can call VFS functions by prefixing your method name with "FS:"
-
-Response is in form of: {error, result}
 </pre>
 
 
@@ -259,14 +257,9 @@ Response is in form of: {error, result}
 <td>Method arguments</td>
 </tr>
 <tr>
-<td>cok</td>
+<td>cb</td>
 <td>Function</td>
-<td>Callback on success =&gt; fn(response)</td>
-</tr>
-<tr>
-<td>cerror</td>
-<td>Function</td>
-<td>(Optional) Callback on HTTP error =&gt; fn(error)</td>
+<td>Callback on success =&gt; fn(err, res)</td>
 </tr>
 <tr>
 <td>options</td>
