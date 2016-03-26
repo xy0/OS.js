@@ -71,6 +71,9 @@
   <p>
     More tutorials to come!
   </p>
+  <p>
+    <i>Please note that the JavaScript code cannot be copy-pasted without making modifications to it</i>
+  </p>
 
   <h2>Designing UI</h2>
   <div class="indent">
@@ -121,12 +124,13 @@
     <p>
       In <i>main.js</i> you can add events and make interactions with the UI you just created. In this example we just handle some buttons and menus.
     </p>
-    <pre class="code">ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
-  var self = this;
+    <pre class="code"> // Change `ApplicationMyName` to your namespace
+ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
   var root = Window.prototype.init.apply(this, arguments);
+  var self = this;
 
-  // Render the scheme file above into window
-  scheme.render(this, 'MyNameWindow', root);
+  // Load and set up scheme (GUI) here
+  scheme.render(this, 'EXAMPLEWindow', root);
 
   // Normal binding
   this._find('MenuClose').on('click', function() {
