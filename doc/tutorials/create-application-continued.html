@@ -129,22 +129,22 @@
   scheme.render(this, 'MyNameWindow', root);
 
   // Normal binding
-  scheme.find(this, 'MenuClose').on('click', function() {
+  this._find('MenuClose').on('click', function() {
     self._close();
   });
 
   // Get a property
-  scheme.find(this, 'MyButtonOne').on('click', function() {
-    alert(scheme.find(self, 'Text').get('value'));
+  this._find('MyButtonOne').on('click', function() {
+    alert(this._find('Text').get('value'));
   });
 
   // Change a property
-  scheme.find(this, 'MyButtonOne').on('click', function() {
-    scheme.find(self, 'Text').set('value', 'CLICKED!');
+  this._find('MyButtonOne').on('click', function() {
+    this._find('Text').set('value', 'CLICKED!');
   });
 
   // Create UI element programatically (chainable)
-  scheme.create(this, 'gui-button', {disabled: true}, root).on('click', function() {
+  scheme.create(this, 'gui-button', {disabled: true}, root).on('click', function() { // or `this._scheme`
 
   });
 
