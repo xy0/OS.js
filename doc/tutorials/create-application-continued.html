@@ -135,12 +135,12 @@
 
   // Get a property
   this._find('MyButtonOne').on('click', function() {
-    alert(this._find('Text').get('value'));
+    alert(self._find('Text').get('value'));
   });
 
   // Change a property
   this._find('MyButtonOne').on('click', function() {
-    this._find('Text').set('value', 'CLICKED!');
+    self._find('Text').set('value', 'CLICKED!');
   });
 
   // Create UI element programatically (chainable)
