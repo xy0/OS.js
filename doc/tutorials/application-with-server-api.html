@@ -20,6 +20,7 @@
     </script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/google/code-prettify/master/styles/sunburst.css" />
     <link href="/stylesheets/codex.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -83,7 +84,7 @@
       <p>
         Create the file "api.js" inside the package directory and use this as a template:
       </p>
-      <pre class="code">(function() {
+      <pre class="code prettyprint lang-js">(function() {
 
   module.exports = {
     // Here you get args.Argument from call in application example below
@@ -103,7 +104,7 @@
       <p>
         Create the file "api.php" inside the package directory and use this as a template:
       </p>
-      <pre class="code">class ApplicationMyName // As you defined in metadata.json
+      <pre class="code prettyprint lang-php">class ApplicationMyName // As you defined in metadata.json
 {
 
   public static function call($method, $args) {
@@ -127,7 +128,7 @@
       <p>
         To call the method you just created, simply create a new method in your Application:
       </p>
-      <pre class="code"> // Change `ApplicationMyName` to your namespace
+      <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
 ApplicationMyName.prototype.myServerMethod = function(callback) {
   this._call('MyServerMethod', {'Argument': 'Some Value'}, callback);
 };</pre>
@@ -139,7 +140,7 @@ ApplicationMyName.prototype.myServerMethod = function(callback) {
       <p>
         For example, when you click a button in your window:
       </p>
-      <pre class="code"> // Change `ApplicationMyName` to your namespace
+      <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
 ApplicationMyNameWindow.prototype.init = function(wmRef, app, scheme) {
   var root = Window.prototype.init.apply(this, arguments);
   var self = this;
@@ -211,6 +212,8 @@ ApplicationMyNameWindow.prototype.init = function(wmRef, app, scheme) {
     </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
   </body>
 </html>

@@ -20,6 +20,7 @@
     </script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/google/code-prettify/master/styles/sunburst.css" />
     <link href="/stylesheets/codex.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -86,7 +87,7 @@
     <p>
       <i>UPDATE:</i> You can now design your interfaces with an official <a href="https://github.com/os-js/OS.js-development">IDE</a>!
     </p>
-    <pre class="code">&lt;application-window data-id="MyNameWindow"&gt;
+    <pre class="code prettyprint lang-html">&lt;application-window data-id="MyNameWindow"&gt;
 
   &lt;gui-vbox&gt;
     &lt;gui-vbox-container data-grow="0" data-shrink="1" data-basis="auto"&gt;
@@ -124,7 +125,7 @@
     <p>
       In <i>main.js</i> you can add events and make interactions with the UI you just created. In this example we just handle some buttons and menus.
     </p>
-    <pre class="code"> // Change `ApplicationMyName` to your namespace
+    <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
 ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
   var root = Window.prototype.init.apply(this, arguments);
   var self = this;
@@ -213,6 +214,8 @@ ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
     </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 
   </body>
 </html>
