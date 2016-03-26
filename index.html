@@ -43,6 +43,9 @@
       if ( window.location.hostname === 'andersevenrud.github.io' ) {
         window.location = '//os.js.org' + window.location.pathname.replace(/\/OS\.js-v2/, '');
       }
+      if ( window.location.hostname === 'os.js.org' && window.location.protocol !== 'https:' ) {
+        window.location.protocol = 'https:';
+      }
     </script>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
