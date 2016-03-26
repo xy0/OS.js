@@ -149,7 +149,7 @@ ApplicationMyNameWindow.prototype.init = function(wmRef, app, scheme) {
   scheme.render(this, 'ApplicationMyNameWindow', root);
 
   // Bind button to call server API
-  scheme.find(this, 'Button').on('click', function() {
+  this._find('Button').on('click', function() {
     self._app.myServerMethod(function(error, result) {
       if ( error ) {
         alert('An error occured: ' + error);
