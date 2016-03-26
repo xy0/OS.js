@@ -88,7 +88,7 @@ var path = new VFS.File('home:///file.txt');
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-read">API documentation</a>
     </p>
-    <pre class="code">VFS.read(path, function(err, res) {
+    <pre class="code prettyprint lang-js">VFS.read(path, function(err, res) {
   if ( err ) {
     alert(err);
     return;
@@ -106,7 +106,7 @@ var path = new VFS.File('home:///file.txt');
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-write">API documentation</a>
     </p>
-    <pre class="code">// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
+    <pre class="code prettyprint lang-js">// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
 VFS.write(path, data, function(err, res) {
   if ( err || !res ) {
     alert(err || 'Failed to write file');
@@ -122,7 +122,7 @@ VFS.write(path, data, function(err, res) {
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-copy">API documentation</a>
     </p>
-    <pre class="code">VFS.copy(src, dest, function(err, res) {
+    <pre class="code prettyprint lang-js">VFS.copy(src, dest, function(err, res) {
   if ( err || !res ) {
     alert(err || 'Failed to copy file');
     return;
@@ -137,7 +137,7 @@ VFS.write(path, data, function(err, res) {
     <p>
       For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-scandir">API documentation</a>
     </p>
-    <pre class="code">VFS.scandir(path, function(err, res) {
+    <pre class="code prettyprint lang-js">VFS.scandir(path, function(err, res) {
   if ( err ) {
     alert(err);
     return;

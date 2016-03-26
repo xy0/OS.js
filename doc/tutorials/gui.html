@@ -73,7 +73,7 @@
 
   <h2>Rendering a template</h2>
   <div class="indent">
-    <pre class="code">var url = 'YOUR URL HERE';
+    <pre class="code prettyprint lang-js">var url = 'YOUR URL HERE';
 var win = /* Your Window Here */;
 var parentElement = /* Root DOM element to append to (win._$content is default) */;
 
@@ -85,10 +85,10 @@ scheme.load(function(error, scheme) {
 
   <h2>Creating elements programatically</h2>
   <div class="indent">
-    <pre class="code">scheme.create(win, 'gui-element-name', {
+    <pre class="code prettyprint lang-js">scheme.create(win, 'gui-element-name', {
   parameter: 'value'
 }, parentElement);</pre>
-    <pre class="code">parentElement.appendHTML('&lt;gui-element-name&gt;&lt;/gui-element-name&gt;', optionalSchemeReference, optionalWinReference);</pre>
+    <pre class="code prettyprint lang-js">parentElement.appendHTML('&lt;gui-element-name&gt;&lt;/gui-element-name&gt;', optionalSchemeReference, optionalWinReference);</pre>
   </div>
 
   <h2>Available Elements</h2>

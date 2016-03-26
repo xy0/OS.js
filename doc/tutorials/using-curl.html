@@ -86,7 +86,7 @@
   <h3>GET request</h3>
   <div class="indent">
 
-    <pre class="code">API.curl({
+    <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here',
   method: 'GET'
 }, function(error, response) {
@@ -97,7 +97,7 @@
   <h3>POST request</h3>
   <div class="indent">
 
-    <pre class="code">API.curl({
+    <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here',
   method: 'POST',
   query: 'HELLO FROM OS.js'
@@ -112,7 +112,7 @@
     <p>
       The format will automatically be detected
     </p>
-    <pre class="code">API.curl({
+    <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here',
   method: 'POST',
   query: {
@@ -125,7 +125,7 @@
 
   <h3>Handling Binary Data</h3>
   <div class="indent">
-    <pre class="code">API.curl({
+    <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here/some-file.png',
   method: 'GET',
   binary: true,
@@ -137,7 +137,7 @@
 
   <h3>Sending Custom Headers</h3>
   <div class="indent">
-    <pre class="code">API.curl({
+    <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here/',
   method: 'GET',
   headers: {
