@@ -81,8 +81,10 @@
     <p>A typical response would look like:</p>
     <pre>
 {
-  httpCode: -1,
-  body: ''
+  httpCode: 200,
+  httpVersion: '1.1',
+  headers: {},
+  body: null
 }
     </pre>
 
@@ -111,9 +113,8 @@
 
   <h3>POST request w/JSON</h3>
   <div class="indent">
-
     <p>
-      The format will automatically be detected
+      If your body is a JSON object, the content-type will be automatically detected. You can also force it with the 'json:true' option.
     </p>
     <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here',
@@ -142,10 +143,24 @@
   <div class="indent">
     <pre class="code prettyprint lang-js">API.curl({
   url: 'http://your-url-here/',
-  method: 'GET',
+  method: 'POST',
   headers: {
     'Content-Type': 'text/plain'
     // ...
+  }
+}, function(error, response) {
+  console.log(response.body); // What you get back
+});</pre>
+  </div>
+
+  <h3>Sending Form Data</h3>
+  <div class="indent">
+    <pre class="code prettyprint lang-js">API.curl({
+  url: 'http://your-url-here/',
+  method: 'POST',
+  contentType: 'application/x-www-form-urlencoded',
+  query: {
+    fieldName: 'fieldValue'
   }
 }, function(error, response) {
   console.log(response.body); // What you get back
