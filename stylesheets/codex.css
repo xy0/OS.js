@@ -223,3 +223,10 @@ table.manual pre {
 .gui-element td {
   padding : 5px;
 }
+
+#faq {
+  margin-top : 40px;
+}
+  #faq > div {
+    margin-bottom : 40px;
+  }

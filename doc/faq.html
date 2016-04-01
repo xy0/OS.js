@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Index - OS.js Documentation</title>
+    <title>FAQ - OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Index" />
+    <meta name="description" content="OS.js -- FAQ" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -56,10 +56,84 @@
 
     <content>
 
-<h1>OS.js Documentation</h1>
+<h1>OS.js FAQ</h1>
 <p>
-  Use the top-right menu to navigate around. Documentation is split up into several pages, for your convenience.
+  Below you'll find the most frequenty answered question.
 </p>
+<p>
+  If you want to submit your own questions just go to the <a href="http://community.os.js.org/">Community Page</a>, <a href="https://gitter.im/os-js/OS.js">Gitter Chatroom</a>, or social media.
+</p>
+<p>
+  <b>I strongly recommend</b> browsing the <a href="/doc/manuals/">manuals</a> and <a href="/doc/tutorials/">tutorials</a> if you're new to the OS.js environment.
+</p>
+
+<div id="faq">
+  <div>
+    <h2>Q: How do I contribute?</h2>
+    <p>
+      Follow the <a href="https://github.com/os-js/OS.js/blob/master/CONTRIBUTING.md">Contribution documentation</a>.
+    </p>
+  </div>
+
+  <div>
+    <h2>Q: How do I install OS.js?</h2>
+    <p>
+      Follow the <a href="https://github.com/os-js/OS.js/blob/master/INSTALL.md">Installation documentation</a>.
+    </p>
+  </div>
+
+  <div>
+    <h2>Q: How do I start OS.js?</h2>
+    <p>
+      Follow the <a href="https://github.com/os-js/OS.js/blob/master/INSTALL.md">Installation documentation</a>.
+    </p>
+  </div>
+
+
+  <div>
+    <h2>Q: How do I brand my distribution?</h2>
+    <p>
+      The build system supports templates for branding and other customizations.
+    </p>
+    <p>
+      Simply copy the base template and modify it as you want.
+    </p>
+    <pre class="code">cp src/templates/dist/default src/templates/dist/mybrand
+grunt config:set:dist.template:mybrand
+grunt</pre>
+  </div>
+
+  <div>
+    <h2>Q: How do I make translations?</h2>
+    <p>
+      See <a href="https://github.com/os-js/OS.js/wiki/Join-the-translation-team">this article</a> for more information.
+    </p>
+  </div>
+
+  <div>
+    <h2>Q: How do I create my own application?</h2>
+    <p>
+      There's a <a href="/doc/tutorials/">Tutorial section</a> dedicated to this.
+    </p>
+  </div>
+
+  <div>
+    <h2>Q: How do I make extensions and changes to the core?</h2>
+    <p>
+      There's a <a href="/doc/tutorials/">Tutorial section</a> dedicated to this.
+    </p>
+    <p>
+      If you feel that the changes should be in the OS.js main repository, go ahead and make any changes required to the codebase and look at the contribution documentation on how to submitt this to upstream.
+    </p>
+  </div>
+
+  <div>
+    <h2>Q: My filetype is not supported</h2>
+    <pre class="code">edit src/conf/130-mime.json
+grunt config</pre>
+  </div>
+</div>
+
 <p>
   Official home page: <a href="https://os.js.org/">https://os.js.org/</a>
 </p>
