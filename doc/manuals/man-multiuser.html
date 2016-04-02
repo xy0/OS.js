@@ -114,10 +114,21 @@
     PAM is the default athentication for many Linux and BSD systems. OS.js supports logging in this way and store the userdata in users home-directory (under .osjs).
   </p>
   <p>
-    You need the <b>authenticate-pam</b> node module.
+    You need the <b>authenticate-pam</b> and <b>userid</b> node module.
   </p>
   <p>
     More <a href="https://github.com/os-js/OS.js/blob/master/doc/handler-pam.md">information here</a> about setup and usage.
+  </p>
+
+  <h3>Shadow (shadow)</h3>
+  <p>
+    You can also use the /etc/shadow file to log in in OS.js.
+  </p>
+  <p>
+    You need the <b>passwd-linux</b> and <b>userid</b> node module.
+  </p>
+  <p>
+    More <a href="https://github.com/os-js/OS.js/blob/master/doc/handler-shadow.md">information here</a> about setup and usage.
   </p>
 
   <h2>Choosing a handler</h2>
