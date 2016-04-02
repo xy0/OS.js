@@ -125,21 +125,8 @@
 }</pre>
     </div>
 
-    <h2>Set up application method</h2>
-    <div class="indent">
-
-      <p>
-        To call the method you just created, simply create a new method in your Application:
-      </p>
-      <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
-ApplicationMyName.prototype.myServerMethod = function(callback) {
-  this._api('MyServerMethod', {'Argument': 'Some Value'}, callback);
-};</pre>
-    </div>
-
     <h2>Calling the method</h2>
     <div class="indent">
-
       <p>
         For example, when you click a button in your window:
       </p>
@@ -151,9 +138,17 @@ ApplicationMyNameWindow.prototype.init = function(wmRef, app, scheme) {
   // Load and set up scheme (GUI) here
   scheme.render(this, 'ApplicationMyNameWindow', root);
 
+
+  //
+  // START EXAMPLE
+  //
+
   // Bind button to call server API
-  this._find('Button').on('click', function() {
-    self._app.myServerMethod(function(error, result) {
+  this._find('Button').on('click', function() { // Expects you to have a button with data-id="Button"
+    var methodName = 'MyServerMethod';
+    var methodArgs = {'Argument': 'Some Value'};
+
+    app._api(methodName, methodArgs, function(error, result) { // or `this._app`
       if ( error ) {
         alert('An error occured: ' + error);
         return;
@@ -164,6 +159,10 @@ ApplicationMyNameWindow.prototype.init = function(wmRef, app, scheme) {
       alert(result.foo);
     });
   });
+
+  //
+  // END EXAMPLE
+  //
 
   return root;
 };</pre>
