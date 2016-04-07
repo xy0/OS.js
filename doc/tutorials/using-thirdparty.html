@@ -93,12 +93,15 @@
     </p>
     <pre class="code prettyprint lang-html">&lt;application-window data-id="MyNameWindow"&gt;
 
-&lt;select&gt;
-  &lt;option value="foo"&gt;foo&lt;/option&gt;
-  &lt;option value="bar"&gt;bar&lt;/option&gt;
-&lt;/select&gt;
+  &lt;select&gt;
+    &lt;option value="foo"&gt;foo&lt;/option&gt;
+    &lt;option value="bar"&gt;bar&lt;/option&gt;
+  &lt;/select&gt;
 
 &lt;/application-window&gt;</pre>
+    <p>
+      You can do this in javascript as well, see below for example.
+    </p>
   </div>
 
   <h2>Edit your javascript</h2>
@@ -124,7 +127,6 @@ ApplicationMyNameWindow.prototype._inited = function() {
 
   // Apply some content
   root.append('<button>XXX</button><b>Just some content testing</b>');
-
 };</pre>
   </div>
 
