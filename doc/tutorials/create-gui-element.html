@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Tutorial - Create your own Application - OS.js Documentation</title>
+    <title>Tutorial - Create a GUI Element - OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Tutorial - Create your own Application" />
+    <meta name="description" content="OS.js -- Tutorial - Create a GUI Element" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -71,55 +71,91 @@
 
     <content>
 
-<h1>Tutorial: Create your own application</h1>
+<h1>Tutorial: Create a GUI Element</h1>
 <div>
-
-  <script type="text/javascript" src="https://asciinema.org/a/398wgp8eqav1hvddr7tyb4s2o.js" id="asciicast-398wgp8eqav1hvddr7tyb4s2o" async></script>
-
-  <h2>Create from template</h2>
-  <div class="indent">
-    <p>Simply run:</p>
-
-    <pre class="code">grunt create-package:default/MyName</pre>
-    <p>
-      The "default" is the name of the repository folder you want to place your package in.
-    </p>
-
-    <p>
-      You will end up with "main.js", "main.css" (for client), "api.js" (for server) and "metadata.json" (see below)
-    </p>
-
-    <p>This will create some source files for you with usable code. You'll have a basic running application with a Window.</p>
-  </div>
-
-  <h2>Update metadata</h2>
+  <h2>Create Stylesheet</h2>
   <div class="indent">
     <p>
-      The metadata file holds general information about your application and stuff used in the building process.
+      Just modify "src/client/stylesheets/gui.css" and "src/client/stylesheets/theme.less" and add your new element styles there.
     </p>
-    <p>
-      <i>You don't have to do this, but this shows what values you can put in</i>
-    </p>
-    <p>
-      <a href="/doc/manuals/package-normal.html">For more information on this see here.</a>
-    </p>
+    <pre class="code prettyprint lang-css">gui-my-element {
+  box-sizing : border-box;
+  display : block;
+}</pre>
   </div>
 
-  <h2>Install</h2>
+  <h2>Create JavaScript</h2>
   <div class="indent">
-    <p>Now run this command to add it to global manifest (make it visible in OS.js)</p>
-    <pre class="code">grunt manifest config packages:default/MyName</pre>
     <p>
-      If you are using "dist-dev", you don't have to run the "packages" grunt command.
+      Create a new javascript file in "src/client/javascript/gui":
     </p>
+    <pre class="code prettyprint lang-js">/**
+   * Element: 'gui-my-element'
+   *
+   * In this example we simply create a "label" with a user-defineable color
+   *
+   * Usage example:
+   *
+   *  &lt;gui-my-element data-color="#ff0000" data-label="My awesome element" /&gt;
+   *
+   * @api OSjs.GUI.Elements.gui-my-element
+   * @class
+   */
+  GUI.Elements['gui-my-element'] = {
+
+    //
+    // This is called whenever you do `element.on(evName, fn)`
+    //
+    bind: function(el, evName, callback, params) {
+      // In this case we just pass over all events to the root element
+      Utils.$bind(el, evName, callback.bind(new GUI.Element(el)), params);
+    },
+
+    //
+    // This is called whenever you do `element.set(param, value)`
+    //
+    set: function(el, param, value) {
+      if ( param === 'color' ) {
+        el.style.color = value;
+      }
+    },
+
+    //
+    // You can also bypass the internal setting method to have custom attributes applied to the DOM element
+    //
+    /*
+    set: function(el, param, value) {
+      if ( param === 'color' ) {
+        el.setAttribute('data-color', String(value));
+        el.style.color = value;
+
+        return true; // bypass
+      }
+
+      return false;
+    },
+    */
+
+    //
+    // This is the method called when the Scheme is asking to render your element.
+    // `el` is the root element (in this case "gui-my-element")
+    //
+    build: function(el) {
+      var color = el.getAttribute('data-color') || '#000000'; // Get color attribute from scheme or use default
+      var label = el.getAttribute('data-label') || 'My GUI element'; // Same for a label
+
+      el.appendChild(document.createTextNode(label);
+      el.style.color = color;
+    }
+
+  };</pre>
   </div>
 
-  <h2>Tips</h2>
+  <h2>Add and build</h2>
   <div class="indent">
-    <p>
-      If you want to reaload your application when it has been updated simply run "OSjs.API.relaunch('ApplicationMyName')" in the developer console of your browser.
-    </p>
+    <pre>$ grunt dist-files core</pre>
   </div>
+
 </div>
 
 

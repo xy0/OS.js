@@ -5,7 +5,29 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
 
+	modified:   doc/tutorials/application-with-server-api.html
+	modified:   doc/tutorials/create-application-continued.html
+	modified:   doc/tutorials/create-application.html
+	modified:   doc/tutorials/create-extension.html
+	modified:   doc/tutorials/create-handler.html
+	modified:   doc/tutorials/create-panelitem.html
+	modified:   doc/tutorials/create-service.html
+	modified:   doc/tutorials/create-theme.html
+	modified:   doc/tutorials/custom-build.html
+	modified:   doc/tutorials/extend-client-api.html
+	modified:   doc/tutorials/extend-server-api.html
+	modified:   doc/tutorials/gui.html
+	modified:   doc/tutorials/iframe-application.html
+	modified:   doc/tutorials/index.html
+	modified:   doc/tutorials/using-curl.html
 	modified:   doc/tutorials/using-thirdparty.html
+	modified:   doc/tutorials/using-vfs.html
 	modified:   git-status.log
+	modified:   sitemap.xml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	doc/tutorials/create-gui-element.html
 
 no changes added to commit (use "git add" and/or "git commit -a")

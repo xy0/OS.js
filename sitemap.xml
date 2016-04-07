@@ -373,6 +373,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/tutorials/create-gui-element.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/tutorials/using-curl.html</loc>
     <priority>0.7</priority>
   </url>
