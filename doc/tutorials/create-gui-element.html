@@ -105,6 +105,7 @@ gui-my-element {
     </p>
     <pre class="code prettyprint lang-js">(function(API, Utils, VFS, GUI) {
   'use strict';
+
   /**
    * Element: 'gui-my-element'
    *
@@ -117,7 +118,10 @@ gui-my-element {
    * @api OSjs.GUI.Elements.gui-my-element
    * @class
    */
-  (function() {
+  GUI.Elements['gui-my-element'] = (function() {
+
+    // Helpers
+
     function setColor(el, color) {
       el.style.color = color;
     }
@@ -127,7 +131,9 @@ gui-my-element {
       el.appendChild(document.createTextNode(String(label));
     }
 
-    GUI.Elements['gui-my-element'] = {
+    // The Element
+
+    return {
 
       //
       // This is called whenever you do `element.on(evName, fn)`
@@ -156,7 +162,7 @@ gui-my-element {
         if ( param === 'color' ) {
           el.setAttribute('data-color', String(value));
           el.setAttribute('data-custom-attribute', 'Foo'); // Add another one
-          el.style.color = value;
+          setColor(value);
 
           return true; // bypass
         }
@@ -177,7 +183,9 @@ gui-my-element {
         setColor(color);
       }
     };
+
   })();
+
 })(OSjs.API, OSjs.Utils, OSjs.VFS, OSjs.GUI);</pre>
   </div>
 
