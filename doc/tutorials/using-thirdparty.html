@@ -81,6 +81,9 @@
     <p>
       Follow the <a href="/doc/manuals/man-thirdparty.html">documentation</a> made for this purpose.
     </p>
+    <p>
+      In the case of jQuery and similar libraries, best practice is to add them to load on startup instead of when you launch your application (to reduce load times). But it is not very important.
+    </p>
   </div>
 
   <h2>Edit your scheme</h2>
@@ -93,7 +96,7 @@
 &lt;select&gt;
   &lt;option value="foo"&gt;foo&lt;/option&gt;
   &lt;option value="bar"&gt;bar&lt;/option&gt;
-&lt;/select&lt;
+&lt;/select&gt;
 
 &lt;/application-window&gt;</pre>
   </div>
@@ -106,11 +109,21 @@
     <p>
       The method "_inited()" to the rescue! This is called directly after the Scheme has been rendered into the browser.
     </p>
-    <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
+    <pre class="code prettyprint lang-js"> // Change `ApplicationMyNameWindow` to match your window class name
 ApplicationMyNameWindow.prototype._inited = function() {
   Window.prototype._inited.apply(this, arguments);
 
-  var root = this._$element;
+  // This is the element you want to base your DOM queries on
+  var root = $(this._$root);
+
+  // Find the select element and add an event
+  root.find('select').on('change', function() {
+    alert($(this).val());
+  });
+
+
+  // Apply some content
+  root.append('<button>XXX</button><b>Just some content testing</b>');
 
 };</pre>
   </div>
