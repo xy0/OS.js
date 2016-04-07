@@ -88,10 +88,14 @@
     <p>
       Just modify "src/client/stylesheets/gui.css" and "src/client/stylesheets/theme.less" and add your new element styles there.
     </p>
-    <pre class="code prettyprint lang-css">gui-my-element {
+    <pre class="code prettyprint lang-css">// ...
+
+gui-my-element {
   box-sizing : border-box;
   display : block;
-}</pre>
+}
+
+// ...</pre>
   </div>
 
   <h2>Create JavaScript</h2>
@@ -99,7 +103,9 @@
     <p>
       Create a new javascript file in "src/client/javascript/gui":
     </p>
-    <pre class="code prettyprint lang-js">/**
+    <pre class="code prettyprint lang-js">(function(API, Utils, VFS, GUI) {
+  'use strict';
+  /**
    * Element: 'gui-my-element'
    *
    * In this example we simply create a "label" with a user-defineable color
@@ -111,58 +117,68 @@
    * @api OSjs.GUI.Elements.gui-my-element
    * @class
    */
-  GUI.Elements['gui-my-element'] = {
-
-    //
-    // This is called whenever you do `element.on(evName, fn)`
-    //
-    bind: function(el, evName, callback, params) {
-      // In this case we just pass over all events to the root element (ex: 'click')
-      Utils.$bind(el, evName, callback.bind(new GUI.Element(el)), params);
-    },
-
-    //
-    // This is called whenever you do `element.set(param, value)`
-    //
-    set: function(el, param, value) {
-      if ( param === 'color' ) {
-        el.style.color = value;
-      } else if ( param === 'label' ) {
-        Utils.$empty(el);
-        el.appendChild(document.createElement(String(value));
-      }
-    },
-
-    //
-    // You can also bypass the internal setting method to have custom attributes applied to the DOM element
-    //
-    /*
-    set: function(el, param, value) {
-      if ( param === 'color' ) {
-        el.setAttribute('data-color', String(value));
-        el.setAttribute('data-custom-attribute', 'Foo'); // Add another one
-        el.style.color = value;
-
-        return true; // bypass
-      }
-
-      return false;
-    },
-    */
-
-    //
-    // This is the method called when the Scheme is asking to render your element.
-    // `el` is the root element (in this case "gui-my-element")
-    //
-    build: function(el) {
-      var color = el.getAttribute('data-color') || '#000000'; // Get color attribute from scheme or use default
-      var label = el.getAttribute('data-label') || 'My GUI element'; // Same for a label
-
-      el.appendChild(document.createTextNode(label);
+  (function() {
+    function setColor(el, color) {
       el.style.color = color;
     }
 
-  };</pre>
+    function setLabel(el, label) {
+      Utils.$empty(el);
+      el.appendChild(document.createElement(String(label));
+    }
+
+    GUI.Elements['gui-my-element'] = {
+
+      //
+      // This is called whenever you do `element.on(evName, fn)`
+      //
+      bind: function(el, evName, callback, params) {
+        // In this case we just pass over all events to the root element (ex: 'click')
+        Utils.$bind(el, evName, callback.bind(new GUI.Element(el)), params);
+      },
+
+      //
+      // This is called whenever you do `element.set(param, value)`
+      //
+      set: function(el, param, value) {
+        if ( param === 'color' ) {
+          setColor(el, value);
+        } else if ( param === 'label' ) {
+          setLabel(el, value);
+        }
+      },
+
+      //
+      // You can also bypass the internal setting method to have custom attributes applied to the DOM element
+      //
+      /*
+      set: function(el, param, value) {
+        if ( param === 'color' ) {
+          el.setAttribute('data-color', String(value));
+          el.setAttribute('data-custom-attribute', 'Foo'); // Add another one
+          el.style.color = value;
+
+          return true; // bypass
+        }
+
+        return false;
+      },
+      */
+
+      //
+      // This is the method called when the Scheme is asking to render your element.
+      // `el` is the root element (in this case "gui-my-element")
+      //
+      build: function(el) {
+        var color = el.getAttribute('data-color') || '#000000'; // Get color attribute from scheme or use default
+        var label = el.getAttribute('data-label') || 'My GUI element'; // Same for a label
+
+        setLabel(label);
+        setColor(color);
+      }
+    };
+  })();
+})(OSjs.API, OSjs.Utils, OSjs.VFS, OSjs.GUI);</pre>
   </div>
 
   <h2>Add and build</h2>
