@@ -123,12 +123,17 @@ gui-my-element {
     // Helpers
 
     function setColor(el, color) {
-      el.style.color = color;
+      el.style.color = color || '#000000'; // Make sure black is default if no color was given
     }
 
     function setLabel(el, label) {
       Utils.$empty(el);
       el.appendChild(document.createTextNode(String(label));
+    }
+
+    function getColor(el) {
+      // First try to get color from CSS, then fall-back to element attribute, or the hard default
+      return el.style.color || GUI.Helpers.getProperty(el, 'color') || '#00000';
     }
 
     // The Element
@@ -141,6 +146,18 @@ gui-my-element {
       bind: function(el, evName, callback, params) {
         // In this case we just pass over all events to the root element (ex: 'click')
         Utils.$bind(el, evName, callback.bind(new GUI.Element(el)), params);
+      },
+
+      //
+      // This is called whenever you do `element.get(param)`
+      //
+      get: function(el, param) {
+        if ( param === 'color' ) {
+          return getColor(el);
+        }
+
+        // Or get from element attribute
+        return GUI.Helpers.getProperty(el, param);
       },
 
       //
@@ -176,8 +193,8 @@ gui-my-element {
       // `el` is the root element (in this case "gui-my-element")
       //
       build: function(el) {
-        var color = el.getAttribute('data-color') || '#000000'; // Get color attribute from scheme or use default
-        var label = el.getAttribute('data-label') || 'My GUI element'; // Same for a label
+        var label = el.getAttribute('data-label') || 'My GUI element'; // If no label was set, use default one
+        var color = el.getAttribute('data-color');
 
         setLabel(label);
         setColor(color);
