@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Tutorial - Using VFS - OS.js Documentation</title>
+    <title>Tutorial - Using Third party libraries - OS.js Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Tutorial - Using VFS" />
+    <meta name="description" content="OS.js -- Tutorial - Using Third party libraries" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -70,88 +70,50 @@
 
     <content>
 
-<h1>Tutorial: Using VFS</h1>
+<h1>Tutorial: Third party libraries</h1>
 <div>
   <p>
-    With the VFS you can manipulate files over HTTP. For a full overview of available methods, look at the <a href="/doc/client/srcclientjavascriptvfsjs.html">API documentation</a>.
-  </p>
-  <p>
-    You can either specify paths as <i>strings</i> or an instance of <a href="/doc/client/srcclientjavascriptvfs_filejs.html#osjs-vfs-file">File Metadata</a>:
-  </p>
-  <pre>
-var path = 'home:///file.txt';
-// or
-var path = new VFS.File('home:///file.txt');
-  </pre>
-  <p>
-    This will show you the basics:
+    In case you want to use (ex) jQuery in your application, follow these steps:
   </p>
 
-  <h2>Reading a File</h2>
+  <h2>Add the library</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-read">API documentation</a>
-    </p>
-    <pre class="code prettyprint lang-js">VFS.read(path, function(err, res) {
-  if ( err ) {
-    alert(err);
-    return;
-  }
-
-  console.log(res); // The file data
-}, {/* options */});</pre>
-    <p>
-      <i>NOTE: If you don't specify the 'type' option this function will return an ArrayBuffer by default</i>
+      Follow the <a href="/doc/manuals/man-thirdparty.html">documentation</a> made for this purpose.
     </p>
   </div>
 
-  <h2>Writing a File</h2>
+  <h2>Edit your scheme</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-write">API documentation</a>
+      Just put some normal HTML in your scheme file (you can mix with OS.js markup):
     </p>
-    <pre class="code prettyprint lang-js">// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
-VFS.write(path, data, function(err, res) {
-  if ( err || !res ) {
-    alert(err || 'Failed to write file');
-    return;
-  }
+    <pre class="code prettyprint lang-html">&lt;application-window data-id="MyNameWindow"&gt;
 
-  // Success!
-}, {/* options */});</pre>
+&gt;select&lt;
+  &gt;option value="foo"&lt;foo&gt;/option&lt;
+  &gt;option value="bar"&lt;bar&gt;/option&lt;
+&gt;/select&lt;
+
+&lt;/application-window&gt;</pre>
   </div>
 
-  <h2>Copy a File</h2>
+  <h2>Edit your javascript</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-copy">API documentation</a>
+      Normally you'd use the "init()" method to manipulate the UI since you're dealing directly with HTML DOM Elements, but in the case of ex jQuery you're looking up elements by a name (string). That won't work because the interface is not rendered until "init()" has been run.
     </p>
-    <pre class="code prettyprint lang-js">VFS.copy(src, dest, function(err, res) {
-  if ( err || !res ) {
-    alert(err || 'Failed to copy file');
-    return;
-  }
-
-  // Success!
-}, {/* options */});</pre>
-  </div>
-
-  <h2>Scan a directory</h2>
-  <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-scandir">API documentation</a>
+      The method "_inited()" to the rescue! This is called directly after the Scheme has been rendered into the browser.
     </p>
-    <pre class="code prettyprint lang-js">VFS.scandir(path, function(err, res) {
-  if ( err ) {
-    alert(err);
-    return;
-  }
+    <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
+ApplicationMyNameWindow.prototype._inited = function() {
+  Window.prototype._inited.apply(this, arguments);
 
-  console.log(res); // A list of 'VFS.File' instances
-}, {/* options */});</pre>
+  var root = this._$element;
+
+};</pre>
   </div>
-
-</div>
 
 </div>
 

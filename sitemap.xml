@@ -409,6 +409,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/tutorials/using-thirdparty.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/tutorials/create-application-continued.html</loc>
     <priority>0.7</priority>
   </url>
