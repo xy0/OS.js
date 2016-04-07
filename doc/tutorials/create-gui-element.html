@@ -73,6 +73,16 @@
 
 <h1>Tutorial: Create a GUI Element</h1>
 <div>
+  <p>
+    In this tutorial we'll make a simple GUI element that supports a user-defined label and color.
+  </p>
+  <p>
+    It will show how to build/render and implement methods for binding and modifying behaviour.
+  </p>
+  <p>
+    If you want to make a GUI element that handles lists (like TreeView, IconView etc.) you'll have to use the "DataView" composition. Look at the actual source for these elements to see how it is done, or come back later when I'm done writing example code for it.
+  </p>
+
   <h2>Create Stylesheet</h2>
   <div class="indent">
     <p>
@@ -107,7 +117,7 @@
     // This is called whenever you do `element.on(evName, fn)`
     //
     bind: function(el, evName, callback, params) {
-      // In this case we just pass over all events to the root element
+      // In this case we just pass over all events to the root element (ex: 'click')
       Utils.$bind(el, evName, callback.bind(new GUI.Element(el)), params);
     },
 
