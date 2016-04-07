@@ -127,6 +127,9 @@
     set: function(el, param, value) {
       if ( param === 'color' ) {
         el.style.color = value;
+      } else if ( param === 'label' ) {
+        Utils.$empty(el);
+        el.appendChild(document.createElement(String(value));
       }
     },
 
@@ -137,6 +140,7 @@
     set: function(el, param, value) {
       if ( param === 'color' ) {
         el.setAttribute('data-color', String(value));
+        el.setAttribute('data-custom-attribute', 'Foo'); // Add another one
         el.style.color = value;
 
         return true; // bypass
