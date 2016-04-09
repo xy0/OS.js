@@ -273,6 +273,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/manuals/man-permissions.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/manuals/man-install.html</loc>
     <priority>0.7</priority>
   </url>
