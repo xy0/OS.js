@@ -68,6 +68,7 @@
 <li><a href="#application-init">init()</a></li>
 <li><a href="#application-destroy">destroy()</a></li>
 <li><a href="#application-_onmessage">_onMessage()</a></li>
+<li><a href="#application-_loadscheme">_loadScheme()</a></li>
 <li><a href="#application-_addwindow">_addWindow()</a></li>
 <li><a href="#application-_removewindow">_removeWindow()</a></li>
 <li><a href="#application-_getwindow">_getWindow()</a></li>
@@ -223,6 +224,39 @@ Application has received a message
 </table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>boolean</u></p>
+
+</div>
+<div class="section-method" id="application-_loadscheme">
+<h3 id="application-_loadscheme-s-cb-">Application::_loadScheme(s, cb)</h3>
+<pre>
+Default method for loading a Scheme file
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s</td>
+<td>String</td>
+<td>Scheme filename</td>
+</tr>
+<tr>
+<td>cb</td>
+<td>Function</td>
+<td>Callback =&gt; fn(scheme)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
 
 </div>
 <div class="section-method" id="application-_addwindow">
