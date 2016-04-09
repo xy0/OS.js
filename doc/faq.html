@@ -158,9 +158,27 @@ grunt</pre>
   </div>
 
   <div>
-    <h2>Q: My filetype is not supported</h2>
+    <h2>Q: My filetype is not supported. How do I add one?</h2>
     <pre class="code">edit src/conf/130-mime.json
 grunt config</pre>
+  </div>
+
+  <div>
+    <h2>Q: Why do I get these errors when installing node dependencies?</h2>
+    <p>
+      First, make sure you're running the latest node and npm version available for your system.
+    </p>
+    <p>
+      <b>Windows users:</b> Make sure you have npm 3.8.3 or later! Or else you will run into problems with exceeding the maximum filename lengths of the NTFS filesystem.
+    </p>
+    <pre class="code"># Remove the cache
+npm cache clean
+
+# Remove installed modules
+rm -rf node_modules
+
+# Reinstall modules (if you're a developer, skip the production flag)
+npm install --production</pre>
   </div>
 </div>
 
