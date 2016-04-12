@@ -85,7 +85,7 @@ nav li {
   background: #528E47;
   box-shadow: 0px 3px 1px 0px rgba(0,0,0,0.20);
   border-radius: 10px;
-  width : 235px;
+  width : calc(25% - 32px);
   height : 100px;
   line-height : 100px;
   text-align : center;
@@ -103,10 +103,15 @@ nav li a {
 nav li#button_try {
   background : #572a79;
 }
-nav li#button_view {
+nav li#button_docs {
   background : #777777;
 }
-
+nav li#button_view {
+  background : #ffffff;
+}
+nav li#button_view a {
+  color : #000;
+}
 main {
   min-height : 300px;
   padding-bottom : 60px;
@@ -177,7 +182,7 @@ iframe {
   }
 
   nav ul li {
-    width : 30%;
+    width : calc(50% - 10px);
     height : 60px;
     margin : 5px;
     font-size : 12px;
@@ -190,6 +195,7 @@ iframe {
   main h2 {
     font-size : 24px;
     line-height : 30px;
+    text-align : center;
   }
 
   main ul {
