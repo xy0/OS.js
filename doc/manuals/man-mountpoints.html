@@ -89,12 +89,23 @@
 <h1>Adding custom mountpoints</h1>
 
 <p>
-  Simply update the configuration:
+  Simply update the configuration.
 </p>
-<pre class="code"># Replace 'your_name' with a identifier of your own
-grunt config:set:client.VFS.Mountpoints.YOURNAMEHERE.description:"YOUR DESCRIPTION HERE"
-grunt config:set:server.vfs.mounts.your_name:/path/to/mountpoint
+<p>
+  In this example we assign the mountpoint `data://` to `/tmp`
+</p>
+<pre class="code"># Notice "data" and "My data files" in this command
+grunt config:set:client.VFS.Mountpoints.data.description:"My data files"
+
+#Notice "data" in this command
+grunt config:set:server.vfs.mounts.data:/tmp
+
+# Update configuration
 grunt config</pre>
+
+<p>
+  Then restart your server and reload OS.js. You can now access `/tmp` via `data://`.
+</p>
 
 
       <div class="adddshere">
