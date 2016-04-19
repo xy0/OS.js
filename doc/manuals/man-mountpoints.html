@@ -94,11 +94,8 @@
 <p>
   In this example we assign the mountpoint `data://` to `/tmp`
 </p>
-<pre class="code"># Notice "data" and "My data files" in this command
-grunt config:set:client.VFS.Mountpoints.data.description:"My data files"
-
-#Notice "data" in this command
-grunt config:set:server.vfs.mounts.data:/tmp
+<pre class="code"># Add with the built in shortcut
+grunt config:mount:data:"My data files":/tmp
 
 # Update configuration
 grunt config</pre>

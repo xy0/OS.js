@@ -174,9 +174,12 @@ grunt config:get:client.Locale
 grunt config:get
 
 # Add a preload (custom library or stylesheet etc)
-grunt preload:NAME:PATH:TYPE
-grunt preload:mylib:/vendor/mylib.js:javascript
-grunt preload:mystyle:/vendor/mystyle.css:stylesheet
+grunt config:preload:NAME:PATH:TYPE
+grunt config:preload:mylib:/vendor/mylib.js:javascript
+grunt config:preload:mystyle:/vendor/mystyle.css:stylesheet
+
+# Add a mountpoint
+grunt config:mount:NAMEHERE:"DESCRIPTION":/path/here
 
 # Add or remove repositories from list
 grunt config:add-repository:NAME
@@ -200,6 +203,9 @@ grunt packages:enable:REPONAME/PACKAGENAME
 
 # Disables given package
 grunt packages:disable:REPONAME/PACKAGENAME</pre>
+
+# List installed packages
+grunt packages:list
 
   <h3>manifest</h3>
   <p>
