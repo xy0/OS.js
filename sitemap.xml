@@ -193,6 +193,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptsearch-enginejs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsinputjs.html</loc>
     <priority>0.7</priority>
   </url>

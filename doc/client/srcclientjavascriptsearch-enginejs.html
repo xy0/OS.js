@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>src/client/javascript/dialogs/error.js | OS.js Client API Documentation</title>
+    <title>src/client/javascript/search-engine.js | OS.js Client API Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- src/client/javascript/dialogs/error.js" />
+    <meta name="description" content="OS.js -- src/client/javascript/search-engine.js" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -56,90 +56,198 @@
     <content class="api">
 
 <h1>Overview</h1>
-<p><i>src/client/javascript/dialogs/error.js</i></p>
+<p><i>src/client/javascript/search-engine.js</i></p>
 <h2>Functions</h2>
 <ul>
+<li><a href="#searchegine-init">SearchEgine::init()</a></li>
+<li><a href="#searchegine-destroy">SearchEgine::destroy()</a></li>
+<li><a href="#searchegine-search">SearchEgine::search()</a></li>
+<li><a href="#searchegine-reindex">SearchEgine::reindex()</a></li>
+<li><a href="#searchegine-configure">SearchEgine::configure()</a></li>
+<li>OSjs.Core.<a href="#osjs-core-getsearchengine">getSearchEngine()</a></li>
 </ul>
 <h2>Classes</h2>
 <ul>
 <li>
-<a href="#osjs-dialogs-error">ErrorDialog</a> (OSjs.Dialogs.Error)
+<a href="#osjs-core-searchengine">SearchEngine</a> (OSjs.Core.SearchEngine)
 <ul>
 </ul>
 </li>
 </ul>
 <h1>Functions</h1>
-<h1>Classes</h1>
-<div class="section-class" id="osjs-dialogs-error">
-<h2 id="errordialog">ErrorDialog</h2>
+<div class="section-function" id="searchegine-init">
+<h2 id="searchegine-init-cb-">SearchEgine::init(cb)</h2>
 <pre>
-An 'Error' dialog
+Initialize instance
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cb</td>
+<td>Function</td>
+<td>Callback =&gt; fn(error, result)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-function" id="searchegine-destroy">
+<h2 id="searchegine-destroy-">SearchEgine::destroy()</h2>
+<pre>
+Destroy instance
+</pre>
+
+
+
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-function" id="searchegine-search">
+<h2 id="searchegine-search-q-args-cb-">SearchEgine::search(q, args, cb)</h2>
+<pre>
+Perform a search
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>q</td>
+<td>String</td>
+<td>Search query</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Object</td>
+<td>Arguments</td>
+</tr>
+<tr>
+<td>cb</td>
+<td>Function</td>
+<td>Callback =&gt; fn(error, result)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-function" id="searchegine-reindex">
+<h2 id="searchegine-reindex-args-cb-">SearchEgine::reindex(args, cb)</h2>
+<pre>
+Reindex databases
+
+TODO
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>args</td>
+<td>Object</td>
+<td>Arguments</td>
+</tr>
+<tr>
+<td>cb</td>
+<td>Function</td>
+<td>Callback =&gt; fn(error, result)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-function" id="searchegine-configure">
+<h2 id="searchegine-configure-opts-save-">SearchEgine::configure(opts, save)</h2>
+<pre>
+Configure the Search Engine
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>opts</td>
+<td>Object</td>
+<td>Settings Object</td>
+</tr>
+<tr>
+<td>save</td>
+<td>boolean</td>
+<td>Save settings (default=true)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-function" id="osjs-core-getsearchengine">
+<h2 id="osjs-core-getsearchengine-">OSjs.Core.getSearchEngine()</h2>
+<pre>
+Get the current SearchEngine instance
+</pre>
+
+
+
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>SearchEngine</u></p>
+
+</div>
+<h1>Classes</h1>
+<div class="section-class" id="osjs-core-searchengine">
+<h2 id="searchengine">SearchEngine</h2>
+<pre>
+Settings Manager Class
+
+For maintaining settings
+
+You can only get an instance with `Core.getSearchEngine()`
 </pre>
 
 <h4 id="namespace">Namespace</h4>
 <ul>
-<li>OSjs.Dialogs.Error</li>
+<li>OSjs.Core.SearchEngine</li>
 </ul>
-<h4 id="extends">Extends</h4>
-<ul>
-<li>DialogWindow</li>
-</ul>
-<h4 id="constructor">Constructor</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Object</td>
-<td>args</td>
-<td>An object with arguments</td>
-</tr>
-<tr>
-<td>Function</td>
-<td>callback</td>
-<td>Callback when done =&gt; fn(ev, button, result)</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-<h4 id="options-for-args-">Options for <em>args</em></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String</td>
-<td>title</td>
-<td>Dialog title</td>
-</tr>
-<tr>
-<td>String</td>
-<td>message</td>
-<td>Dialog message</td>
-</tr>
-<tr>
-<td>String</td>
-<td>error</td>
-<td>Error message</td>
-</tr>
-<tr>
-<td>Object</td>
-<td>exception</td>
-<td>(Optional) Exception object</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
 
 </div>
 
