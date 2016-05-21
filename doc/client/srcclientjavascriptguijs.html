@@ -500,6 +500,43 @@ Create a draggable DOM element
 </tr>
 </tbody>
 </table>
+<h4 id="options-for-args-">Options for <em>args</em></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>(Optional) A custom drag event &#39;type&#39;</td>
+</tr>
+<tr>
+<td>effect</td>
+<td>String</td>
+<td>(Optional) The draggable effect (cursor) (Default=move)</td>
+</tr>
+<tr>
+<td>mime</td>
+<td>String</td>
+<td>(Optional) The mime type of content (Default=application/json)</td>
+</tr>
+<tr>
+<td>onStart</td>
+<td>Function</td>
+<td>Callback when drag started =&gt; fn(ev, el, args)</td>
+</tr>
+<tr>
+<td>onEnd</td>
+<td>Function</td>
+<td>Callback when drag ended =&gt; fn(ev, el, args)</td>
+</tr>
+</tbody>
+</table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
 
@@ -530,6 +567,68 @@ Create a droppable DOM element
 <td>args</td>
 <td>Object</td>
 <td>JSON of droppable params</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options-for-args-">Options for <em>args</em></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>accept</td>
+<td>String</td>
+<td>(Optional) Accept given drag event &#39;type&#39;</td>
+</tr>
+<tr>
+<td>effect</td>
+<td>String</td>
+<td>(Optional) The draggable effect (cursor) (Default=move)</td>
+</tr>
+<tr>
+<td>mime</td>
+<td>String</td>
+<td>(Optional) The mime type of content (Default=application/json)</td>
+</tr>
+<tr>
+<td>files</td>
+<td>boolean</td>
+<td>(Optional) Support file drops from OS (Default=true)</td>
+</tr>
+<tr>
+<td>onEnter</td>
+<td>Function</td>
+<td>Callback when drag entered =&gt; fn(ev, el)</td>
+</tr>
+<tr>
+<td>onOver</td>
+<td>Function</td>
+<td>Callback when drag over =&gt; fn(ev, el)</td>
+</tr>
+<tr>
+<td>onLeave</td>
+<td>Function</td>
+<td>Callback when drag leave =&gt; fn(ev, el)</td>
+</tr>
+<tr>
+<td>onDrop</td>
+<td>Function</td>
+<td>Callback when drag drop all =&gt; fn(ev, el)</td>
+</tr>
+<tr>
+<td>onFilesDropped</td>
+<td>Function</td>
+<td>Callback when drag drop file =&gt; fn(ev, el, files, args)</td>
+</tr>
+<tr>
+<td>onItemDropped</td>
+<td>Function</td>
+<td>Callback when drag drop internal object =&gt; fn(ev, el, item, args)</td>
 </tr>
 </tbody>
 </table>
