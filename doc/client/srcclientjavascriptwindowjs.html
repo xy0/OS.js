@@ -160,16 +160,20 @@ Events:
 
  keypress When keypress => (ev, keyCode, shiftKey, ctrlKey, altKey)
 
- drop When a drop event occurs => (ev, type, item, args)
+ drop When a drop event occurs => (ev, type, item, args, srcEl)
 
  drop:upload When a upload file was dropped => (ev, <File>, args)
 
- drop:file When a internal file object was dropped => (ev, VFS.File, args)
+ drop:file When a internal file object was dropped => (ev, VFS.File, args, srcEl)
 </pre>
 
 <h4 id="namespace">Namespace</h4>
 <ul>
 <li>OSjs.Core.Window</li>
+</ul>
+<h4 id="see">See</h4>
+<ul>
+<li>OSjs.Helpers.EventHandler</li>
 </ul>
 <h4 id="constructor">Constructor</h4>
 <table>
@@ -499,6 +503,7 @@ Fire a hook to internal event
 <h4 id="see">See</h4>
 <ul>
 <li>Window::_on()</li>
+<li>OSjs.Helpers.EventHandler::emit()</li>
 </ul>
 <h4 id="parameters">Parameters</h4>
 <table>
@@ -533,6 +538,10 @@ Adds a hook to internal event
 </pre>
 
 
+<h4 id="see">See</h4>
+<ul>
+<li>OSjs.Helpers.EventHandler::on()</li>
+</ul>
 <h4 id="parameters">Parameters</h4>
 <table>
 <thead>
@@ -569,6 +578,7 @@ Adds a hook to internal event
 <h4 id="see">See</h4>
 <ul>
 <li>Window::_on()</li>
+<li>OSjs.Helpers.EventHandler::off()</li>
 </ul>
 <h4 id="parameters">Parameters</h4>
 <table>

@@ -72,6 +72,9 @@
 <ul>
 <li><a href="#process-destroy">destroy()</a></li>
 <li><a href="#process-_onmessage">_onMessage()</a></li>
+<li><a href="#process-_emit">_emit()</a></li>
+<li><a href="#process-_on">_on()</a></li>
+<li><a href="#process-_off">_off()</a></li>
 <li><a href="#process-_api">_api()</a></li>
 <li><a href="#process-_call">_call()</a></li>
 <li><a href="#process-_getargument">_getArgument()</a></li>
@@ -144,7 +147,7 @@ Kills a process
 
 </div>
 <div class="section-function" id="osjs-api-message">
-<h2 id="osjs-api-message-msg-opts-">OSjs.API.message(msg, opts)</h2>
+<h2 id="osjs-api-message-msg-obj-opts-">OSjs.API.message(msg, obj, opts)</h2>
 <pre>
 Sends a message to all processes
 
@@ -172,9 +175,31 @@ Example: VFS uses this to signal file changes etc.
 <td>Message name</td>
 </tr>
 <tr>
+<td>obj</td>
+<td>Object</td>
+<td>Message object</td>
+</tr>
+<tr>
 <td>opts</td>
 <td>Object</td>
 <td>Options</td>
+</tr>
+</tbody>
+</table>
+<h4 id="options-for-opts-">Options for <em>opts</em></h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td>integer</td>
+<td>(Optional) Source Process ID</td>
 </tr>
 </tbody>
 </table>
@@ -232,11 +257,47 @@ Get all processes
 <h2 id="process">Process</h2>
 <pre>
 Process Template Class
+
+Events:
+
+ message All events => (msg, object, options)
+
+ attention When application gets attention signal => (args)
+
+ hashchange When URL hash has changed => (args)
+
+ api API event => (method)
+
+ destroy Destruction event => (killed)
+
+ destroyWindow Attached window destruction event => (win)
+
+ vfs For all VFS events => (msg, object, options)
+
+ vfs:mount VFS mount event => (module, options, msg)
+
+ vfs:unmount VFS unmount event => (module, options, msg)
+
+ vfs:write VFS write event => (dest, options, msg)
+
+ vfs:mkdir VFS mkdir event => (dest, options, msg)
+
+ vfs:move VFS move event => ({src,dest}, options, msg)
+
+ vfs:delete VFS delete event => (dest, options, msg)
+
+ vfs:upload VFS upload event => (file, options, msg)
+
+ vfs:update VFS update event => (dir, options, msg)
 </pre>
 
 <h4 id="namespace">Namespace</h4>
 <ul>
 <li>OSjs.Core.Process</li>
+</ul>
+<h4 id="see">See</h4>
+<ul>
+<li>OSjs.Helpers.EventHandler</li>
 </ul>
 <h4 id="constructor">Constructor</h4>
 <table>
@@ -288,11 +349,124 @@ Destroys the process
 <div class="section-method" id="process-_onmessage">
 <h3 id="process-_onmessage-">Process::_onMessage()</h3>
 <pre>
-Placeholder for messages sendt via API
+Method for handling internal messaging system
 </pre>
 
 
 
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-method" id="process-_emit">
+<h3 id="process-_emit-k-args-">Process::_emit(k, args)</h3>
+<pre>
+Fire a hook to internal event
+</pre>
+
+
+<h4 id="see">See</h4>
+<ul>
+<li>Process::_on()</li>
+<li>EventHandler::emit()</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>String</td>
+<td>Event name</td>
+</tr>
+<tr>
+<td>args</td>
+<td>Array</td>
+<td>Send these arguments (fn.apply)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
+
+</div>
+<div class="section-method" id="process-_on">
+<h3 id="process-_on-k-func-">Process::_on(k, func)</h3>
+<pre>
+Adds a hook to internal event
+</pre>
+
+
+<h4 id="see">See</h4>
+<ul>
+<li>EventHandler::on()</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>String</td>
+<td>Event name</td>
+</tr>
+<tr>
+<td>func</td>
+<td>Function</td>
+<td>Callback function</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns">Returns</h4>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>integer</u></p>
+
+</div>
+<div class="section-method" id="process-_off">
+<h3 id="process-_off-k-idx-">Process::_off(k, idx)</h3>
+<pre>
+Adds a hook to internal event
+</pre>
+
+
+<h4 id="see">See</h4>
+<ul>
+<li>Process::_on()</li>
+<li>EventHandler::off()</li>
+</ul>
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k</td>
+<td>String</td>
+<td>Event name</td>
+</tr>
+<tr>
+<td>idx</td>
+<td>integer</td>
+<td>The hook index returned from _on()</td>
+</tr>
+</tbody>
+</table>
 <h4 id="returns">Returns</h4>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
 
