@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>src/server/node/node_modules/osjs/handler.js | OS.js Server API Documentation</title>
+    <title>src/server/node/core/handler.js | OS.js Server API Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- src/server/node/node_modules/osjs/handler.js" />
+    <meta name="description" content="OS.js -- src/server/node/core/handler.js" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -41,14 +41,14 @@
       <h2>Namespace</h2>
       <ul>
 
-<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-logout">logout</a></li><li><a class="Class" href="srcservernodenode_modulesosjsapijs.html#api-settings">settings</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-find">find</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodenode_modulesosjsvfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodenode_modulesosjsosjsjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodenode_modulesosjsconfigjs.html#config-init">init</a></li></ul></li><li>handler<ul><li><a class="Class" href="srcservernodenode_modulesosjshandlerjs.html#handler-handler">Handler</a></li><li><a class="Class" href="srcservernodenode_modulesosjshandlerjs.html#handler-nwhandler">NWHandler</a></li><li><a class="" href="srcservernodenode_modulesosjshandlerjs.html#handler-init">init()</a></li></ul></li>
+<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodecoreapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-logout">logout</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-settings">settings</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-find">find</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-freespace">freeSpace</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodecoreindexjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodecoreconfigjs.html#config-init">init</a></li></ul></li><li>handler<ul><li><a class="Class" href="srcservernodecorehandlerjs.html#handler-handler">Handler</a></li><li><a class="Class" href="srcservernodecorehandlerjs.html#handler-nwhandler">NWHandler</a></li><li><a class="" href="srcservernodecorehandlerjs.html#handler-init">init()</a></li></ul></li>
 
       </ul>
 
       <h2>Files</h2>
       <ul>
 
-<li>src<ul><li>server<ul><li>node<ul><li><a href="srcservernodehttpjs.html">http.js</a></li><li>node_modules<ul><li>osjs<ul><li><a href="srcservernodenode_modulesosjsapijs.html">api.js</a></li><li><a href="srcservernodenode_modulesosjsvfsjs.html">vfs.js</a></li><li><a href="srcservernodenode_modulesosjsosjsjs.html">osjs.js</a></li><li><a href="srcservernodenode_modulesosjsconfigjs.html">config.js</a></li><li><a href="srcservernodenode_modulesosjshandlerjs.html">handler.js</a></li></ul></li></ul></li></ul></li></ul></li></ul></li>
+<li>src<ul><li>server<ul><li>node<ul><li><a href="srcservernodehttpjs.html">http.js</a></li><li>core<ul><li><a href="srcservernodecoreapijs.html">api.js</a></li><li><a href="srcservernodecorevfsjs.html">vfs.js</a></li><li><a href="srcservernodecoreindexjs.html">index.js</a></li><li><a href="srcservernodecoreconfigjs.html">config.js</a></li><li><a href="srcservernodecorehandlerjs.html">handler.js</a></li></ul></li></ul></li></ul></li></ul></li>
 
       </ul>
     </nav>
@@ -56,7 +56,7 @@
     <content class="api">
 
 <h1>Overview</h1>
-<p><i>src/server/node/node_modules/osjs/handler.js</i></p>
+<p><i>src/server/node/core/handler.js</i></p>
 <h2>Functions</h2>
 <ul>
 <li>handler.<a href="#handler-init">init()</a></li>
