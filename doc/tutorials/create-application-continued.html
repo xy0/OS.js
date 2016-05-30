@@ -160,6 +160,26 @@ ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
 
   return root;
 };</pre>
+
+    <p>You can also bind events via your class</p>
+    <pre class="code prettyprint lang-js"> // Change `ApplicationMyName` to your namespace
+ApplicationMyNameWindow.prototype.init = function(wm, app, scheme) {
+  var root = Window.prototype.init.apply(this, arguments);
+  var self = this;
+
+  // Load and set up scheme (GUI) here
+  scheme.render(this, 'ApplicationMyNameWindow', root);
+
+
+  // Bind via this
+  this._find('MyButtonOne').son('click', this, this.onMyButtonClick);
+
+  return root;
+};
+
+ApplicationMyNameWindow.prototype.onMyButtonClick = function(el, ev) {
+  console.log('CLICKED');
+};</pre>
   </div>
 
   <h2>More advanced examples</h2>
