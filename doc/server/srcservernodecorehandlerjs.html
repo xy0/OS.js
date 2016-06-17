@@ -171,7 +171,7 @@ session(s).
 <p>&nbsp;</p>
 
 <div class="section-method" id="handler-getusername">
-<h3 id="handler-getusername-request-response-">Handler::getUserName(request, response)</h3>
+<h3 id="handler-getusername-server-">Handler::getUserName(server)</h3>
 <pre>
 Gets the username of currently active user
 </pre>
@@ -188,21 +188,16 @@ Gets the username of currently active user
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 </tbody>
 </table>
 
 </div>
 <div class="section-method" id="handler-getusergroups">
-<h3 id="handler-getusergroups-request-response-">Handler::getUserGroups(request, response)</h3>
+<h3 id="handler-getusergroups-server-">Handler::getUserGroups(server)</h3>
 <pre>
 Gets the groups of currently active user
 </pre>
@@ -219,21 +214,16 @@ Gets the groups of currently active user
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 </tbody>
 </table>
 
 </div>
 <div class="section-method" id="handler-getuserblacklistedpackages">
-<h3 id="handler-getuserblacklistedpackages-request-response-callback-">Handler::getUserBlacklistedPackages(request, response, callback)</h3>
+<h3 id="handler-getuserblacklistedpackages-server-callback-">Handler::getUserBlacklistedPackages(server, callback)</h3>
 <pre>
 Gets the blacklisted packages of active user
 
@@ -252,14 +242,9 @@ Gets the blacklisted packages of active user
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -273,7 +258,7 @@ Gets the blacklisted packages of active user
 
 </div>
 <div class="section-method" id="handler-setuserdata">
-<h3 id="handler-setuserdata-request-response-data-callback-">Handler::setUserData(request, response, data, callback)</h3>
+<h3 id="handler-setuserdata-server-data-callback-">Handler::setUserData(server, data, callback)</h3>
 <pre>
 Sets the user data of active user
 
@@ -292,14 +277,9 @@ Sets the user data of active user
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>data</td>
@@ -318,7 +298,7 @@ Sets the user data of active user
 
 </div>
 <div class="section-method" id="handler-checkapiprivilege">
-<h3 id="handler-checkapiprivilege-request-response-privilege-callback-">Handler::checkAPIPrivilege(request, response, privilege, callback)</h3>
+<h3 id="handler-checkapiprivilege-server-privilege-callback-">Handler::checkAPIPrivilege(server, privilege, callback)</h3>
 <pre>
 Check if request has access to given API request
 
@@ -339,14 +319,9 @@ THIS IS THE METHOD CALLED FROM THE SERVER
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>privilege</td>
@@ -365,7 +340,7 @@ THIS IS THE METHOD CALLED FROM THE SERVER
 
 </div>
 <div class="section-method" id="handler-checkvfsprivilege">
-<h3 id="handler-checkvfsprivilege-request-response-method-args-callback-">Handler::checkVFSPrivilege(request, response, method, args, callback)</h3>
+<h3 id="handler-checkvfsprivilege-server-method-args-callback-">Handler::checkVFSPrivilege(server, method, args, callback)</h3>
 <pre>
 Check if request has access to given VFS request
 
@@ -386,14 +361,9 @@ THIS IS THE METHOD CALLED FROM THE SERVER
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>method</td>
@@ -417,7 +387,7 @@ THIS IS THE METHOD CALLED FROM THE SERVER
 
 </div>
 <div class="section-method" id="handler-checkpackageprivilege">
-<h3 id="handler-checkpackageprivilege-request-response-packagename-callback-">Handler::checkPackagePrivilege(request, response, packageName, callback)</h3>
+<h3 id="handler-checkpackageprivilege-server-packagename-callback-">Handler::checkPackagePrivilege(server, packageName, callback)</h3>
 <pre>
 Check if request has access to given Package
 
@@ -438,14 +408,9 @@ THIS IS THE METHOD CALLED FROM THE SERVER
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>packageName</td>
@@ -486,7 +451,7 @@ Event fired when server ends
 
 </div>
 <div class="section-method" id="handler-onlogin">
-<h3 id="handler-onlogin-request-response-data-callback-">Handler::onLogin(request, response, data, callback)</h3>
+<h3 id="handler-onlogin-server-data-callback-">Handler::onLogin(server, data, callback)</h3>
 <pre>
 Event fired when server gets a login
 
@@ -505,14 +470,9 @@ Event fired when server gets a login
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>data</td>
@@ -529,7 +489,7 @@ Event fired when server gets a login
 
 </div>
 <div class="section-method" id="handler-onlogout">
-<h3 id="handler-onlogout-request-response-callback-">Handler::onLogout(request, response, callback)</h3>
+<h3 id="handler-onlogout-server-callback-">Handler::onLogout(server, callback)</h3>
 <pre>
 Event fired when server gets a logout
 
@@ -548,14 +508,9 @@ Event fired when server gets a logout
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -567,7 +522,7 @@ Event fired when server gets a logout
 
 </div>
 <div class="section-method" id="handler-_checkhasgroup">
-<h3 id="handler-_checkhasgroup-request-response-groupname-callback-">Handler::_checkHasGroup(request, response, groupname, callback)</h3>
+<h3 id="handler-_checkhasgroup-server-groupname-callback-">Handler::_checkHasGroup(server, groupname, callback)</h3>
 <pre>
 Default method for checking if User has given group(s)
 
@@ -588,14 +543,9 @@ If the user has group 'admin' it will automatically granted full access
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>groupname</td>
@@ -614,7 +564,7 @@ If the user has group 'admin' it will automatically granted full access
 
 </div>
 <div class="section-method" id="handler-_checkhassession">
-<h3 id="handler-_checkhassession-request-response-callback-">Handler::_checkHasSession(request, response, callback)</h3>
+<h3 id="handler-_checkhassession-server-callback-">Handler::_checkHasSession(server, callback)</h3>
 <pre>
 Default method for checking if user has a session
 
@@ -633,14 +583,9 @@ Default method for checking if user has a session
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>callback</td>
@@ -652,7 +597,7 @@ Default method for checking if user has a session
 
 </div>
 <div class="section-method" id="handler-_checkhasblacklistedpackage">
-<h3 id="handler-_checkhasblacklistedpackage-request-response-packagename-callback-">Handler::_checkHasBlacklistedPackage(request, response, packageName, callback)</h3>
+<h3 id="handler-_checkhasblacklistedpackage-server-packagename-callback-">Handler::_checkHasBlacklistedPackage(server, packageName, callback)</h3>
 <pre>
 Default method for checking blacklisted package permissions
 
@@ -671,14 +616,9 @@ Default method for checking blacklisted package permissions
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
-</tr>
-<tr>
-<td>response</td>
-<td>Object</td>
-<td>Server response object</td>
+<td>Server object</td>
 </tr>
 <tr>
 <td>packageName</td>
@@ -746,7 +686,7 @@ This method checks user groups against the ones defined in package metadata
 
 </div>
 <div class="section-method" id="handler-onsystemlogin">
-<h3 id="handler-onsystemlogin-request-response-cfg-login-getuserid-callback-">Handler::onSystemLogin(request, response, cfg, login, getUserId, callback)</h3>
+<h3 id="handler-onsystemlogin-server-config-login-getuserid-callback-">Handler::onSystemLogin(server, config, login, getUserId, callback)</h3>
 <pre>
 Perform a system-type login event.
 
@@ -777,19 +717,14 @@ This method will:
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
+<td>Server object</td>
 </tr>
 <tr>
-<td>response</td>
+<td>config</td>
 <td>Object</td>
-<td>Server response object</td>
-</tr>
-<tr>
-<td>cfg</td>
-<td>Object</td>
-<td>The config object</td>
+<td>Handler config object</td>
 </tr>
 <tr>
 <td>login</td>
@@ -811,7 +746,7 @@ This method will:
 
 </div>
 <div class="section-method" id="handler-onsystemsettings">
-<h3 id="handler-onsystemsettings-request-response-cfg-settings-getuserid-callback-">Handler::onSystemSettings(request, response, cfg, settings, getUserId, callback)</h3>
+<h3 id="handler-onsystemsettings-server-config-settings-getuserid-callback-">Handler::onSystemSettings(server, config, settings, getUserId, callback)</h3>
 <pre>
 Stores the user setings into the home directory of user
 
@@ -830,19 +765,14 @@ Stores the user setings into the home directory of user
 </thead>
 <tbody>
 <tr>
-<td>request</td>
+<td>server</td>
 <td>Object</td>
-<td>Server request object</td>
+<td>Server object</td>
 </tr>
 <tr>
-<td>response</td>
+<td>config</td>
 <td>Object</td>
-<td>Server response object</td>
-</tr>
-<tr>
-<td>cfg</td>
-<td>Object</td>
-<td>The config object</td>
+<td>Handler config object</td>
 </tr>
 <tr>
 <td>settings</td>
