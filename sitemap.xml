@@ -45,11 +45,11 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsappsjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_elementsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptgui_elementsjs.html</loc>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsapplicationsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -86,6 +86,10 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptinitjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsosjsjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>
@@ -153,10 +157,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsosjsjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascripthelpersiframe-applicationjs.html</loc>
     <priority>0.7</priority>
   </url>
@@ -166,10 +166,6 @@
   </url>
   <url>
     <loc>http://os.js.org/doc/client/srcclientjavascripthelpersdefault-application-windowjs.html</loc>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>http://os.js.org/doc/client/srcclientjavascriptvfsmountsuserjs.html</loc>
     <priority>0.7</priority>
   </url>
   <url>

@@ -77,6 +77,7 @@
 <li><a href="#handler-onserverend">onServerEnd()</a></li>
 <li><a href="#handler-onlogin">onLogin()</a></li>
 <li><a href="#handler-onlogout">onLogout()</a></li>
+<li><a href="#handler-onvfsrequest">onVFSRequest()</a></li>
 <li><a href="#handler-_checkhasgroup">_checkHasGroup()</a></li>
 <li><a href="#handler-_checkhassession">_checkHasSession()</a></li>
 <li><a href="#handler-_checkhasblacklistedpackage">_checkHasBlacklistedPackage()</a></li>
@@ -511,6 +512,49 @@ Event fired when server gets a logout
 <td>server</td>
 <td>Object</td>
 <td>Server object</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>Function</td>
+<td>Callback fuction</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="section-method" id="handler-onvfsrequest">
+<h3 id="handler-onvfsrequest-server-vfsmethod-vfsarguments-callback-">Handler::onVFSRequest(server, vfsMethod, vfsArguments, callback)</h3>
+<pre>
+Event fired when client requests a VFS event
+
+@async
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>server</td>
+<td>Object</td>
+<td>Server object</td>
+</tr>
+<tr>
+<td>vfsMethod</td>
+<td>String</td>
+<td>VFS Method</td>
+</tr>
+<tr>
+<td>vfsArguments</td>
+<td>Object</td>
+<td>VFS Arguments</td>
 </tr>
 <tr>
 <td>callback</td>
