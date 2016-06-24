@@ -76,7 +76,6 @@
 <li><a href="#process-_on">_on()</a></li>
 <li><a href="#process-_off">_off()</a></li>
 <li><a href="#process-_api">_api()</a></li>
-<li><a href="#process-_call">_call()</a></li>
 <li><a href="#process-_getargument">_getArgument()</a></li>
 <li><a href="#process-_getarguments">_getArguments()</a></li>
 <li><a href="#process-_getresource">_getResource()</a></li>
@@ -487,60 +486,6 @@ On Lua or Arduino it is called 'server.lua'
 <td>callback</td>
 <td>Function</td>
 <td>Callback method =&gt; fn(error, result)</td>
-</tr>
-<tr>
-<td>showLoading</td>
-<td>boolean</td>
-<td>Show loading indication (default=true)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>boolean</u></p>
-
-</div>
-<div class="section-method" id="process-_call">
-<h3 id="process-_call-method-args-onsuccess-onerror-showloading-">Process::_call(method, args, onSuccess, onError, showLoading)</h3>
-<pre>
-Call the ApplicationAPI
-
-This is used for calling 'api.php' or 'api.js' in your Application.
-
-On Lua or Arduino it is called 'server.lua'
-
-WARNING: THIS METHOD WILL BE DEPRECATED
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>method</td>
-<td>String</td>
-<td>Name of method</td>
-</tr>
-<tr>
-<td>args</td>
-<td>Object</td>
-<td>Arguments in JSON</td>
-</tr>
-<tr>
-<td>onSuccess</td>
-<td>Function</td>
-<td>When request is done callback fn(result)</td>
-</tr>
-<tr>
-<td>onError</td>
-<td>Function</td>
-<td>When an error occured fn(error)</td>
 </tr>
 <tr>
 <td>showLoading</td>
