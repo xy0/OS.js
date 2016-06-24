@@ -137,6 +137,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptutilseventsjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptutilsmiscjs.html</loc>
     <priority>0.7</priority>
   </url>
