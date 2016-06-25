@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>src/client/javascript/helpers/iframe-application.js | OS.js Client API Documentation</title>
+    <title>src/client/javascript/vfs/web.js | OS.js Client API Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- src/client/javascript/helpers/iframe-application.js" />
+    <meta name="description" content="OS.js -- src/client/javascript/vfs/web.js" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -56,274 +56,54 @@
     <content class="api">
 
 <h1>Overview</h1>
-<p><i>src/client/javascript/helpers/iframe-application.js</i></p>
+<p><i>src/client/javascript/vfs/web.js</i></p>
 <h2>Functions</h2>
 <ul>
+<li>OSjs.VFS.Transports.<a href="#osjs-vfs-transports-web">Web</a></li>
+<li>OSjs.VFS.Transports.Web.<a href="#osjs-vfs-transports-web-path">path()</a></li>
 </ul>
 <h2>Classes</h2>
 <ul>
-<li>
-<a href="#osjs-helpers-iframeapplicationwindow">IFrameApplicationWindow</a> (OSjs.Helpers.IFrameApplicationWindow)
-<ul>
-<li><a href="#iframeapplicationwindow-postmessage">postMessage()</a></li>
-<li><a href="#iframeapplicationwindow-onpostmessage">onPostMessage()</a></li>
-<li><a href="#iframeapplicationwindow-setlocation">setLocation()</a></li>
-</ul>
-</li>
-<li>
-<a href="#osjs-helpers-iframeapplication">IFrameApplication</a> (OSjs.Helpers.IFrameApplication)
-<ul>
-<li><a href="#iframeapplication-init">init()</a></li>
-<li><a href="#iframeapplication-onpostmessage">onPostMessage()</a></li>
-</ul>
-</li>
 </ul>
 <h1>Functions</h1>
+<div class="section-function" id="osjs-vfs-transports-web">
+<h2 id="osjs-vfs-transports-web">OSjs.VFS.Transports.Web</h2>
+<pre>
+Web/HTTP VFS Transport Module
+</pre>
+
+
+
+</div>
+<div class="section-function" id="osjs-vfs-transports-web-path">
+<h2 id="osjs-vfs-transports-web-path-item-">OSjs.VFS.Transports.Web.path(item)</h2>
+<pre>
+Make a Web HTTP URL for VFS
+
+@retun String URL based on input
+</pre>
+
+
+<h4 id="parameters">Parameters</h4>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>item</td>
+<td>Mixed</td>
+<td>(Optional) Path of VFS.File object</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 <h1>Classes</h1>
-<div class="section-class" id="osjs-helpers-iframeapplicationwindow">
-<h2 id="iframeapplicationwindow">IFrameApplicationWindow</h2>
-<pre>
-IFrame Application Window constructor
-
-This class is a basic implementation of OSjs.Core.Window
-
-that uses Iframe as window content. It's usefull for creating
-
-applications that is not using OS.js API.
-
-You can use this in combination with 'IFrameApplication'
-</pre>
-
-<h4 id="namespace">Namespace</h4>
-<ul>
-<li>OSjs.Helpers.IFrameApplicationWindow</li>
-</ul>
-<h4 id="extends">Extends</h4>
-<ul>
-<li>Window</li>
-</ul>
-<h4 id="see">See</h4>
-<ul>
-<li>OSjs.Core.Window</li>
-</ul>
-<h4 id="links">Links</h4>
-<ul>
-<li><a href="https://os.js.org/doc/tutorials/iframe-application.html">https://os.js.org/doc/tutorials/iframe-application.html</a></li>
-</ul>
-<h4 id="options-for-opts-">Options for <em>opts</em></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String</td>
-<td>src</td>
-<td>The Iframe source</td>
-</tr>
-<tr>
-<td>String</td>
-<td>icon</td>
-<td>The Icon relative/absolute path (./ for app dir)</td>
-</tr>
-<tr>
-<td>String</td>
-<td>title</td>
-<td>The Window title</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-
-<div class="section-method" id="iframeapplicationwindow-postmessage">
-<h3 id="iframeapplicationwindow-postmessage-message-">IFrameApplicationWindow::postMessage(message)</h3>
-<pre>
-Post a message to IFrame Application
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>message</td>
-<td>Mixed</td>
-<td>The message</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-<div class="section-method" id="iframeapplicationwindow-onpostmessage">
-<h3 id="iframeapplicationwindow-onpostmessage-message-ev-">IFrameApplicationWindow::onPostMessage(message, ev)</h3>
-<pre>
-When Window receives a message from IFrame Application
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>message</td>
-<td>Mixed</td>
-<td>The message</td>
-</tr>
-<tr>
-<td>ev</td>
-<td>DOMEvent</td>
-<td>DOM Event</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-<div class="section-method" id="iframeapplicationwindow-setlocation">
-<h3 id="iframeapplicationwindow-setlocation-src-">IFrameApplicationWindow::setLocation(src)</h3>
-<pre>
-Set Iframe source
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>src</td>
-<td>String</td>
-<td>Source</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-</div>
-<div class="section-class" id="osjs-helpers-iframeapplication">
-<h2 id="iframeapplication">IFrameApplication</h2>
-<pre>
-IFrame Application constructor
-
-Usage: Just apply the correct options and this should work
-
-automatically.
-
-This just inits an empty application with a window that uses
-
-iframe for contents. Look at the IFrameApplicationWindow
-
-constructor for more options you can apply here.
-</pre>
-
-<h4 id="namespace">Namespace</h4>
-<ul>
-<li>OSjs.Helpers.IFrameApplication</li>
-</ul>
-<h4 id="extends">Extends</h4>
-<ul>
-<li>Application</li>
-</ul>
-<h4 id="options-for-opts-">Options for <em>opts</em></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>String</td>
-<td>icon</td>
-<td>Window Icon</td>
-</tr>
-<tr>
-<td>String</td>
-<td>title</td>
-<td>Window Title</td>
-</tr>
-</tbody>
-</table>
-<p>&nbsp;</p>
-
-<div class="section-method" id="iframeapplication-init">
-<h3 id="iframeapplication-init-">IFrameApplication::init()</h3>
-<pre>
-Default init() code (run this last in your Application init() method)
-</pre>
-
-
-<h4 id="see">See</h4>
-<ul>
-<li>Application::init()</li>
-</ul>
-
-</div>
-<div class="section-method" id="iframeapplication-onpostmessage">
-<h3 id="iframeapplication-onpostmessage-message-ev-">IFrameApplication::onPostMessage(message, ev)</h3>
-<pre>
-When Application receives a message from IFrame Application
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>message</td>
-<td>Mixed</td>
-<td>The message</td>
-</tr>
-<tr>
-<td>ev</td>
-<td>DOMEvent</td>
-<td>DOM Event</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-</div>
 
       <div class="adddshere">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
