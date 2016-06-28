@@ -157,6 +157,10 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://os.js.org/doc/client/srcclientjavascriptvfshttpjs.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://os.js.org/doc/client/srcclientjavascriptdialogsfileinfojs.html</loc>
     <priority>0.7</priority>
   </url>

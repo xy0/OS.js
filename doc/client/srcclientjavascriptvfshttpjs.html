@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>src/client/javascript/helpers/firefox-marketplace.js | OS.js Client API Documentation</title>
+    <title>src/client/javascript/vfs/http.js | OS.js Client API Documentation</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- src/client/javascript/helpers/firefox-marketplace.js" />
+    <meta name="description" content="OS.js -- src/client/javascript/vfs/http.js" />
     <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -56,253 +56,25 @@
     <content class="api">
 
 <h1>Overview</h1>
-<p><i>src/client/javascript/helpers/firefox-marketplace.js</i></p>
+<p><i>src/client/javascript/vfs/http.js</i></p>
 <h2>Functions</h2>
 <ul>
-<li>OSjs.Helpers.FirefoxMarketplace.<a href="#osjs-helpers-firefoxmarketplace-getinstance">getInstance()</a></li>
-<li>OSjs.Helpers.FirefoxMarketplace.<a href="#osjs-helpers-firefoxmarketplace-createinstance">createInstance()</a></li>
+<li>OSjs.VFS.Modules.<a href="#osjs-vfs-modules-http">HTTP</a></li>
 </ul>
 <h2>Classes</h2>
 <ul>
-<li>
-<a href="#osjs-helpers-firefoxmarketplace-firefoxmarketplace">FirefoxMarketplace</a> (OSjs.Helpers.FirefoxMarketplace.FirefoxMarketplace)
-<ul>
-<li><a href="#firefoxmarketplace-_call">_call()</a></li>
-<li><a href="#firefoxmarketplace-_metadata">_metadata()</a></li>
-<li><a href="#firefoxmarketplace-search">search()</a></li>
-<li><a href="#firefoxmarketplace-launch">launch()</a></li>
-</ul>
-</li>
 </ul>
 <h1>Functions</h1>
-<div class="section-function" id="osjs-helpers-firefoxmarketplace-getinstance">
-<h2 id="osjs-helpers-firefoxmarketplace-getinstance-">OSjs.Helpers.FirefoxMarketplace.getInstance()</h2>
+<div class="section-function" id="osjs-vfs-modules-http">
+<h2 id="osjs-vfs-modules-http">OSjs.VFS.Modules.HTTP</h2>
 <pre>
-Gets the currently running instance
+A hidden mountpoint for making HTTP requests via VFS
 </pre>
 
 
-
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>FirefoxMarketplace</u> <em>Can also be null</em></p>
-
-</div>
-<div class="section-function" id="osjs-helpers-firefoxmarketplace-createinstance">
-<h2 id="osjs-helpers-firefoxmarketplace-createinstance-args-callback-">OSjs.Helpers.FirefoxMarketplace.createInstance(args, callback)</h2>
-<pre>
-Create an instance of FirefoxMarketplace
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>args</td>
-<td>Object</td>
-<td>Arguments</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback function =&gt; fn(error, instance)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="options-for-args-">Options for <em>args</em></h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>scope</td>
-<td>Array</td>
-<td>What scope to load</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
 
 </div>
 <h1>Classes</h1>
-<div class="section-class" id="osjs-helpers-firefoxmarketplace-firefoxmarketplace">
-<h2 id="firefoxmarketplace">FirefoxMarketplace</h2>
-<pre>
-The FirefoxMarketplace wrapper class
-
-This is a private class and can only be aquired through
-
-OSjs.Helpers.FirefoxMarketplace.createInsatance()
-
-@private
-</pre>
-
-<h4 id="namespace">Namespace</h4>
-<ul>
-<li>OSjs.Helpers.FirefoxMarketplace.FirefoxMarketplace</li>
-</ul>
-<h4 id="see">See</h4>
-<ul>
-<li>OSjs.Helpers.FirefoxMarketplace.createInsatance()</li>
-</ul>
-<h4 id="links">Links</h4>
-<ul>
-<li><a href="http://firefox-marketplace-api.readthedocs.org/en/latest">http://firefox-marketplace-api.readthedocs.org/en/latest</a></li>
-</ul>
-
-<div class="section-method" id="firefoxmarketplace-_call">
-<h3 id="firefoxmarketplace-_call-func-data-callback-">FirefoxMarketplace::_call(func, data, callback)</h3>
-<pre>
-Call the Marketplace API
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>func</td>
-<td>String</td>
-<td>The URI (function)</td>
-</tr>
-<tr>
-<td>data</td>
-<td>Object</td>
-<td>Tuple with arguments</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback =&gt; fn(error, result, url)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-<div class="section-method" id="firefoxmarketplace-_metadata">
-<h3 id="firefoxmarketplace-_metadata-id-callback-">FirefoxMarketplace::_metadata(id, callback)</h3>
-<pre>
-Get metadata for application by id
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int</td>
-<td>Application ID</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback =&gt; fn(error, result, url)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-<div class="section-method" id="firefoxmarketplace-search">
-<h3 id="firefoxmarketplace-search-q-callback-">FirefoxMarketplace::search(q, callback)</h3>
-<pre>
-Search for an application
-
-If no query is given, the featured list is retrieved
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>q</td>
-<td>String</td>
-<td>Query string (optional)</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback =&gt; fn(error, result)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-<div class="section-method" id="firefoxmarketplace-launch">
-<h3 id="firefoxmarketplace-launch-id-callback-">FirefoxMarketplace::launch(id, callback)</h3>
-<pre>
-Launch an application by Id
-</pre>
-
-
-<h4 id="parameters">Parameters</h4>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>int</td>
-<td>Application ID</td>
-</tr>
-<tr>
-<td>callback</td>
-<td>Function</td>
-<td>Callback =&gt; fn(error, result)</td>
-</tr>
-</tbody>
-</table>
-<h4 id="returns">Returns</h4>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>void</u></p>
-
-</div>
-</div>
 
       <div class="adddshere">
         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
