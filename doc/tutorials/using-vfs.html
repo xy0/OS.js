@@ -74,10 +74,10 @@
 <h1>Tutorial: Using VFS</h1>
 <div>
   <p>
-    With the VFS you can manipulate files over HTTP. For a full overview of available methods, look at the <a href="/doc/client/srcclientjavascriptvfsjs.html">API documentation</a>.
+    With the VFS you can manipulate files over HTTP. For a full overview of available methods, look at the <a href="/doc/client/OSjs.VFS.html">API documentation</a>.
   </p>
   <p>
-    You can either specify paths as <i>strings</i> or an instance of <a href="/doc/client/srcclientjavascriptvfs_filejs.html#osjs-vfs-file">File Metadata</a>:
+    You can either specify paths as <i>strings</i> or an instance of <a href="/doc/client/OSjs.VFS.File.html">File Metadata</a>:
   </p>
   <pre>
 var path = 'home:///file.txt';
@@ -91,7 +91,7 @@ var path = new VFS.File('home:///file.txt');
   <h2>Reading a File</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-read">API documentation</a>
+      For more information look at the <a href="/doc/client/OSjs.VFS.html#.read">API documentation</a>
     </p>
     <pre class="code prettyprint lang-js">VFS.read(path, function(err, res) {
   if ( err ) {
@@ -109,7 +109,7 @@ var path = new VFS.File('home:///file.txt');
   <h2>Writing a File</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-write">API documentation</a>
+      For more information look at the <a href="/doc/client/OSjs.VFS.html#.write">API documentation</a>
     </p>
     <pre class="code prettyprint lang-js">// data can either a 'String', 'File', 'Blob', 'ArrayBuffer', 'JSON' or 'VFS.FileDataURL'
 VFS.write(path, data, function(err, res) {
@@ -125,7 +125,7 @@ VFS.write(path, data, function(err, res) {
   <h2>Copy a File</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-copy">API documentation</a>
+      For more information look at the <a href="/doc/client/OSjs.VFS.html#.copy">API documentation</a>
     </p>
     <pre class="code prettyprint lang-js">VFS.copy(src, dest, function(err, res) {
   if ( err || !res ) {
@@ -140,7 +140,7 @@ VFS.write(path, data, function(err, res) {
   <h2>Scan a directory</h2>
   <div class="indent">
     <p>
-      For more information look at the <a href="/doc/client/srcclientjavascriptvfsjs.html#osjs-vfs-scandir">API documentation</a>
+      For more information look at the <a href="/doc/client/OSjs.VFS.html#.scandir">API documentation</a>
     </p>
     <pre class="code prettyprint lang-js">VFS.scandir(path, function(err, res) {
   if ( err ) {

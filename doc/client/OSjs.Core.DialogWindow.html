@@ -1,0 +1,9170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Class: DialogWindow - OS.js Client JSDoc</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
+    <link rel="author" href="https://plus.google.com/101576798387217383063" />
+    <link rel="publisher" href="https://plus.google.com/101576798387217383063" />
+
+    <script type="text/javascript">
+      if ( window.location.hostname === 'andersevenrud.github.io' ) {
+        window.location = '//os.js.org' + window.location.pathname.replace(/\/OS\.js-v2/, '');
+      }
+      if ( window.location.hostname === 'os.js.org' && window.location.protocol !== 'https:' ) {
+        window.location.protocol = 'https:';
+      }
+    </script>
+</head>
+
+<body>
+
+<header>
+      <img alt="" src="/images/doc/logo.png" />
+      <ul>
+        <li><a href="/doc/">Index</a></li>
+        <li><a href="/doc/client/">Client API</a></li>
+        <li><a href="/doc/server/">Server API</a></li>
+        <li><a href="/doc/manuals/">Manuals</a></li>
+        <li><a href="/doc/tutorials/">Tutorials</a></li>
+      </ul>
+</header>
+
+<nav>
+    <h3>Classes</h3><ul><li data-name="OSjs.Core.Application" data-subs="true"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.Application.html#__args">__args</a></li><li><a href="OSjs.Core.Application.html#__destroyed">__destroyed</a></li><li><a href="OSjs.Core.Application.html#__destroying">__destroying</a></li><li><a href="OSjs.Core.Application.html#__inited">__inited</a></li><li><a href="OSjs.Core.Application.html#__mainwindow">__mainwindow</a></li><li><a href="OSjs.Core.Application.html#__metadata">__metadata</a></li><li><a href="OSjs.Core.Application.html#__pid">__pid</a></li><li><a href="OSjs.Core.Application.html#__pname">__pname</a></li><li><a href="OSjs.Core.Application.html#__scheme">__scheme</a></li><li><a href="OSjs.Core.Application.html#__settings">__settings</a></li><li><a href="OSjs.Core.Application.html#__started">__started</a></li><li><a href="OSjs.Core.Application.html#__windows">__windows</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.Application.html#_addWindow">_addWindow</a></li><li><a href="OSjs.Core.Application.html#_api">_api</a></li><li><a href="OSjs.Core.Application.html#_emit">_emit</a></li><li><a href="OSjs.Core.Application.html#_getArgument">_getArgument</a></li><li><a href="OSjs.Core.Application.html#_getArguments">_getArguments</a></li><li><a href="OSjs.Core.Application.html#_getMainWindow">_getMainWindow</a></li><li><a href="OSjs.Core.Application.html#_getResource">_getResource</a></li><li><a href="OSjs.Core.Application.html#_getSessionData">_getSessionData</a></li><li><a href="OSjs.Core.Application.html#_getSettings">_getSettings</a></li><li><a href="OSjs.Core.Application.html#_getWindow">_getWindow</a></li><li><a href="OSjs.Core.Application.html#_getWindowByName">_getWindowByName</a></li><li><a href="OSjs.Core.Application.html#_getWindowByTag">_getWindowByTag</a></li><li><a href="OSjs.Core.Application.html#_getWindows">_getWindows</a></li><li><a href="OSjs.Core.Application.html#_loadScheme">_loadScheme</a></li><li><a href="OSjs.Core.Application.html#_off">_off</a></li><li><a href="OSjs.Core.Application.html#_on">_on</a></li><li><a href="OSjs.Core.Application.html#_onMessage">_onMessage</a></li><li><a href="OSjs.Core.Application.html#_removeWindow">_removeWindow</a></li><li><a href="OSjs.Core.Application.html#_setArgument">_setArgument</a></li><li><a href="OSjs.Core.Application.html#_setScheme">_setScheme</a></li><li><a href="OSjs.Core.Application.html#_setSetting">_setSetting</a></li><li><a href="OSjs.Core.Application.html#destroy">destroy</a></li><li><a href="OSjs.Core.Application.html#init">init</a></li></ul></div></li><li data-name="OSjs.Core.DialogWindow" data-subs="true"><a href="OSjs.Core.DialogWindow.html">OSjs.Core.DialogWindow</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.DialogWindow.html#_$disabled">_$disabled</a></li><li><a href="OSjs.Core.DialogWindow.html#_$element">_$element</a></li><li><a href="OSjs.Core.DialogWindow.html#_$loading">_$loading</a></li><li><a href="OSjs.Core.DialogWindow.html#_$resize">_$resize</a></li><li><a href="OSjs.Core.DialogWindow.html#_$root">_$root</a></li><li><a href="OSjs.Core.DialogWindow.html#_$top">_$top</a></li><li><a href="OSjs.Core.DialogWindow.html#_$warning">_$warning</a></li><li><a href="OSjs.Core.DialogWindow.html#_$winicon">_$winicon</a></li><li><a href="OSjs.Core.DialogWindow.html#_app">_app</a></li><li><a href="OSjs.Core.DialogWindow.html#_children">_children</a></li><li><a href="OSjs.Core.DialogWindow.html#_destroyed">_destroyed</a></li><li><a href="OSjs.Core.DialogWindow.html#_dimension">_dimension</a></li><li><a href="OSjs.Core.DialogWindow.html#_disabled">_disabled</a></li><li><a href="OSjs.Core.DialogWindow.html#_icon">_icon</a></li><li><a href="OSjs.Core.DialogWindow.html#_loaded">_loaded</a></li><li><a href="OSjs.Core.DialogWindow.html#_loading">_loading</a></li><li><a href="OSjs.Core.DialogWindow.html#_name">_name</a></li><li><a href="OSjs.Core.DialogWindow.html#_opts">_opts</a></li><li><a href="OSjs.Core.DialogWindow.html#_parent">_parent</a></li><li><a href="OSjs.Core.DialogWindow.html#_position">_position</a></li><li><a href="OSjs.Core.DialogWindow.html#_properties">_properties</a></li><li><a href="OSjs.Core.DialogWindow.html#_restored">_restored</a></li><li><a href="OSjs.Core.DialogWindow.html#_scheme">_scheme</a></li><li><a href="OSjs.Core.DialogWindow.html#_state">_state</a></li><li><a href="OSjs.Core.DialogWindow.html#_title">_title</a></li><li><a href="OSjs.Core.DialogWindow.html#_wid">_wid</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.DialogWindow.html#.parseMessage">parseMessage</a></li><li><a href="OSjs.Core.DialogWindow.html#_addChild">_addChild</a></li><li><a href="OSjs.Core.DialogWindow.html#_blur">_blur</a></li><li><a href="OSjs.Core.DialogWindow.html#_blurGUI">_blurGUI</a></li><li><a href="OSjs.Core.DialogWindow.html#_close">_close</a></li><li><a href="OSjs.Core.DialogWindow.html#_emit">_emit</a></li><li><a href="OSjs.Core.DialogWindow.html#_find">_find</a></li><li><a href="OSjs.Core.DialogWindow.html#_findByQuery">_findByQuery</a></li><li><a href="OSjs.Core.DialogWindow.html#_focus">_focus</a></li><li><a href="OSjs.Core.DialogWindow.html#_getChild">_getChild</a></li><li><a href="OSjs.Core.DialogWindow.html#_getChildById">_getChildById</a></li><li><a href="OSjs.Core.DialogWindow.html#_getChildByName">_getChildByName</a></li><li><a href="OSjs.Core.DialogWindow.html#_getChildren">_getChildren</a></li><li><a href="OSjs.Core.DialogWindow.html#_getChildrenByTag">_getChildrenByTag</a></li><li><a href="OSjs.Core.DialogWindow.html#_getMaximizedSize">_getMaximizedSize</a></li><li><a href="OSjs.Core.DialogWindow.html#_getRoot">_getRoot</a></li><li><a href="OSjs.Core.DialogWindow.html#_getViewRect">_getViewRect</a></li><li><a href="OSjs.Core.DialogWindow.html#_getZindex">_getZindex</a></li><li><a href="OSjs.Core.DialogWindow.html#_inited">_inited</a></li><li><a href="OSjs.Core.DialogWindow.html#_maximize">_maximize</a></li><li><a href="OSjs.Core.DialogWindow.html#_minimize">_minimize</a></li><li><a href="OSjs.Core.DialogWindow.html#_move">_move</a></li><li><a href="OSjs.Core.DialogWindow.html#_moveTo">_moveTo</a></li><li><a href="OSjs.Core.DialogWindow.html#_nextTabIndex">_nextTabIndex</a></li><li><a href="OSjs.Core.DialogWindow.html#_off">_off</a></li><li><a href="OSjs.Core.DialogWindow.html#_on">_on</a></li><li><a href="OSjs.Core.DialogWindow.html#_onChange">_onChange</a></li><li><a href="OSjs.Core.DialogWindow.html#_onDndEvent">_onDndEvent</a></li><li><a href="OSjs.Core.DialogWindow.html#_onKeyEvent">_onKeyEvent</a></li><li><a href="OSjs.Core.DialogWindow.html#_onResize">_onResize</a></li><li><a href="OSjs.Core.DialogWindow.html#_onWindowButtonClick">_onWindowButtonClick</a></li><li><a href="OSjs.Core.DialogWindow.html#_removeChild">_removeChild</a></li><li><a href="OSjs.Core.DialogWindow.html#_removeChildren">_removeChildren</a></li><li><a href="OSjs.Core.DialogWindow.html#_resizeTo">_resizeTo</a></li><li><a href="OSjs.Core.DialogWindow.html#_restore">_restore</a></li><li><a href="OSjs.Core.DialogWindow.html#_setIcon">_setIcon</a></li><li><a href="OSjs.Core.DialogWindow.html#_setProperty">_setProperty</a></li><li><a href="OSjs.Core.DialogWindow.html#_setTitle">_setTitle</a></li><li><a href="OSjs.Core.DialogWindow.html#_setWarning">_setWarning</a></li><li><a href="OSjs.Core.DialogWindow.html#_toggleAttentionBlink">_toggleAttentionBlink</a></li><li><a href="OSjs.Core.DialogWindow.html#_toggleDisabled">_toggleDisabled</a></li><li><a href="OSjs.Core.DialogWindow.html#_toggleLoading">_toggleLoading</a></li><li><a href="OSjs.Core.DialogWindow.html#_updateMarkup">_updateMarkup</a></li><li><a href="OSjs.Core.DialogWindow.html#destroy">destroy</a></li><li><a href="OSjs.Core.DialogWindow.html#init">init</a></li><li><a href="OSjs.Core.DialogWindow.html#onClose">onClose</a></li></ul></div></li><li data-name="OSjs.Core.Handler" data-subs="true"><a href="OSjs.Core.Handler.html">OSjs.Core.Handler</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.Handler.html#.use">use</a></li><li><a href="OSjs.Core.Handler.html#__callGET">__callGET</a></li><li><a href="OSjs.Core.Handler.html#__callNW">__callNW</a></li><li><a href="OSjs.Core.Handler.html#__callPOST">__callPOST</a></li><li><a href="OSjs.Core.Handler.html#__callXHR">__callXHR</a></li><li><a href="OSjs.Core.Handler.html#_callAPI">_callAPI</a></li><li><a href="OSjs.Core.Handler.html#_callVFS">_callVFS</a></li><li><a href="OSjs.Core.Handler.html#callAPI">callAPI</a></li><li><a href="OSjs.Core.Handler.html#destroy">destroy</a></li><li><a href="OSjs.Core.Handler.html#getLastSession">getLastSession</a></li><li><a href="OSjs.Core.Handler.html#getUserData">getUserData</a></li><li><a href="OSjs.Core.Handler.html#getVFSPath">getVFSPath</a></li><li><a href="OSjs.Core.Handler.html#init">init</a></li><li><a href="OSjs.Core.Handler.html#initLoginScreen">initLoginScreen</a></li><li><a href="OSjs.Core.Handler.html#loadSession">loadSession</a></li><li><a href="OSjs.Core.Handler.html#login">login</a></li><li><a href="OSjs.Core.Handler.html#logout">logout</a></li><li><a href="OSjs.Core.Handler.html#onLogin">onLogin</a></li><li><a href="OSjs.Core.Handler.html#onOffline">onOffline</a></li><li><a href="OSjs.Core.Handler.html#onOnline">onOnline</a></li><li><a href="OSjs.Core.Handler.html#onVFSRequest">onVFSRequest</a></li><li><a href="OSjs.Core.Handler.html#onVFSRequestCompleted">onVFSRequestCompleted</a></li><li><a href="OSjs.Core.Handler.html#saveSession">saveSession</a></li><li><a href="OSjs.Core.Handler.html#saveSettings">saveSettings</a></li></ul></div></li><li data-name="OSjs.Core.PackageManager" data-subs="true"><a href="OSjs.Core.PackageManager.html">OSjs.Core.PackageManager</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.PackageManager.html#_addPackages">_addPackages</a></li><li><a href="OSjs.Core.PackageManager.html#_loadExtensions">_loadExtensions</a></li><li><a href="OSjs.Core.PackageManager.html#_loadMetadata">_loadMetadata</a></li><li><a href="OSjs.Core.PackageManager.html#addDummyPackage">addDummyPackage</a></li><li><a href="OSjs.Core.PackageManager.html#generateUserMetadata">generateUserMetadata</a></li><li><a href="OSjs.Core.PackageManager.html#getPackage">getPackage</a></li><li><a href="OSjs.Core.PackageManager.html#getPackages">getPackages</a></li><li><a href="OSjs.Core.PackageManager.html#getPackagesByMime">getPackagesByMime</a></li><li><a href="OSjs.Core.PackageManager.html#install">install</a></li><li><a href="OSjs.Core.PackageManager.html#load">load</a></li><li><a href="OSjs.Core.PackageManager.html#setBlacklist">setBlacklist</a></li></ul></div></li><li data-name="OSjs.Core.Process" data-subs="true"><a href="OSjs.Core.Process.html">OSjs.Core.Process</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.Process.html#__args">__args</a></li><li><a href="OSjs.Core.Process.html#__destroyed">__destroyed</a></li><li><a href="OSjs.Core.Process.html#__metadata">__metadata</a></li><li><a href="OSjs.Core.Process.html#__pid">__pid</a></li><li><a href="OSjs.Core.Process.html#__pname">__pname</a></li><li><a href="OSjs.Core.Process.html#__started">__started</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.Process.html#_api">_api</a></li><li><a href="OSjs.Core.Process.html#_emit">_emit</a></li><li><a href="OSjs.Core.Process.html#_getArgument">_getArgument</a></li><li><a href="OSjs.Core.Process.html#_getArguments">_getArguments</a></li><li><a href="OSjs.Core.Process.html#_getResource">_getResource</a></li><li><a href="OSjs.Core.Process.html#_off">_off</a></li><li><a href="OSjs.Core.Process.html#_on">_on</a></li><li><a href="OSjs.Core.Process.html#_onMessage">_onMessage</a></li><li><a href="OSjs.Core.Process.html#_setArgument">_setArgument</a></li><li><a href="OSjs.Core.Process.html#destroy">destroy</a></li></ul></div></li><li data-name="OSjs.Core.SearchEngine" data-subs="true"><a href="OSjs.Core.SearchEngine.html">OSjs.Core.SearchEngine</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.SearchEngine.html#configure">configure</a></li><li><a href="OSjs.Core.SearchEngine.html#destroy">destroy</a></li><li><a href="OSjs.Core.SearchEngine.html#init">init</a></li><li><a href="OSjs.Core.SearchEngine.html#reindex">reindex</a></li><li><a href="OSjs.Core.SearchEngine.html#search">search</a></li></ul></div></li><li data-name="OSjs.Core.Service" data-subs="true"><a href="OSjs.Core.Service.html">OSjs.Core.Service</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.Service.html#__args">__args</a></li><li><a href="OSjs.Core.Service.html#__destroyed">__destroyed</a></li><li><a href="OSjs.Core.Service.html#__metadata">__metadata</a></li><li><a href="OSjs.Core.Service.html#__pid">__pid</a></li><li><a href="OSjs.Core.Service.html#__pname">__pname</a></li><li><a href="OSjs.Core.Service.html#__started">__started</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.Service.html#_api">_api</a></li><li><a href="OSjs.Core.Service.html#_emit">_emit</a></li><li><a href="OSjs.Core.Service.html#_getArgument">_getArgument</a></li><li><a href="OSjs.Core.Service.html#_getArguments">_getArguments</a></li><li><a href="OSjs.Core.Service.html#_getResource">_getResource</a></li><li><a href="OSjs.Core.Service.html#_off">_off</a></li><li><a href="OSjs.Core.Service.html#_on">_on</a></li><li><a href="OSjs.Core.Service.html#_onMessage">_onMessage</a></li><li><a href="OSjs.Core.Service.html#_setArgument">_setArgument</a></li><li><a href="OSjs.Core.Service.html#destroy">destroy</a></li><li><a href="OSjs.Core.Service.html#init">init</a></li></ul></div></li><li data-name="OSjs.Core.SettingsManager" data-subs="true"><a href="OSjs.Core.SettingsManager.html">OSjs.Core.SettingsManager</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.SettingsManager.html#changed">changed</a></li><li><a href="OSjs.Core.SettingsManager.html#clear">clear</a></li><li><a href="OSjs.Core.SettingsManager.html#defaults">defaults</a></li><li><a href="OSjs.Core.SettingsManager.html#get">get</a></li><li><a href="OSjs.Core.SettingsManager.html#init">init</a></li><li><a href="OSjs.Core.SettingsManager.html#instance">instance</a></li><li><a href="OSjs.Core.SettingsManager.html#save">save</a></li><li><a href="OSjs.Core.SettingsManager.html#set">set</a></li><li><a href="OSjs.Core.SettingsManager.html#unwatch">unwatch</a></li><li><a href="OSjs.Core.SettingsManager.html#watch">watch</a></li></ul></div></li><li data-name="OSjs.Core.Window" data-subs="true"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.Window.html#_$disabled">_$disabled</a></li><li><a href="OSjs.Core.Window.html#_$element">_$element</a></li><li><a href="OSjs.Core.Window.html#_$loading">_$loading</a></li><li><a href="OSjs.Core.Window.html#_$resize">_$resize</a></li><li><a href="OSjs.Core.Window.html#_$root">_$root</a></li><li><a href="OSjs.Core.Window.html#_$top">_$top</a></li><li><a href="OSjs.Core.Window.html#_$warning">_$warning</a></li><li><a href="OSjs.Core.Window.html#_$winicon">_$winicon</a></li><li><a href="OSjs.Core.Window.html#_app">_app</a></li><li><a href="OSjs.Core.Window.html#_children">_children</a></li><li><a href="OSjs.Core.Window.html#_destroyed">_destroyed</a></li><li><a href="OSjs.Core.Window.html#_dimension">_dimension</a></li><li><a href="OSjs.Core.Window.html#_disabled">_disabled</a></li><li><a href="OSjs.Core.Window.html#_icon">_icon</a></li><li><a href="OSjs.Core.Window.html#_loaded">_loaded</a></li><li><a href="OSjs.Core.Window.html#_loading">_loading</a></li><li><a href="OSjs.Core.Window.html#_name">_name</a></li><li><a href="OSjs.Core.Window.html#_opts">_opts</a></li><li><a href="OSjs.Core.Window.html#_parent">_parent</a></li><li><a href="OSjs.Core.Window.html#_position">_position</a></li><li><a href="OSjs.Core.Window.html#_properties">_properties</a></li><li><a href="OSjs.Core.Window.html#_restored">_restored</a></li><li><a href="OSjs.Core.Window.html#_scheme">_scheme</a></li><li><a href="OSjs.Core.Window.html#_state">_state</a></li><li><a href="OSjs.Core.Window.html#_title">_title</a></li><li><a href="OSjs.Core.Window.html#_title">_title</a></li><li><a href="OSjs.Core.Window.html#_wid">_wid</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.Window.html#_addChild">_addChild</a></li><li><a href="OSjs.Core.Window.html#_blur">_blur</a></li><li><a href="OSjs.Core.Window.html#_blurGUI">_blurGUI</a></li><li><a href="OSjs.Core.Window.html#_close">_close</a></li><li><a href="OSjs.Core.Window.html#_emit">_emit</a></li><li><a href="OSjs.Core.Window.html#_find">_find</a></li><li><a href="OSjs.Core.Window.html#_findByQuery">_findByQuery</a></li><li><a href="OSjs.Core.Window.html#_focus">_focus</a></li><li><a href="OSjs.Core.Window.html#_getChild">_getChild</a></li><li><a href="OSjs.Core.Window.html#_getChildById">_getChildById</a></li><li><a href="OSjs.Core.Window.html#_getChildByName">_getChildByName</a></li><li><a href="OSjs.Core.Window.html#_getChildren">_getChildren</a></li><li><a href="OSjs.Core.Window.html#_getChildrenByTag">_getChildrenByTag</a></li><li><a href="OSjs.Core.Window.html#_getMaximizedSize">_getMaximizedSize</a></li><li><a href="OSjs.Core.Window.html#_getRoot">_getRoot</a></li><li><a href="OSjs.Core.Window.html#_getViewRect">_getViewRect</a></li><li><a href="OSjs.Core.Window.html#_getZindex">_getZindex</a></li><li><a href="OSjs.Core.Window.html#_inited">_inited</a></li><li><a href="OSjs.Core.Window.html#_maximize">_maximize</a></li><li><a href="OSjs.Core.Window.html#_minimize">_minimize</a></li><li><a href="OSjs.Core.Window.html#_move">_move</a></li><li><a href="OSjs.Core.Window.html#_moveTo">_moveTo</a></li><li><a href="OSjs.Core.Window.html#_nextTabIndex">_nextTabIndex</a></li><li><a href="OSjs.Core.Window.html#_off">_off</a></li><li><a href="OSjs.Core.Window.html#_on">_on</a></li><li><a href="OSjs.Core.Window.html#_onChange">_onChange</a></li><li><a href="OSjs.Core.Window.html#_onDndEvent">_onDndEvent</a></li><li><a href="OSjs.Core.Window.html#_onKeyEvent">_onKeyEvent</a></li><li><a href="OSjs.Core.Window.html#_onResize">_onResize</a></li><li><a href="OSjs.Core.Window.html#_onResize">_onResize</a></li><li><a href="OSjs.Core.Window.html#_onWindowButtonClick">_onWindowButtonClick</a></li><li><a href="OSjs.Core.Window.html#_removeChild">_removeChild</a></li><li><a href="OSjs.Core.Window.html#_removeChildren">_removeChildren</a></li><li><a href="OSjs.Core.Window.html#_resizeTo">_resizeTo</a></li><li><a href="OSjs.Core.Window.html#_restore">_restore</a></li><li><a href="OSjs.Core.Window.html#_setIcon">_setIcon</a></li><li><a href="OSjs.Core.Window.html#_setProperty">_setProperty</a></li><li><a href="OSjs.Core.Window.html#_setTitle">_setTitle</a></li><li><a href="OSjs.Core.Window.html#_setWarning">_setWarning</a></li><li><a href="OSjs.Core.Window.html#_toggleAttentionBlink">_toggleAttentionBlink</a></li><li><a href="OSjs.Core.Window.html#_toggleDisabled">_toggleDisabled</a></li><li><a href="OSjs.Core.Window.html#_toggleLoading">_toggleLoading</a></li><li><a href="OSjs.Core.Window.html#_updateMarkup">_updateMarkup</a></li><li><a href="OSjs.Core.Window.html#destroy">destroy</a></li><li><a href="OSjs.Core.Window.html#init">init</a></li></ul></div></li><li data-name="OSjs.Core.WindowManager" data-subs="true"><a href="OSjs.Core.WindowManager.html">OSjs.Core.WindowManager</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Core.WindowManager.html#__args">__args</a></li><li><a href="OSjs.Core.WindowManager.html#__destroyed">__destroyed</a></li><li><a href="OSjs.Core.WindowManager.html#__metadata">__metadata</a></li><li><a href="OSjs.Core.WindowManager.html#__pid">__pid</a></li><li><a href="OSjs.Core.WindowManager.html#__pname">__pname</a></li><li><a href="OSjs.Core.WindowManager.html#__started">__started</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.WindowManager.html#_api">_api</a></li><li><a href="OSjs.Core.WindowManager.html#_emit">_emit</a></li><li><a href="OSjs.Core.WindowManager.html#_getArgument">_getArgument</a></li><li><a href="OSjs.Core.WindowManager.html#_getArguments">_getArguments</a></li><li><a href="OSjs.Core.WindowManager.html#_getResource">_getResource</a></li><li><a href="OSjs.Core.WindowManager.html#_off">_off</a></li><li><a href="OSjs.Core.WindowManager.html#_on">_on</a></li><li><a href="OSjs.Core.WindowManager.html#_onMessage">_onMessage</a></li><li><a href="OSjs.Core.WindowManager.html#_setArgument">_setArgument</a></li><li><a href="OSjs.Core.WindowManager.html#addWindow">addWindow</a></li><li><a href="OSjs.Core.WindowManager.html#applySettings">applySettings</a></li><li><a href="OSjs.Core.WindowManager.html#createNotificationIcon">createNotificationIcon</a></li><li><a href="OSjs.Core.WindowManager.html#createStylesheet">createStylesheet</a></li><li><a href="OSjs.Core.WindowManager.html#destroy">destroy</a></li><li><a href="OSjs.Core.WindowManager.html#destroyStylesheet">destroyStylesheet</a></li><li><a href="OSjs.Core.WindowManager.html#eventWindow">eventWindow</a></li><li><a href="OSjs.Core.WindowManager.html#getAnimDuration">getAnimDuration</a></li><li><a href="OSjs.Core.WindowManager.html#getCurrentWindow">getCurrentWindow</a></li><li><a href="OSjs.Core.WindowManager.html#getDefaultSettings">getDefaultSettings</a></li><li><a href="OSjs.Core.WindowManager.html#getIconTheme">getIconTheme</a></li><li><a href="OSjs.Core.WindowManager.html#getIconThemes">getIconThemes</a></li><li><a href="OSjs.Core.WindowManager.html#getLastWindow">getLastWindow</a></li><li><a href="OSjs.Core.WindowManager.html#getMouseLocked">getMouseLocked</a></li><li><a href="OSjs.Core.WindowManager.html#getPanel">getPanel</a></li><li><a href="OSjs.Core.WindowManager.html#getPanels">getPanels</a></li><li><a href="OSjs.Core.WindowManager.html#getSetting">getSetting</a></li><li><a href="OSjs.Core.WindowManager.html#getSettings">getSettings</a></li><li><a href="OSjs.Core.WindowManager.html#getSoundTheme">getSoundTheme</a></li><li><a href="OSjs.Core.WindowManager.html#getSoundThemes">getSoundThemes</a></li><li><a href="OSjs.Core.WindowManager.html#getStyleTheme">getStyleTheme</a></li><li><a href="OSjs.Core.WindowManager.html#getStyleThemes">getStyleThemes</a></li><li><a href="OSjs.Core.WindowManager.html#getWindow">getWindow</a></li><li><a href="OSjs.Core.WindowManager.html#getWindowPosition">getWindowPosition</a></li><li><a href="OSjs.Core.WindowManager.html#getWindows">getWindows</a></li><li><a href="OSjs.Core.WindowManager.html#getWindowSpace">getWindowSpace</a></li><li><a href="OSjs.Core.WindowManager.html#init">init</a></li><li><a href="OSjs.Core.WindowManager.html#notification">notification</a></li><li><a href="OSjs.Core.WindowManager.html#onKeyDown">onKeyDown</a></li><li><a href="OSjs.Core.WindowManager.html#removeNotificationIcon">removeNotificationIcon</a></li><li><a href="OSjs.Core.WindowManager.html#removeWindow">removeWindow</a></li><li><a href="OSjs.Core.WindowManager.html#setCurrentWindow">setCurrentWindow</a></li><li><a href="OSjs.Core.WindowManager.html#setLastWindow">setLastWindow</a></li><li><a href="OSjs.Core.WindowManager.html#setSetting">setSetting</a></li><li><a href="OSjs.Core.WindowManager.html#setup">setup</a></li><li><a href="OSjs.Core.WindowManager.html#showSettings">showSettings</a></li></ul></div></li><li data-name="OSjs.Dialogs.Alert" data-subs="false"><a href="OSjs.Dialogs.Alert.html">OSjs.Dialogs.Alert</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.ApplicationChooser" data-subs="false"><a href="OSjs.Dialogs.ApplicationChooser.html">OSjs.Dialogs.ApplicationChooser</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.Color" data-subs="false"><a href="OSjs.Dialogs.Color.html">OSjs.Dialogs.Color</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.Confirm" data-subs="false"><a href="OSjs.Dialogs.Confirm.html">OSjs.Dialogs.Confirm</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.Error" data-subs="false"><a href="OSjs.Dialogs.Error.html">OSjs.Dialogs.Error</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.File" data-subs="false"><a href="OSjs.Dialogs.File.html">OSjs.Dialogs.File</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.FileInfo" data-subs="false"><a href="OSjs.Dialogs.FileInfo.html">OSjs.Dialogs.FileInfo</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.FileProgress" data-subs="false"><a href="OSjs.Dialogs.FileProgress.html">OSjs.Dialogs.FileProgress</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.FileUpload" data-subs="false"><a href="OSjs.Dialogs.FileUpload.html">OSjs.Dialogs.FileUpload</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.Font" data-subs="false"><a href="OSjs.Dialogs.Font.html">OSjs.Dialogs.Font</a><span class="folder">+</span></li><li data-name="OSjs.Dialogs.Input" data-subs="false"><a href="OSjs.Dialogs.Input.html">OSjs.Dialogs.Input</a><span class="folder">+</span></li><li data-name="OSjs.GUI.DialogScheme" data-subs="true"><a href="OSjs.GUI.DialogScheme.html">OSjs.GUI.DialogScheme</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.DialogScheme.html#destroy">destroy</a></li><li><a href="OSjs.GUI.DialogScheme.html#get">get</a></li><li><a href="OSjs.GUI.DialogScheme.html#init">init</a></li></ul></div></li><li data-name="OSjs.GUI.Element" data-subs="true"><a href="OSjs.GUI.Element.html">OSjs.GUI.Element</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.Element.html#append">append</a></li><li><a href="OSjs.GUI.Element.html#appendHTML">appendHTML</a></li><li><a href="OSjs.GUI.Element.html#blur">blur</a></li><li><a href="OSjs.GUI.Element.html#empty">empty</a></li><li><a href="OSjs.GUI.Element.html#fn">fn</a></li><li><a href="OSjs.GUI.Element.html#focus">focus</a></li><li><a href="OSjs.GUI.Element.html#get">get</a></li><li><a href="OSjs.GUI.Element.html#hide">hide</a></li><li><a href="OSjs.GUI.Element.html#on">on</a></li><li><a href="OSjs.GUI.Element.html#ons">ons</a></li><li><a href="OSjs.GUI.Element.html#querySelector">querySelector</a></li><li><a href="OSjs.GUI.Element.html#querySelectorAll">querySelectorAll</a></li><li><a href="OSjs.GUI.Element.html#remove">remove</a></li><li><a href="OSjs.GUI.Element.html#set">set</a></li><li><a href="OSjs.GUI.Element.html#show">show</a></li></ul></div></li><li data-name="OSjs.GUI.ElementDataView" data-subs="true"><a href="OSjs.GUI.ElementDataView.html">OSjs.GUI.ElementDataView</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.ElementDataView.html#add">add</a></li><li><a href="OSjs.GUI.ElementDataView.html#append">append</a></li><li><a href="OSjs.GUI.ElementDataView.html#appendHTML">appendHTML</a></li><li><a href="OSjs.GUI.ElementDataView.html#blur">blur</a></li><li><a href="OSjs.GUI.ElementDataView.html#clear">clear</a></li><li><a href="OSjs.GUI.ElementDataView.html#empty">empty</a></li><li><a href="OSjs.GUI.ElementDataView.html#fn">fn</a></li><li><a href="OSjs.GUI.ElementDataView.html#focus">focus</a></li><li><a href="OSjs.GUI.ElementDataView.html#get">get</a></li><li><a href="OSjs.GUI.ElementDataView.html#hide">hide</a></li><li><a href="OSjs.GUI.ElementDataView.html#on">on</a></li><li><a href="OSjs.GUI.ElementDataView.html#ons">ons</a></li><li><a href="OSjs.GUI.ElementDataView.html#patch">patch</a></li><li><a href="OSjs.GUI.ElementDataView.html#querySelector">querySelector</a></li><li><a href="OSjs.GUI.ElementDataView.html#querySelectorAll">querySelectorAll</a></li><li><a href="OSjs.GUI.ElementDataView.html#remove">remove</a></li><li><a href="OSjs.GUI.ElementDataView.html#set">set</a></li><li><a href="OSjs.GUI.ElementDataView.html#show">show</a></li></ul></div></li><li data-name="OSjs.GUI.Scheme" data-subs="true"><a href="OSjs.GUI.Scheme.html">OSjs.GUI.Scheme</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.Scheme.html#.getElementInstance">getElementInstance</a></li><li><a href="OSjs.GUI.Scheme.html#.parseNode">parseNode</a></li><li><a href="OSjs.GUI.Scheme.html#create">create</a></li><li><a href="OSjs.GUI.Scheme.html#destroy">destroy</a></li><li><a href="OSjs.GUI.Scheme.html#find">find</a></li><li><a href="OSjs.GUI.Scheme.html#findByQuery">findByQuery</a></li><li><a href="OSjs.GUI.Scheme.html#findDOM">findDOM</a></li><li><a href="OSjs.GUI.Scheme.html#get">get</a></li><li><a href="OSjs.GUI.Scheme.html#getFragment">getFragment</a></li><li><a href="OSjs.GUI.Scheme.html#getHTML">getHTML</a></li><li><a href="OSjs.GUI.Scheme.html#load">load</a></li><li><a href="OSjs.GUI.Scheme.html#loadString">loadString</a></li><li><a href="OSjs.GUI.Scheme.html#on">on</a></li><li><a href="OSjs.GUI.Scheme.html#parse">parse</a></li><li><a href="OSjs.GUI.Scheme.html#render">render</a></li></ul></div></li><li data-name="OSjs.Helpers.Date" data-subs="true"><a href="OSjs.Helpers.Date.html">OSjs.Helpers.Date</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.Date.html#.format">format</a></li><li><a href="OSjs.Helpers.Date.html#.getDayName">getDayName</a></li><li><a href="OSjs.Helpers.Date.html#.getDayOfTheYear">getDayOfTheYear</a></li><li><a href="OSjs.Helpers.Date.html#.getDaysInMonth">getDaysInMonth</a></li><li><a href="OSjs.Helpers.Date.html#.getFirstDayInMonth">getFirstDayInMonth</a></li><li><a href="OSjs.Helpers.Date.html#.getLastDayInMonth">getLastDayInMonth</a></li><li><a href="OSjs.Helpers.Date.html#.getMonthName">getMonthName</a></li><li><a href="OSjs.Helpers.Date.html#.getNextMonth">getNextMonth</a></li><li><a href="OSjs.Helpers.Date.html#.getPreviousMonth">getPreviousMonth</a></li><li><a href="OSjs.Helpers.Date.html#.getWeekNumber">getWeekNumber</a></li><li><a href="OSjs.Helpers.Date.html#.isWithinMonth">isWithinMonth</a></li><li><a href="OSjs.Helpers.Date.html#format">format</a></li><li><a href="OSjs.Helpers.Date.html#get">get</a></li><li><a href="OSjs.Helpers.Date.html#getDaysInMonth">getDaysInMonth</a></li><li><a href="OSjs.Helpers.Date.html#getFirstDayInMonth">getFirstDayInMonth</a></li><li><a href="OSjs.Helpers.Date.html#getLastDayInMonth">getLastDayInMonth</a></li><li><a href="OSjs.Helpers.Date.html#getWeekNumber">getWeekNumber</a></li><li><a href="OSjs.Helpers.Date.html#isWithinMonth">isWithinMonth</a></li><li><a href="OSjs.Helpers.Date.html#isWithinYear">isWithinYear</a></li></ul></div></li><li data-name="OSjs.Helpers.DefaultApplication" data-subs="true"><a href="OSjs.Helpers.DefaultApplication.html">OSjs.Helpers.DefaultApplication</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.DefaultApplication.html#_onMessage">_onMessage</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#destroy">destroy</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#init">init</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#newDialog">newDialog</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#openDialog">openDialog</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#openFile">openFile</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#saveDialog">saveDialog</a></li><li><a href="OSjs.Helpers.DefaultApplication.html#saveFile">saveFile</a></li></ul></div></li><li data-name="OSjs.Helpers.DefaultApplicationWindow" data-subs="true"><a href="OSjs.Helpers.DefaultApplicationWindow.html">OSjs.Helpers.DefaultApplicationWindow</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#_close">_close</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#_inited">_inited</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#_onDndEvent">_onDndEvent</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#_onKeyEvent">_onKeyEvent</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#checkHasChanged">checkHasChanged</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#destroy">destroy</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#getFileData">getFileData</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#init">init</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#showFile">showFile</a></li><li><a href="OSjs.Helpers.DefaultApplicationWindow.html#updateFile">updateFile</a></li></ul></div></li><li data-name="OSjs.Helpers.EventHandler" data-subs="true"><a href="OSjs.Helpers.EventHandler.html">OSjs.Helpers.EventHandler</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.EventHandler.html#emit">emit</a></li><li><a href="OSjs.Helpers.EventHandler.html#off">off</a></li><li><a href="OSjs.Helpers.EventHandler.html#on">on</a></li></ul></div></li><li data-name="OSjs.Helpers.FirefoxMarketplace.Class" data-subs="true"><a href="OSjs.Helpers.FirefoxMarketplace.Class.html">OSjs.Helpers.FirefoxMarketplace.Class</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.FirefoxMarketplace.Class.html#_call">_call</a></li><li><a href="OSjs.Helpers.FirefoxMarketplace.Class.html#_metadata">_metadata</a></li><li><a href="OSjs.Helpers.FirefoxMarketplace.Class.html#launch">launch</a></li><li><a href="OSjs.Helpers.FirefoxMarketplace.Class.html#search">search</a></li></ul></div></li><li data-name="OSjs.Helpers.GoogleAPI.Class" data-subs="true"><a href="OSjs.Helpers.GoogleAPI.Class.html">OSjs.Helpers.GoogleAPI.Class</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.GoogleAPI.Class.html#revoke">revoke</a></li><li><a href="OSjs.Helpers.GoogleAPI.Class.html#signOut">signOut</a></li></ul></div></li><li data-name="OSjs.Helpers.IFrameApplication" data-subs="false"><a href="OSjs.Helpers.IFrameApplication.html">OSjs.Helpers.IFrameApplication</a><span class="folder">+</span></li><li data-name="OSjs.Helpers.IFrameApplicationWindow" data-subs="false"><a href="OSjs.Helpers.IFrameApplicationWindow.html">OSjs.Helpers.IFrameApplicationWindow</a><span class="folder">+</span></li><li data-name="OSjs.Helpers.SettingsFragment" data-subs="true"><a href="OSjs.Helpers.SettingsFragment.html">OSjs.Helpers.SettingsFragment</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.SettingsFragment.html#get">get</a></li><li><a href="OSjs.Helpers.SettingsFragment.html#instance">instance</a></li><li><a href="OSjs.Helpers.SettingsFragment.html#mergeDefaults">mergeDefaults</a></li><li><a href="OSjs.Helpers.SettingsFragment.html#save">save</a></li><li><a href="OSjs.Helpers.SettingsFragment.html#set">set</a></li></ul></div></li><li data-name="OSjs.Helpers.WindowsLiveAPI.Class" data-subs="true"><a href="OSjs.Helpers.WindowsLiveAPI.Class.html">OSjs.Helpers.WindowsLiveAPI.Class</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.WindowsLiveAPI.Class.html#logout">logout</a></li></ul></div></li><li data-name="OSjs.Helpers.ZipArchiver" data-subs="true"><a href="OSjs.Helpers.ZipArchiver.html">OSjs.Helpers.ZipArchiver</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.ZipArchiver.html#.createInstance">createInstance</a></li><li><a href="OSjs.Helpers.ZipArchiver.html#.getInstance">getInstance</a></li></ul></div></li><li data-name="OSjs.VFS.File" data-subs="true"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.VFS.File.html#filename">filename</a></li><li><a href="OSjs.VFS.File.html#id">id</a></li><li><a href="OSjs.VFS.File.html#mime">mime</a></li><li><a href="OSjs.VFS.File.html#path">path</a></li><li><a href="OSjs.VFS.File.html#size">size</a></li><li><a href="OSjs.VFS.File.html#type">type</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.VFS.File.html#getData">getData</a></li><li><a href="OSjs.VFS.File.html#setData">setData</a></li></ul></div></li><li data-name="OSjs.VFS.FileDataURL" data-subs="true"><a href="OSjs.VFS.FileDataURL.html">OSjs.VFS.FileDataURL</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.VFS.FileDataURL.html#dataURL">dataURL</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.VFS.FileDataURL.html#toBase64">toBase64</a></li><li><a href="OSjs.VFS.FileDataURL.html#toString">toString</a></li></ul></div></li></ul><h3>Namespaces</h3><ul><li data-name="OSjs.API" data-subs="true"><a href="OSjs.API.html">OSjs.API</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.API.html#._">_</a></li><li><a href="OSjs.API.html#.__">__</a></li><li><a href="OSjs.API.html#.addHook">addHook</a></li><li><a href="OSjs.API.html#.blurMenu">blurMenu</a></li><li><a href="OSjs.API.html#.call">call</a></li><li><a href="OSjs.API.html#.checkPermission">checkPermission</a></li><li><a href="OSjs.API.html#.createDialog">createDialog</a></li><li><a href="OSjs.API.html#.createLoading">createLoading</a></li><li><a href="OSjs.API.html#.createMenu">createMenu</a></li><li><a href="OSjs.API.html#.createNotification">createNotification</a></li><li><a href="OSjs.API.html#.createSplash">createSplash</a></li><li><a href="OSjs.API.html#.curl">curl</a></li><li><a href="OSjs.API.html#.destroyLoading">destroyLoading</a></li><li><a href="OSjs.API.html#.error">error</a></li><li><a href="OSjs.API.html#.getApplicationResource">getApplicationResource</a></li><li><a href="OSjs.API.html#.getClipboard">getClipboard</a></li><li><a href="OSjs.API.html#.getConfig">getConfig</a></li><li><a href="OSjs.API.html#.getDefaultPath">getDefaultPath</a></li><li><a href="OSjs.API.html#.getFileIcon">getFileIcon</a></li><li><a href="OSjs.API.html#.getIcon">getIcon</a></li><li><a href="OSjs.API.html#.getLocale">getLocale</a></li><li><a href="OSjs.API.html#.getProcess">getProcess</a></li><li><a href="OSjs.API.html#.getProcesses">getProcesses</a></li><li><a href="OSjs.API.html#.getServiceNotificationIcon">getServiceNotificationIcon</a></li><li><a href="OSjs.API.html#.getSound">getSound</a></li><li><a href="OSjs.API.html#.getThemeCSS">getThemeCSS</a></li><li><a href="OSjs.API.html#.getThemeResource">getThemeResource</a></li><li><a href="OSjs.API.html#.kill">kill</a></li><li><a href="OSjs.API.html#.killAll">killAll</a></li><li><a href="OSjs.API.html#.launch">launch</a></li><li><a href="OSjs.API.html#.launchList">launchList</a></li><li><a href="OSjs.API.html#.message">message</a></li><li><a href="OSjs.API.html#.open">open</a></li><li><a href="OSjs.API.html#.playSound">playSound</a></li><li><a href="OSjs.API.html#.relaunch">relaunch</a></li><li><a href="OSjs.API.html#.removeHook">removeHook</a></li><li><a href="OSjs.API.html#.setClipboard">setClipboard</a></li><li><a href="OSjs.API.html#.setLocale">setLocale</a></li><li><a href="OSjs.API.html#.shutdown">shutdown</a></li><li><a href="OSjs.API.html#.signOut">signOut</a></li><li><a href="OSjs.API.html#.triggerHook">triggerHook</a></li></ul></div></li><li data-name="OSjs.Core" data-subs="true"><a href="OSjs.Core.html">OSjs.Core</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Core.html#.getConfig">getConfig</a></li><li><a href="OSjs.Core.html#.getHandler">getHandler</a></li><li><a href="OSjs.Core.html#.getMetadata">getMetadata</a></li><li><a href="OSjs.Core.html#.getPackageManager">getPackageManager</a></li><li><a href="OSjs.Core.html#.getSearchEngine">getSearchEngine</a></li><li><a href="OSjs.Core.html#.getSettingsManager">getSettingsManager</a></li><li><a href="OSjs.Core.html#.getWindowManager">getWindowManager</a></li></ul></div></li><li data-name="OSjs.GUI" data-subs="true"><a href="OSjs.GUI.html">OSjs.GUI</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.html#.createScheme">createScheme</a></li></ul></div></li><li data-name="OSjs.GUI.Elements" data-subs="true"><a href="OSjs.GUI.Elements.html">OSjs.GUI.Elements</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.GUI.Elements.html#.DataView">DataView</a></li><li><a href="OSjs.GUI.Elements.html#.gui-audio">gui-audio</a></li><li><a href="OSjs.GUI.Elements.html#.gui-button">gui-button</a></li><li><a href="OSjs.GUI.Elements.html#.gui-button-bar">gui-button-bar</a></li><li><a href="OSjs.GUI.Elements.html#.gui-canvas">gui-canvas</a></li><li><a href="OSjs.GUI.Elements.html#.gui-checkbox">gui-checkbox</a></li><li><a href="OSjs.GUI.Elements.html#.gui-color-box">gui-color-box</a></li><li><a href="OSjs.GUI.Elements.html#.gui-color-swatch">gui-color-swatch</a></li><li><a href="OSjs.GUI.Elements.html#.gui-expander">gui-expander</a></li><li><a href="OSjs.GUI.Elements.html#.gui-file-upload">gui-file-upload</a></li><li><a href="OSjs.GUI.Elements.html#.gui-file-view">gui-file-view</a></li><li><a href="OSjs.GUI.Elements.html#.gui-grid">gui-grid</a></li><li><a href="OSjs.GUI.Elements.html#.gui-grid-entry">gui-grid-entry</a></li><li><a href="OSjs.GUI.Elements.html#.gui-grid-row">gui-grid-row</a></li><li><a href="OSjs.GUI.Elements.html#.gui-hbox">gui-hbox</a></li><li><a href="OSjs.GUI.Elements.html#.gui-hbox-container">gui-hbox-container</a></li><li><a href="OSjs.GUI.Elements.html#.gui-icon-view">gui-icon-view</a></li><li><a href="OSjs.GUI.Elements.html#.gui-iframe">gui-iframe</a></li><li><a href="OSjs.GUI.Elements.html#.gui-image">gui-image</a></li><li><a href="OSjs.GUI.Elements.html#.gui-input-modal">gui-input-modal</a></li><li><a href="OSjs.GUI.Elements.html#.gui-label">gui-label</a></li><li><a href="OSjs.GUI.Elements.html#.gui-list-view">gui-list-view</a></li><li><a href="OSjs.GUI.Elements.html#.gui-menu">gui-menu</a></li><li><a href="OSjs.GUI.Elements.html#.gui-menu-bar">gui-menu-bar</a></li><li><a href="OSjs.GUI.Elements.html#.gui-menu-entry">gui-menu-entry</a></li><li><a href="OSjs.GUI.Elements.html#.gui-paned-view">gui-paned-view</a></li><li><a href="OSjs.GUI.Elements.html#.gui-paned-view-container">gui-paned-view-container</a></li><li><a href="OSjs.GUI.Elements.html#.gui-password">gui-password</a></li><li><a href="OSjs.GUI.Elements.html#.gui-progress-bar">gui-progress-bar</a></li><li><a href="OSjs.GUI.Elements.html#.gui-radio">gui-radio</a></li><li><a href="OSjs.GUI.Elements.html#.gui-richtext">gui-richtext</a></li><li><a href="OSjs.GUI.Elements.html#.gui-select">gui-select</a></li><li><a href="OSjs.GUI.Elements.html#.gui-select-list">gui-select-list</a></li><li><a href="OSjs.GUI.Elements.html#.gui-slider">gui-slider</a></li><li><a href="OSjs.GUI.Elements.html#.gui-statusbar">gui-statusbar</a></li><li><a href="OSjs.GUI.Elements.html#.gui-switch">gui-switch</a></li><li><a href="OSjs.GUI.Elements.html#.gui-tabs">gui-tabs</a></li><li><a href="OSjs.GUI.Elements.html#.gui-text">gui-text</a></li><li><a href="OSjs.GUI.Elements.html#.gui-textarea">gui-textarea</a></li><li><a href="OSjs.GUI.Elements.html#.gui-toolbar">gui-toolbar</a></li><li><a href="OSjs.GUI.Elements.html#.gui-tree-view">gui-tree-view</a></li><li><a href="OSjs.GUI.Elements.html#.gui-vbox">gui-vbox</a></li><li><a href="OSjs.GUI.Elements.html#.gui-vbox-container">gui-vbox-container</a></li><li><a href="OSjs.GUI.Elements.html#.gui-video">gui-video</a></li></ul></div></li><li data-name="OSjs.GUI.Helpers" data-subs="true"><a href="OSjs.GUI.Helpers.html">OSjs.GUI.Helpers</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.GUI.Helpers.html#.blurMenu">blurMenu</a></li><li><a href="OSjs.GUI.Helpers.html#.createDrag">createDrag</a></li><li><a href="OSjs.GUI.Helpers.html#.createDraggable">createDraggable</a></li><li><a href="OSjs.GUI.Helpers.html#.createDroppable">createDroppable</a></li><li><a href="OSjs.GUI.Helpers.html#.createElement">createElement</a></li><li><a href="OSjs.GUI.Helpers.html#.createInputLabel">createInputLabel</a></li><li><a href="OSjs.GUI.Helpers.html#.createMenu">createMenu</a></li><li><a href="OSjs.GUI.Helpers.html#.getIcon">getIcon</a></li><li><a href="OSjs.GUI.Helpers.html#.getLabel">getLabel</a></li><li><a href="OSjs.GUI.Helpers.html#.getNextElement">getNextElement</a></li><li><a href="OSjs.GUI.Helpers.html#.getProperty">getProperty</a></li><li><a href="OSjs.GUI.Helpers.html#.getValueLabel">getValueLabel</a></li><li><a href="OSjs.GUI.Helpers.html#.getViewNodeValue">getViewNodeValue</a></li><li><a href="OSjs.GUI.Helpers.html#.getWindowId">getWindowId</a></li><li><a href="OSjs.GUI.Helpers.html#.setFlexbox">setFlexbox</a></li><li><a href="OSjs.GUI.Helpers.html#.setProperty">setProperty</a></li></ul></div></li><li data-name="OSjs.Handlers" data-subs="false"><a href="OSjs.Handlers.html">OSjs.Handlers</a><span class="folder">+</span></li><li data-name="OSjs.Helpers" data-subs="false"><a href="OSjs.Helpers.html">OSjs.Helpers</a><span class="folder">+</span></li><li data-name="OSjs.Helpers.FirefoxMarketplace" data-subs="true"><a href="OSjs.Helpers.FirefoxMarketplace.html">OSjs.Helpers.FirefoxMarketplace</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.FirefoxMarketplace.html#.createInstance">createInstance</a></li><li><a href="OSjs.Helpers.FirefoxMarketplace.html#.getInstance">getInstance</a></li></ul></div></li><li data-name="OSjs.Helpers.GoogleAPI" data-subs="true"><a href="OSjs.Helpers.GoogleAPI.html">OSjs.Helpers.GoogleAPI</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.GoogleAPI.html#.createInstance">createInstance</a></li><li><a href="OSjs.Helpers.GoogleAPI.html#.getInstance">getInstance</a></li></ul></div></li><li data-name="OSjs.Helpers.WindowsLiveAPI" data-subs="true"><a href="OSjs.Helpers.WindowsLiveAPI.html">OSjs.Helpers.WindowsLiveAPI</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Helpers.WindowsLiveAPI.html#.createInstance">createInstance</a></li><li><a href="OSjs.Helpers.WindowsLiveAPI.html#.getInstance">getInstance</a></li></ul></div></li><li data-name="OSjs.Utils" data-subs="true"><a href="OSjs.Utils.html">OSjs.Utils</a><span class="folder">+</span><div class="sub"><span>Members</span><ul><li><a href="OSjs.Utils.html#.Keys">Keys</a></li></ul></div><div class="sub"><span>Functions</span><ul><li><a href="OSjs.Utils.html#.$">$</a></li><li><a href="OSjs.Utils.html#.$addClass">$addClass</a></li><li><a href="OSjs.Utils.html#.$bind">$bind</a></li><li><a href="OSjs.Utils.html#.$createCSS">$createCSS</a></li><li><a href="OSjs.Utils.html#.$createJS">$createJS</a></li><li><a href="OSjs.Utils.html#.$empty">$empty</a></li><li><a href="OSjs.Utils.html#.$escape">$escape</a></li><li><a href="OSjs.Utils.html#.$getStyle">$getStyle</a></li><li><a href="OSjs.Utils.html#.$hasClass">$hasClass</a></li><li><a href="OSjs.Utils.html#.$index">$index</a></li><li><a href="OSjs.Utils.html#.$isFormElement">$isFormElement</a></li><li><a href="OSjs.Utils.html#.$isInput">$isInput</a></li><li><a href="OSjs.Utils.html#.$parent">$parent</a></li><li><a href="OSjs.Utils.html#.$position">$position</a></li><li><a href="OSjs.Utils.html#.$remove">$remove</a></li><li><a href="OSjs.Utils.html#.$removeClass">$removeClass</a></li><li><a href="OSjs.Utils.html#.$safeName">$safeName</a></li><li><a href="OSjs.Utils.html#.$selectRange">$selectRange</a></li><li><a href="OSjs.Utils.html#.$unbind">$unbind</a></li><li><a href="OSjs.Utils.html#.ajax">ajax</a></li><li><a href="OSjs.Utils.html#.argumentDefaults">argumentDefaults</a></li><li><a href="OSjs.Utils.html#.asyncs">asyncs</a></li><li><a href="OSjs.Utils.html#.atobUrlsafe">atobUrlsafe</a></li><li><a href="OSjs.Utils.html#.atobUtf">atobUtf</a></li><li><a href="OSjs.Utils.html#.btoaUrlsafe">btoaUrlsafe</a></li><li><a href="OSjs.Utils.html#.btoaUtf">btoaUtf</a></li><li><a href="OSjs.Utils.html#.checkAcceptMime">checkAcceptMime</a></li><li><a href="OSjs.Utils.html#.checkdir">checkdir</a></li><li><a href="OSjs.Utils.html#.cleanHTML">cleanHTML</a></li><li><a href="OSjs.Utils.html#.cloneObject">cloneObject</a></li><li><a href="OSjs.Utils.html#.convertToHEX">convertToHEX</a></li><li><a href="OSjs.Utils.html#.convertToRGB">convertToRGB</a></li><li><a href="OSjs.Utils.html#.dirname">dirname</a></li><li><a href="OSjs.Utils.html#.escapeFilename">escapeFilename</a></li><li><a href="OSjs.Utils.html#.filename">filename</a></li><li><a href="OSjs.Utils.html#.filext">filext</a></li><li><a href="OSjs.Utils.html#.fixJSON">fixJSON</a></li><li><a href="OSjs.Utils.html#.format">format</a></li><li><a href="OSjs.Utils.html#.getCompability">getCompability</a></li><li><a href="OSjs.Utils.html#.getFilenameRange">getFilenameRange</a></li><li><a href="OSjs.Utils.html#.getRect">getRect</a></li><li><a href="OSjs.Utils.html#.getUserLocale">getUserLocale</a></li><li><a href="OSjs.Utils.html#.humanFileSize">humanFileSize</a></li><li><a href="OSjs.Utils.html#.invertHEX">invertHEX</a></li><li><a href="OSjs.Utils.html#.isIE">isIE</a></li><li><a href="OSjs.Utils.html#.keyCombination">keyCombination</a></li><li><a href="OSjs.Utils.html#.mergeObject">mergeObject</a></li><li><a href="OSjs.Utils.html#.mouseButton">mouseButton</a></li><li><a href="OSjs.Utils.html#.parseurl">parseurl</a></li><li><a href="OSjs.Utils.html#.pathJoin">pathJoin</a></li><li><a href="OSjs.Utils.html#.preload">preload</a></li><li><a href="OSjs.Utils.html#.replaceFileExtension">replaceFileExtension</a></li><li><a href="OSjs.Utils.html#.replaceFilename">replaceFilename</a></li></ul></div></li><li data-name="OSjs.VFS" data-subs="true"><a href="OSjs.VFS.html">OSjs.VFS</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.VFS.html#.abToBinaryString">abToBinaryString</a></li><li><a href="OSjs.VFS.html#.abToBlob">abToBlob</a></li><li><a href="OSjs.VFS.html#.abToDataSource">abToDataSource</a></li><li><a href="OSjs.VFS.html#.abToText">abToText</a></li><li><a href="OSjs.VFS.html#.addFormFile">addFormFile</a></li><li><a href="OSjs.VFS.html#.blobToAb">blobToAb</a></li><li><a href="OSjs.VFS.html#.copy">copy</a></li><li><a href="OSjs.VFS.html#.createMountpoint">createMountpoint</a></li><li><a href="OSjs.VFS.html#.dataSourceToAb">dataSourceToAb</a></li><li><a href="OSjs.VFS.html#.download">download</a></li><li><a href="OSjs.VFS.html#.emptyTrash">emptyTrash</a></li><li><a href="OSjs.VFS.html#.exists">exists</a></li><li><a href="OSjs.VFS.html#.fileinfo">fileinfo</a></li><li><a href="OSjs.VFS.html#.filterScandir">filterScandir</a></li><li><a href="OSjs.VFS.html#.find">find</a></li><li><a href="OSjs.VFS.html#.freeSpace">freeSpace</a></li><li><a href="OSjs.VFS.html#.getModuleFromPath">getModuleFromPath</a></li><li><a href="OSjs.VFS.html#.getModules">getModules</a></li><li><a href="OSjs.VFS.html#.isInternalEnabled">isInternalEnabled</a></li><li><a href="OSjs.VFS.html#.isInternalModule">isInternalModule</a></li><li><a href="OSjs.VFS.html#.mkdir">mkdir</a></li><li><a href="OSjs.VFS.html#.move">move</a></li><li><a href="OSjs.VFS.html#.read">read</a></li><li><a href="OSjs.VFS.html#.registerMountpoints">registerMountpoints</a></li><li><a href="OSjs.VFS.html#.removeMountpoints">removeMountpoints</a></li><li><a href="OSjs.VFS.html#.scandir">scandir</a></li><li><a href="OSjs.VFS.html#.textToAb">textToAb</a></li><li><a href="OSjs.VFS.html#.trash">trash</a></li><li><a href="OSjs.VFS.html#.unlink">unlink</a></li><li><a href="OSjs.VFS.html#.untrash">untrash</a></li><li><a href="OSjs.VFS.html#.upload">upload</a></li><li><a href="OSjs.VFS.html#.url">url</a></li><li><a href="OSjs.VFS.html#.write">write</a></li></ul></div></li><li data-name="OSjs.VFS.Modules" data-subs="false"><a href="OSjs.VFS.Modules.html">OSjs.VFS.Modules</a><span class="folder">+</span></li><li data-name="OSjs.VFS.Transports" data-subs="false"><a href="OSjs.VFS.Transports.html">OSjs.VFS.Transports</a><span class="folder">+</span></li><li data-name="OSjs.VFS.Transports.Applications" data-subs="false"><a href="OSjs.VFS.Transports.Applications.html">OSjs.VFS.Transports.Applications</a><span class="folder">+</span></li><li data-name="OSjs.VFS.Transports.HTTP" data-subs="false"><a href="OSjs.VFS.Transports.HTTP.html">OSjs.VFS.Transports.HTTP</a><span class="folder">+</span></li><li data-name="OSjs.VFS.Transports.OSjs" data-subs="false"><a href="OSjs.VFS.Transports.OSjs.html">OSjs.VFS.Transports.OSjs</a><span class="folder">+</span></li><li data-name="OSjs.VFS.Transports.Web" data-subs="true"><a href="OSjs.VFS.Transports.Web.html">OSjs.VFS.Transports.Web</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.VFS.Transports.Web.html#.path">path</a></li></ul></div></li><li data-name="OSjs.VFS.Transports.WebDAV" data-subs="true"><a href="OSjs.VFS.Transports.WebDAV.html">OSjs.VFS.Transports.WebDAV</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="OSjs.VFS.Transports.WebDAV.html#.path">path</a></li></ul></div></li></ul>
+</nav>
+
+<main>
+
+    <h1 class="page-title">Class: DialogWindow</h1>
+
+    
+
+
+
+
+<section>
+
+    
+        <h2>
+            <span class="ancestors"><a href="OSjs.Core.html">.Core</a>.</span>DialogWindow</h2>
+        
+    
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="DialogWindow">
+            
+    new OSjs.Core.DialogWindow<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Dialog Window
+
+A simple wrapper with some pre-defined options
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dialog.js.html">dialog.js</a>, <a href="dialog.js.html#line46">line 46</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id="_$disabled">_$disabled<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The disabled overlay
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$disabled">OSjs.Core.Window#_$disabled</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line301">line 301</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$element">_$element<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The outer container
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$element">OSjs.Core.Window#_$element</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line261">line 261</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$loading">_$loading<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The loading overlay
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$loading">OSjs.Core.Window#_$loading</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line293">line 293</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$resize">_$resize<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The resize underlay
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$resize">OSjs.Core.Window#_$resize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line309">line 309</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$root">_$root<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The inner (content) container
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$root">OSjs.Core.Window#_$root</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line269">line 269</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$top">_$top<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The top container
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$top">OSjs.Core.Window#_$top</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line277">line 277</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$warning">_$warning<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The warning overlay
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$warning">OSjs.Core.Window#_$warning</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line317">line 317</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_$winicon">_$winicon<span class="type-signature type node">Node</span> </h4>
+
+
+
+
+<div class="description">
+    The icon element
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Node</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_$winicon">OSjs.Core.Window#_$winicon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line285">line 285</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_app">_app<span class="type-signature type osjs.core.application"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a></span> </h4>
+
+
+
+
+<div class="description">
+    Application reference
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_app">OSjs.Core.Window#_app</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line333">line 333</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_children">_children<span class="type-signature type array">Array</span> </h4>
+
+
+
+
+<div class="description">
+    Children
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Array</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_children">OSjs.Core.Window#_children</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line445">line 445</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_destroyed">_destroyed<span class="type-signature type boolean">Boolean</span> </h4>
+
+
+
+
+<div class="description">
+    If Window has been destroyed
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_destroyed">OSjs.Core.Window#_destroyed</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line349">line 349</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_dimension">_dimension<span class="type-signature type object">Object</span> </h4>
+
+
+
+
+<div class="description">
+    Window Dimension With w and h
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_dimension">OSjs.Core.Window#_dimension</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line437">line 437</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_disabled">_disabled<span class="type-signature type boolean">Boolean</span> </h4>
+
+
+
+
+<div class="description">
+    If Window is currently disabled
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_disabled">OSjs.Core.Window#_disabled</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line373">line 373</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_icon">_icon<span class="type-signature type string">String</span> </h4>
+
+
+
+
+<div class="description">
+    Window Icon
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_icon">OSjs.Core.Window#_icon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line397">line 397</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_loaded">_loaded<span class="type-signature type boolean">Boolean</span> </h4>
+
+
+
+
+<div class="description">
+    If Window is finished loading
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_loaded">OSjs.Core.Window#_loaded</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line365">line 365</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_loading">_loading<span class="type-signature type boolean">Boolean</span> </h4>
+
+
+
+
+<div class="description">
+    If Window is currently loading
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_loading">OSjs.Core.Window#_loading</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line381">line 381</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_name">_name<span class="type-signature type string">String</span> </h4>
+
+
+
+
+<div class="description">
+    Window Name
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_name">OSjs.Core.Window#_name</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line405">line 405</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_opts">_opts<span class="type-signature type object">Object</span> </h4>
+
+
+
+
+<div class="description">
+    Constructor options copy
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_opts">OSjs.Core.Window#_opts</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line325">line 325</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_parent">_parent<span class="type-signature type osjs.core.window"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span> </h4>
+
+
+
+
+<div class="description">
+    Parent
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_parent">OSjs.Core.Window#_parent</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line453">line 453</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_position">_position<span class="type-signature type object">Object</span> </h4>
+
+
+
+
+<div class="description">
+    Window Position With x and y
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_position">OSjs.Core.Window#_position</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line429">line 429</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_properties">_properties<span class="type-signature type object">Object</span> </h4>
+
+
+
+
+<div class="description">
+    Window Properties
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_properties">OSjs.Core.Window#_properties</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line477">line 477</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_restored">_restored<span class="type-signature type boolean">Boolean</span> </h4>
+
+
+
+
+<div class="description">
+    If Window was restored
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Boolean</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_restored">OSjs.Core.Window#_restored</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line357">line 357</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_scheme">_scheme<span class="type-signature type osjs.gui.scheme"><a href="OSjs.GUI.Scheme.html">OSjs.GUI.Scheme</a></span> </h4>
+
+
+
+
+<div class="description">
+    Scheme reference
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type"><a href="OSjs.GUI.Scheme.html">OSjs.GUI.Scheme</a></span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_scheme">OSjs.Core.Window#_scheme</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line341">line 341</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_state">_state<span class="type-signature type object">Object</span> </h4>
+
+
+
+
+<div class="description">
+    Window State
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Object</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_state">OSjs.Core.Window#_state</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line505">line 505</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_title">_title<span class="type-signature type string">String</span> </h4>
+
+
+
+
+<div class="description">
+    Window Title
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">String</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_title">OSjs.Core.Window#_title</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line413">line 413</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id="_wid">_wid<span class="type-signature type number">Number</span> </h4>
+
+
+
+
+<div class="description">
+    Window ID (Internal)
+</div>
+
+
+
+    <h5>Type:</h5>
+    <ul>
+        <li>
+            
+<span class="param-type">Number</span>
+
+
+        </li>
+    </ul>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_wid">OSjs.Core.Window#_wid</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line389">line 389</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".parseMessage">
+            
+    <span class="type-signature static">static</span>OSjs.Core.DialogWindow.parseMessage<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Parses given message to be inserted into Dialog
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dialog.js.html">dialog.js</a>, <a href="dialog.js.html#line177">line 177</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_addChild">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_addChild">inherited</a></span>
+            
+    _addChild<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Add a child-window
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_addChild">OSjs.Core.Window#_addChild</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1084">line 1084</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Helpers.EventHandler.html#off">OSjs.Helpers.EventHandler#off</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The added instance
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_blur">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_blur">inherited</a></span>
+            
+    _blur<span class="signature">(force)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Blur the window
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Forces blur</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_blur">OSjs.Core.Window#_blur</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1451">line 1451</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_blurGUI">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_blurGUI">inherited</a></span>
+            
+    _blurGUI<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Blurs the GUI
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_blurGUI">OSjs.Core.Window#_blurGUI</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1488">line 1488</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_close">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_close">inherited</a></span>
+            
+    _close<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Close the Window
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_close">OSjs.Core.Window#_close</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1235">line 1235</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On succes
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_emit">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_emit">inherited</a></span>
+            
+    _emit<span class="signature">(k, args)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Fire a hook to internal event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>k</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Event name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Send these arguments (fn.apply)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_emit">OSjs.Core.Window#_emit</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1021">line 1021</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Helpers.EventHandler.html#emit">OSjs.Helpers.EventHandler#emit</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_find">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_find">inherited</a></span>
+            
+    _find<span class="signature">(id)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.GUI.Element.html">OSjs.GUI.Element</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Finds a GUI Element by ID from Scheme.
+
+THIS IS JUST A SHORTCUT METHOD FROM THE UI SCHEME CLASS
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The value of element 'data-id' parameter</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_find">OSjs.Core.Window#_find</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line989">line 989</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.GUI.Scheme.html#find">OSjs.GUI.Scheme#find</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="OSjs.GUI.Element.html">OSjs.GUI.Element</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_findByQuery">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_findByQuery">inherited</a></span>
+            
+    _findByQuery<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Array|<a href="OSjs.GUI.Element.html">OSjs.GUI.Element</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Finds a GUI Element by ID from Scheme.
+
+THIS IS JUST A SHORTCUT METHOD FROM THE UI SCHEME CLASS
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_findByQuery">OSjs.Core.Window#_findByQuery</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1006">line 1006</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.GUI.Scheme.html#findByQuery">OSjs.GUI.Scheme#findByQuery</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+|
+
+<span class="param-type"><a href="OSjs.GUI.Element.html">OSjs.GUI.Element</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_focus">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_focus">inherited</a></span>
+            
+    _focus<span class="signature">(force)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Focus the window
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Forces focus</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_focus">OSjs.Core.Window#_focus</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1406">line 1406</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getChild">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getChild">inherited</a></span>
+            
+    _getChild<span class="signature">(value, key)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get a Window child by X
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Value to look for</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Key to look for</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getChild">OSjs.Core.Window#_getChild</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1128">line 1128</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Resulted Window or 'null'
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getChildById">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getChildById">inherited</a></span>
+            
+    _getChildById<span class="signature">(id)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get a Window child by ID
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>id</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Window id</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getChildById">OSjs.Core.Window#_getChildById</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1159">line 1159</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Core.Window.html#_getChild">OSjs.Core.Window#_getChild</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getChildByName">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getChildByName">inherited</a></span>
+            
+    _getChildByName<span class="signature">(name)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get a Window child by Name
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Window name</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getChildByName">OSjs.Core.Window#_getChildByName</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1173">line 1173</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Core.Window.html#_getChild">OSjs.Core.Window#_getChild</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getChildren">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getChildren">inherited</a></span>
+            
+    _getChildren<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Array}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Gets all children Windows
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getChildren">OSjs.Core.Window#_getChildren</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1202">line 1202</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getChildrenByTag">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getChildrenByTag">inherited</a></span>
+            
+    _getChildrenByTag<span class="signature">(tag)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Array}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get Window(s) child by Tag
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>tag</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Tag name</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getChildrenByTag">OSjs.Core.Window#_getChildrenByTag</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1187">line 1187</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Core.Window.html#_getChild">OSjs.Core.Window#_getChild</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getMaximizedSize">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getMaximizedSize">inherited</a></span>
+            
+    _getMaximizedSize<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get Window maximized size
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getMaximizedSize">OSjs.Core.Window#_getMaximizedSize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2060">line 2060</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Size in rectangle
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getRoot">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getRoot">inherited</a></span>
+            
+    _getRoot<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Node}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get Window main DOM element
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getRoot">OSjs.Core.Window#_getRoot</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2105">line 2105</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Node</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getViewRect">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getViewRect">inherited</a></span>
+            
+    _getViewRect<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get Window position in DOM
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getViewRect">OSjs.Core.Window#_getViewRect</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2094">line 2094</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>OSjs.Utils.position</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_getZindex">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_getZindex">inherited</a></span>
+            
+    _getZindex<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Get Window z-index
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_getZindex">OSjs.Core.Window#_getZindex</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2117">line 2117</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_inited">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_inited">inherited</a></span>
+            
+    _inited<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    When window is rendered and inited
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_inited">OSjs.Core.Window#_inited</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line848">line 848</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_maximize">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_maximize">inherited</a></span>
+            
+    _maximize<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Maximize the Window
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_maximize">OSjs.Core.Window#_maximize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1299">line 1299</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_minimize">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_minimize">inherited</a></span>
+            
+    _minimize<span class="signature">()</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Minimize the Window
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_minimize">OSjs.Core.Window#_minimize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1255">line 1255</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_move">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_move">inherited</a></span>
+            
+    _move<span class="signature">(x, y)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Move window to position
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>x</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">X Position</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>y</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Y Position</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_move">OSjs.Core.Window#_move</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1667">line 1667</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_moveTo">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_moveTo">inherited</a></span>
+            
+    _moveTo<span class="signature">(pos)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Move window to position
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>pos</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Position rectangle</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_moveTo">OSjs.Core.Window#_moveTo</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1638">line 1638</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_nextTabIndex">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_nextTabIndex">inherited</a></span>
+            
+    _nextTabIndex<span class="signature">(ev)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Check next Tab (cycle GUIElement)
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Event</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_nextTabIndex">OSjs.Core.Window#_nextTabIndex</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1823">line 1823</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_off">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_off">inherited</a></span>
+            
+    _off<span class="signature">(k, idx)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Removes a hook to internal event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>k</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Event name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>idx</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The hook index returned from _on()</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_off">OSjs.Core.Window#_off</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1061">line 1061</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Helpers.EventHandler.html#off">OSjs.Helpers.EventHandler#off</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_on">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_on">inherited</a></span>
+            
+    _on<span class="signature">(k, func)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Adds a hook to internal event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>k</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Event name</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>func</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Callback function</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_on">OSjs.Core.Window#_on</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1042">line 1042</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.Helpers.EventHandler.html#on">OSjs.Helpers.EventHandler#on</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_onChange">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_onChange">inherited</a></span>
+            
+    _onChange<span class="signature">(ev, byUser)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    On Window has changed
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Event</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>byUser</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Performed by user?</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_onChange">OSjs.Core.Window#_onChange</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2036">line 2036</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_onDndEvent">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_onDndEvent">inherited</a></span>
+            
+    _onDndEvent<span class="signature">(ev, type)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    On Drag-and-drop event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Event</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DnD type</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_onDndEvent">OSjs.Core.Window#_onDndEvent</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1848">line 1848</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_onKeyEvent">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_onKeyEvent">inherited</a></span>
+            
+    _onKeyEvent<span class="signature">(ev, type)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    On Key event
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Event</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>type</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Key type</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_onKeyEvent">OSjs.Core.Window#_onKeyEvent</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1879">line 1879</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_onResize">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_onResize">inherited</a></span>
+            
+    _onResize<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    On Window resized
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_onResize">OSjs.Core.Window#_onResize</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1902">line 1902</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_onWindowButtonClick">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_onWindowButtonClick">inherited</a></span>
+            
+    _onWindowButtonClick<span class="signature">(ev, el, btn)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    On Window Button Click
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ev</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Event</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Event</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>el</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Node</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DOM Element</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>btn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Button name</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_onWindowButtonClick">OSjs.Core.Window#_onWindowButtonClick</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2012">line 2012</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_removeChild">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_removeChild">inherited</a></span>
+            
+    _removeChild<span class="signature">(w)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Removes a child Window
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>w</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.Core.Window.html">OSjs.Core.Window</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Widow reference</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_removeChild">OSjs.Core.Window#_removeChild</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1106">line 1106</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    On success
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Boolean</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_removeChildren">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_removeChildren">inherited</a></span>
+            
+    _removeChildren<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Removes all children Windows
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_removeChildren">OSjs.Core.Window#_removeChildren</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1214">line 1214</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_resizeTo">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_resizeTo">inherited</a></span>
+            
+    _resizeTo<span class="signature">(dw, dh, <span class="optional">limit</span>, <span class="optional">move</span>, <span class="optional">container</span>, <span class="optional">force</span>)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Resize Window to given size
+
+Use this method if you want the window to fit into the viewport and not
+just set a specific size
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>dw</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Width</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dh</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Height</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>limit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Limit to this size</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>move</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">Move window if too big</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>container</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Node</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last">Relative to this container</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>force</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">Force movment</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_resizeTo">OSjs.Core.Window#_resizeTo</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1500">line 1500</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_restore">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_restore">inherited</a></span>
+            
+    _restore<span class="signature">(max, min)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Restore the Window
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Revert maximize state</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>min</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Revert minimize state</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_restore">OSjs.Core.Window#_restore</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1353">line 1353</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_setIcon">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_setIcon">inherited</a></span>
+            
+    _setIcon<span class="signature">(i)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Set Windoc icon
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>i</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Icon path</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_setIcon">OSjs.Core.Window#_setIcon</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2169">line 2169</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_setProperty">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_setProperty">inherited</a></span>
+            
+    _setProperty<span class="signature">(p, v)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Set a window property
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>p</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Key</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>v</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Value</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_setProperty">OSjs.Core.Window#_setProperty</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2223">line 2223</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_setTitle">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_setTitle">inherited</a></span>
+            
+    _setTitle<span class="signature">(t, <span class="optional">append</span>, <span class="optional">delimiter</span>)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Set Window title
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Title</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>append</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Append this to original title</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>delimiter</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">The delimiter (default is -)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_setTitle">OSjs.Core.Window#_setTitle</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2132">line 2132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_setWarning">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_setWarning">inherited</a></span>
+            
+    _setWarning<span class="signature">(message)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Set Window warning message (Displays as a popup inside window)
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>message</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Warning message</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_setWarning">OSjs.Core.Window#_setWarning</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line2187">line 2187</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_toggleAttentionBlink">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_toggleAttentionBlink">inherited</a></span>
+            
+    _toggleAttentionBlink<span class="signature">(t)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Toggle attention
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Toggle</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_toggleAttentionBlink">OSjs.Core.Window#_toggleAttentionBlink</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1771">line 1771</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_toggleDisabled">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_toggleDisabled">inherited</a></span>
+            
+    _toggleDisabled<span class="signature">(t)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Toggle disabled overlay
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Toggle</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_toggleDisabled">OSjs.Core.Window#_toggleDisabled</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1695">line 1695</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_toggleLoading">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_toggleLoading">inherited</a></span>
+            
+    _toggleLoading<span class="signature">(t)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Toggle loading overlay
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>t</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Boolean</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Toggle</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_toggleLoading">OSjs.Core.Window#_toggleLoading</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1714">line 1714</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="_updateMarkup">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#_updateMarkup">inherited</a></span>
+            
+    _updateMarkup<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Updates window markup with attributes etc
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#_updateMarkup">OSjs.Core.Window#_updateMarkup</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line1733">line 1733</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="destroy">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#destroy">inherited</a></span>
+            
+    destroy<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Destroy the Window
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#destroy">OSjs.Core.Window#destroy</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line876">line 876</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    Boolean
+</div>
+
+
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="init">
+            
+                <span class="inherited"><a href="OSjs.Core.Window.html#init">inherited</a></span>
+            
+    init<span class="signature">(_wm, _app, _scheme)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Node}</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Initialize the Window
+
+This creates all elements and attaches basic events to them.
+If you are looking for move/resize events, they are located in
+the WindowManager.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>_wm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.Core.WindowManager.html">OSjs.Core.WindowManager</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Window Manager reference</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Application reference</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>_scheme</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.GUI.Scheme.html">OSjs.GUI.Scheme</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">UIScheme reference</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-overrides">Overrides:</dt>
+    <dd class="tag-overrides"><ul class="dummy"><li>
+        <a href="OSjs.Core.Window.html#init">OSjs.Core.Window#init</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="window.js.html">window.js</a>, <a href="window.js.html#line552">line 552</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    The Window DOM element
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Node</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="onClose">
+            
+    onClose<span class="signature">()</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    When dialog closes
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="dialog.js.html">dialog.js</a>, <a href="dialog.js.html#line142">line 142</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+
+
+      <div class="adddshere">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- https://os.js.org (RESPONSIVE) -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-6145716264521226"
+             data-ad-slot="9888011596"
+             data-ad-format="auto"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+<main>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 18:34:44 GMT+0200 (CEST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+<script>
+(function() {
+  (['HTMLCollection', 'NodeList', 'FileList']).forEach(function(p) {
+    if ( window[p] ) {
+      window[p].prototype.forEacH = Array.prototype.forEach;
+    }
+  });
+
+  var a = location.pathname.split('/')
+  a = a[a.length - 1].replace(/\.html/, '')
+
+  function toggleFold(id, close) {
+    document.querySelectorAll('li[data-name="' + id + '"] .sub').forEach(function(el) {
+      el.style.display = close ? 'none' : 'block';
+    });
+    document.querySelector('li[data-name="' + id + '"] .folder').innerHTML = close ? '+' : '-';
+    document.querySelector('li[data-name="' + id + '"] .folder').setAttribute('data-open', String(!close));
+  }
+
+  document.querySelectorAll('.folder').forEach(function(el) {
+    el.addEventListener('click', function() {
+      toggleFold(el.parentNode.getAttribute('data-name'), this.getAttribute('data-open') === 'true');
+    });
+  });
+
+  toggleFold(a, false);
+
+})();
+</script>
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-46087265-1', 'auto');
+      ga('require', 'linkid');
+      ga('send', 'pageview');
+    </script>
+
+
+    <script>
+      ((window.gitter = {}).chat = {}).options = {
+        room: 'os-js/OS.js'
+      };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
+</body>
+</html>

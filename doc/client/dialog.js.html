@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - OS.js Client JSDoc</title>
+    <title>Source: dialog.js - OS.js Client JSDoc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -44,32 +44,222 @@
 
 <main>
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: dialog.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/*!
+ * OS.js - JavaScript Cloud/Web Desktop Platform
+ *
+ * Copyright (c) 2011-2016, Anders Evenrud &lt;andersevenrud@gmail.com>
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * @author  Anders Evenrud &lt;andersevenrud@gmail.com>
+ * @licence Simplified BSD License
+ */
+(function(Utils, API, Window) {
+  'use strict';
 
+  /////////////////////////////////////////////////////////////////////////////
+  // DIALOG
+  /////////////////////////////////////////////////////////////////////////////
 
-    <h3> </h3>
+  /**
+   * Dialog Window
+   *
+   * A simple wrapper with some pre-defined options
+   *
+   * @constructor
+   * @memberof OSjs.Core
+   * @extends OSjs.Core.Window
+   */
+  function DialogWindow(className, opts, args, callback) {
+    var self = this;
 
+    opts = opts || {};
+    args = args || {};
 
+    callback = callback || function() {};
+    if ( typeof callback !== 'function' ) {
+      throw new TypeError('DialogWindow expects a callback Function, gave: ' + typeof callback);
+    }
 
+    console.info('DialogWindow::construct()', className, opts, args);
 
+    Window.apply(this, [className, opts]);
 
+    this._properties.gravity          = 'center';
+    this._properties.allow_resize     = false;
+    this._properties.allow_minimize   = false;
+    this._properties.allow_maximize   = false;
+    this._properties.allow_windowlist = false;
+    this._properties.allow_session    = false;
+    this._state.ontop                 = true;
+    this._tag                         = 'DialogWindow';
 
+    if ( args.scheme &amp;&amp; args.scheme instanceof OSjs.GUI.Scheme ) {
+      this.scheme = args.scheme;
+      delete args.scheme;
+    } else {
+      this.scheme = OSjs.GUI.DialogScheme.get();
+    }
 
+    this.args = args;
+    this.className = className;
+    this.buttonClicked = false;
 
+    this.closeCallback = function(ev, button, result) {
+      if ( self._destroyed ) {
+        return;
+      }
 
+      self.buttonClicked = true;
+      callback.apply(self, arguments);
+      self._close();
+    };
+  }
 
-    
+  DialogWindow.prototype = Object.create(Window.prototype);
+  DialogWindow.constructor = Window;
 
+  /**
+   * @override
+   * @function init
+   * @memberof OSjs.Core.DialogWindow#
+   */
+  DialogWindow.prototype.init = function() {
+    var self = this;
 
+    var root = Window.prototype.init.apply(this, arguments);
+    root.setAttribute('role', 'dialog');
 
+    this.scheme.render(this, this.className.replace(/Dialog$/, ''), root, 'application-dialog', function(node) {
+      node.querySelectorAll('gui-label').forEach(function(el) {
+        if ( el.childNodes.length &amp;&amp; el.childNodes[0].nodeType === 3 &amp;&amp; el.childNodes[0].nodeValue ) {
+          var label = el.childNodes[0].nodeValue;
+          Utils.$empty(el);
+          el.appendChild(document.createTextNode(API._(label)));
+        }
+      });
+    });
 
+    var buttonMap = {
+      ButtonOK:     'ok',
+      ButtonCancel: 'cancel',
+      ButtonYes:    'yes',
+      ButtonNo:     'no'
+    };
 
+    var focusButtons = ['ButtonCancel', 'ButtonNo'];
+
+    Object.keys(buttonMap).forEach(function(id) {
+      if ( self.scheme.findDOM(self, id) ) {
+        var btn = self.scheme.find(self, id);
+        btn.on('click', function(ev) {
+          self.onClose(ev, buttonMap[id]);
+        });
+        if ( focusButtons.indexOf(id) >= 0 ) {
+          btn.focus();
+        }
+      }
+    });
+
+    Utils.$addClass(root, 'DialogWindow');
+
+    return root;
+  };
+
+  /**
+   * When dialog closes
+   *
+   * @function onClose
+   * @memberof OSjs.Core.DialogWindow#
+   */
+  DialogWindow.prototype.onClose = function(ev, button) {
+    this.closeCallback(ev, button, null);
+  };
+
+  /**
+   * @override
+   * @function _close
+   * @memberof OSjs.Core.DialogWindow#
+   */
+  DialogWindow.prototype._close = function() {
+    if ( !this.buttonClicked ) {
+      this.onClose(null, 'cancel', null);
+    }
+    return Window.prototype._close.apply(this, arguments);
+  };
+
+  /**
+   * @override
+   * @function _onKeyEvent
+   * @memberof OSjs.Core.DialogWindow#
+   */
+  DialogWindow.prototype._onKeyEvent = function(ev) {
+    Window.prototype._onKeyEvent.apply(this, arguments);
+
+    if ( ev.keyCode === Utils.Keys.ESC ) {
+      this.onClose(ev, 'cancel');
+    }
+  };
+
+  /**
+   * Parses given message to be inserted into Dialog
+   *
+   * @function parseMessage
+   * @memberof OSjs.Core.DialogWindow
+   */
+  DialogWindow.parseMessage = function(msg) {
+    msg = Utils.$escape(msg || '').replace(/\*\*(.*)\*\*/g, '&lt;span>$1&lt;/span>');
+
+    var tmp = document.createElement('div');
+    tmp.innerHTML = msg;
+
+    var frag = document.createDocumentFragment();
+    for ( var i = 0; i &lt; tmp.childNodes.length; i++ ) {
+      frag.appendChild(tmp.childNodes[i].cloneNode(true));
+    }
+    tmp = null;
+
+    return frag;
+  };
+
+  /////////////////////////////////////////////////////////////////////////////
+  // EXPORTS
+  /////////////////////////////////////////////////////////////////////////////
+
+  OSjs.Core.DialogWindow = Object.seal(DialogWindow);
+
+})(OSjs.Utils, OSjs.API, OSjs.Core.Window);
+</code></pre>
+        </article>
+    </section>
 
 
 
@@ -93,7 +283,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 18:34:44 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 18:34:43 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>

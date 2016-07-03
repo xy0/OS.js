@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Home - OS.js Client JSDoc</title>
+    <title>Namespace: Elements - OS.js Client JSDoc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -44,32 +44,3346 @@
 
 <main>
 
-    <h1 class="page-title">Home</h1>
-
-    
-
-
-
-    
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
+    <h1 class="page-title">Namespace: Elements</h1>
 
     
 
 
 
 
+<section>
 
+    
+        <h2>
+            <span class="ancestors"><a href="OSjs.GUI.html">.GUI</a>.</span>Elements</h2>
+        
+    
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui__elements.js.html">gui/_elements.js</a>, <a href="gui__elements.js.html#line33">line 33</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        
+            
+<h4 class="name" id=".DataView"><span class="type-signature ">abstract,static</span>OSjs.GUI.Elements.DataView</h4>
+
+
+
+
+<div class="description">
+    Element: '_dataview'
+
+This is an abstraction layer for Icon, Tree and List views.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     Mixed         The value/currently selected
+  getter    selected  Mixed         Alias of 'value'
+  getter    entry     Mixed         Gets an etnry by value, key
+  setter    value     Mixed         The value/currently selected
+  property  multiple  boolean       If multiple elements are selectable
+  event     select                  When entry was selected => fn(ev)
+  event     activate                When entry was activated => fn(ev)
+  action    add                     Add elements(s) => fn(entries)
+  action    patch                   Patch/Update elements => fn(entries)
+  action    remove                  Removes element => fn(arg)
+  action    clear                   Clear elements => fn()
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui__dataview.js.html">gui/_dataview.js</a>, <a href="gui__dataview.js.html#line214">line 214</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-audio"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-audio</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-audio'
+
+HTML5 Audio Element.
+
+<pre><code>
+  getter    src   String        The source (src)
+  setter    src   String        The source (src)
+  property  src   String        The source (src)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_visual.js.html">gui/visual.js</a>, <a href="gui_visual.js.html#line79">line 79</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-button"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-button</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-button'
+
+A normal button
+
+<pre><code>
+  getter    value     String        The value
+  setter    value     String        The value
+  setter    icon      String        Icon source
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  property  icon      String        Icon source
+  event     click                   When input was clicked => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line564">line 564</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-button-bar"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-button-bar</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-button-bar'
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line142">line 142</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-canvas"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-canvas</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-canvas'
+
+Canvas Element.
+
+<pre><code>
+  getter    src   String        The source (src)
+  setter    src   String        The source (src)
+  property  src   String        The source (src)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_visual.js.html">gui/visual.js</a>, <a href="gui_visual.js.html#line154">line 154</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-checkbox"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-checkbox</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-checbox'
+
+Checkbox selection input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     boolean       The value/checked state
+  setter    value     boolean       The value/checked state
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  property  label     String        (Optional) Set a label on the input element
+  property  group     String        (Optional) A group identificator
+  event     change                  When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line469">line 469</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-color-box"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-color-box</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-color-box'
+
+A box that displays a color.
+
+<pre><code>
+  getter    value   String        The value (color)
+  setter    value   String        The value (color)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_misc.js.html">gui/misc.js</a>, <a href="gui_misc.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-color-swatch"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-color-swatch</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-color-swatch'
+
+A box for selecting color(s) in the rainbow.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value   String        The value (color)
+  setter    value   String        The value (color)
+  event     change                When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_misc.js.html">gui/misc.js</a>, <a href="gui_misc.js.html#line73">line 73</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-expander"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-expander</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-expander'
+
+A expandable/collapsable container with label and indicator
+
+<pre><code>
+  property  label     String        The label
+  property  expanded  boolean       Expanded state (default=true)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line286">line 286</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-file-upload"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-file-upload</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-file-upload'
+
+File upload selector.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     String        The value/contents
+  setter    value     String        The value/contents
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  event     change                  When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line409">line 409</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-file-view"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-file-view</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-file-view'
+
+Abstraction layer for displaying files within Icon-, Tree- or List Views
+
+For more properties and events etc, see 'dataview'
+
+<pre><code>
+  property  multiple    boolean       If multiple elements are selectable
+  property  type        String        Child type
+  property  filter      Array         MIME Filters
+  property  dotfiles    boolean       Show dotfiles (default=true)
+  property  extensions  boolean       Show file extensions (default=true)
+  action    chdir                     Change directory => fn(args)  (args = {path: '', done: function() })
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_fileview.js.html">gui/fileview.js</a>, <a href="gui_fileview.js.html#line351">line 351</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li><a href="OSjs.GUI.Elements.html#.gui-list-view">OSjs.GUI.Elements.gui-list-view</a></li>
+        
+            <li><a href="OSjs.GUI.Elements.html#.gui-tree-view">OSjs.GUI.Elements.gui-tree-view</a></li>
+        
+            <li><a href="OSjs.GUI.Elements.html#.gui-icon-view">OSjs.GUI.Elements.gui-icon-view</a></li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-grid"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-grid</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-grid'
+
+A grid-type container with equal-sized containers
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line168">line 168</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-grid-entry"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-grid-entry</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-grid-entry'
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line200">line 200</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-grid-row"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-grid-row</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-grid-row'
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line188">line 188</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-hbox"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-hbox</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-hbox'
+
+Horizontal boxed layout
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line249">line 249</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-hbox-container"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-hbox-container</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-hbox-container'
+
+Horizontal boxed layout container
+
+<pre><code>
+  property  base      String        CSS base flexbox property
+  property  grow      integer       CSS grow flexbox property
+  property  shrink    integer       CSS shrink flexbox property
+  property  expand    boolean       Make content expand to full width
+  property  fill      boolean       Make content fill up entire space
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line263">line 263</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-icon-view"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-icon-view</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-icon-view'
+
+A container for displaying icons with labels
+
+For more properties and events etc, see 'dataview'
+
+<pre><code>
+  property  icon-size   integer       Icon size (default=16)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_iconview.js.html">gui/iconview.js</a>, <a href="gui_iconview.js.html#line67">line 67</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>.add([{
+     label: "Label",
+     icon: "Optional icon path",
+     value: "something or JSON or whatever"
+  }])</code></pre>
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-iframe"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-iframe</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-iframe'
+
+IFrame container. On NW/Electron/X11 this is a "webview"
+
+<pre><code>
+  property  src     String        The source (src)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_misc.js.html">gui/misc.js</a>, <a href="gui_misc.js.html#line155">line 155</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-image"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-image</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-image'
+
+Normal Image Element.
+
+<pre><code>
+  getter    src   String        The source (src)
+  setter    src   String        The source (src)
+  property  src   String        The source (src)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_visual.js.html">gui/visual.js</a>, <a href="gui_visual.js.html#line129">line 129</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-input-modal"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-input-modal</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-input-modal'
+
+A text area displaying current value with a button to open a modal/dialog etc.
+
+<pre><code>
+  getter    value     String        The value
+  setter    value     String        The value
+  event     open                    When button was pressed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line775">line 775</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-label"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-label</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-label'
+
+Just a normal label.
+
+<pre><code>
+  getter    value     String        The value/contents
+  setter    value     String        The value/contents
+  setter    label     String        The label text
+  property  disabled  boolean       Disabled state
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line270">line 270</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-list-view"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-list-view</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-list-view'
+
+A list view with columns.
+
+<pre><code>
+  Parameters:
+   zebra     boolean       Enable zebra stripes
+
+  Setters:
+   columns(arr)  Sets the columns
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_listview.js.html">gui/listview.js</a>, <a href="gui_listview.js.html#line183">line 183</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Examples</h5>
+    
+    <pre class="prettyprint"><code>.set('columns', [
+     {label: "Column 1", size: "100px"},
+     {label: "Column 2", size: "100px", visible: false},
+     {label: "Column 3", size: "100px", textalign: "right"},
+     {label: "Column 4", size: "100px", textalign: "right"}
+])</code></pre>
+
+    <pre class="prettyprint"><code>.add([
+  {
+     value: "something or JSON or whatever",
+     columns: [
+       {label: "Value for column 1", icon: "Optional icon"},
+       {label: "Value for column 2", icon: "Optional icon"},
+       {label: "Value for column 3", icon: "Optional icon"},
+       {label: "Value for column 4", icon: "Optional icon"},
+     ]
+  }
+])</code></pre>
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-menu"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-menu</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-menu'
+
+A normal menu (also contextmenu)
+
+<pre><code>
+  Events:
+   select        When an entry was selected (click) => fn(ev)
+
+  Setters:
+   checked       Set checkbox/option checked value
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_menus.js.html">gui/menus.js</a>, <a href="gui_menus.js.html#line208">line 208</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-menu-bar"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-menu-bar</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-menu-bar'
+
+A menubar with sub-menus
+
+<pre><code>
+  event     select               When an entry was selected (click) => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_menus.js.html">gui/menus.js</a>, <a href="gui_menus.js.html#line279">line 279</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-menu-entry"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-menu-entry</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-menu-entry'
+
+An entry for a menu.
+
+<pre><code>
+  Events:
+   select        When an entry was selected (click) => fn(ev)
+<pre><code>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_menus.js.html">gui/menus.js</a>, <a href="gui_menus.js.html#line118">line 118</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-paned-view"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-paned-view</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-paned-view'
+
+A view with resizable content boxes
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line41">line 41</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-paned-view-container"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-paned-view-container</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-paned-view-container'
+
+<pre><code>
+  property  base      String        CSS base flexbox property
+  property  grow      integer       CSS grow flexbox property
+  property  shrink    integer       CSS shrink flexbox property
+  property  min-size  integer       Minimum size in pixels
+  property  max-size  integer       Maxmimum size in pixels
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line121">line 121</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-password"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-password</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-password'
+
+Password input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value         String        The value/contents
+  setter    value         String        The value/contents
+  setter    disabled      boolean       Set disabled state
+  property  disabled      boolean       Disabled state
+  property  value         String        The input value
+  property  placeholder   String        An optional placeholder
+  event     change                      When input has changed => fn(ev)
+  event     enter                       When enter key was pressed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line380">line 380</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-progress-bar"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-progress-bar</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-progress-bar'
+
+Progress bar element.
+
+<pre><code>
+  setter    progress    integer     Progress value (percentage)
+  property  progress    integer     Progress value (percentage)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_misc.js.html">gui/misc.js</a>, <a href="gui_misc.js.html#line191">line 191</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-radio"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-radio</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-radio'
+
+Radio selection input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     boolean       The value/checked state
+  setter    value     boolean       The value/checked state
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  property  label     String        (Optional) Set a label on the input element
+  property  group     String        (Optional) A group identificator
+  event     change                  When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line441">line 441</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-richtext"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-richtext</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-richtext'
+
+"Richt text" input area.
+
+<pre><code>
+  getter    value   String        The value/contents
+  setter    value   String        The value/contents
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_richtext.js.html">gui/richtext.js</a>, <a href="gui_richtext.js.html#line132">line 132</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-select"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-select</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-select'
+
+A selection dropdown.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     String        The value
+  setter    value     String        The value
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  event     change                  When input has changed => fn(ev)
+  action    add                     Add elements(s) => fn(entries)
+  action    clear                   Clear elements => fn()
+  action    remove                  Removes element => fn(arg)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line686">line 686</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>add({
+   label: "Label",
+   value: "Value"
+  })</code></pre>
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-select-list"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-select-list</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-select-list'
+
+A selection list (same as dropdown except multiple)
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     String        The value
+  setter    value     String        The value
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  event     change                  When input has changed => fn(ev)
+  action    add                     Add elements(s) => fn(entries)
+  action    clear                   Clear elements => fn()
+  action    remove                  Removes element => fn(arg)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line716">line 716</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-slider"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-slider</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-slider'
+
+A slider input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     String        The value
+  setter    value     String        The value
+  setter    disabled  boolean       Set disabled state
+  property  min       integer       The minimum value
+  property  max       integer       The maxmimum value
+  property  disabled  boolean       Disabled state
+  event     change                  When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line740">line 740</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-statusbar"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-statusbar</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-statusbar'
+
+Status bar element.
+
+<pre><code>
+  setter    value       String      Content to set
+  setter    label       String      Alias of 'value'
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_misc.js.html">gui/misc.js</a>, <a href="gui_misc.js.html#line244">line 244</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-switch"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-switch</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-switch'
+
+A switch (on/off) input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value     String        The value/enabled state
+  setter    value     String        The value/enabled state
+  setter    disabled  boolean       Set disabled state
+  property  disabled  boolean       Disabled state
+  event     change                  When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line497">line 497</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-tabs"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-tabs</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-tabs'
+
+A container with tabs for displaying content.
+
+<pre><code>
+  event     select                    When tab has changed => fn(ev)
+  event     activate                  Alias of 'select'
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_tabs.js.html">gui/tabs.js</a>, <a href="gui_tabs.js.html#line48">line 48</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-text"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-text</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-text'
+
+Text input.
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value         String        The value/contents
+  setter    value         String        The value/contents
+  setter    disabled      boolean       Set disabled state
+  property  disabled      boolean       Disabled state
+  property  value         String        The input value
+  property  placeholder   String        An optional placeholder
+  event     change                      When input has changed => fn(ev)
+  event     enter                       When enter key was pressed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line351">line 351</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-textarea"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-textarea</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-textarea'
+
+Text area input (multi-line)
+
+See `ev.detail` for data on events (like on 'change').
+
+<pre><code>
+  getter    value         String        The value/contents
+  setter    value         String        The value/contents
+  setter    label         String        The label text
+  setter    disabled      boolean       Set disabled state
+  property  disabled      boolean       Disabled state
+  property  value         String        The input value
+  property  placeholder   String        An optional placeholder
+  event     change                      When input has changed => fn(ev)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_inputs.js.html">gui/inputs.js</a>, <a href="gui_inputs.js.html#line312">line 312</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-toolbar"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-toolbar</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-toolbar'
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line155">line 155</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-tree-view"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-tree-view</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-tree-view'
+
+A tree view for nested content
+
+For more properties and events etc, see 'dataview'
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_treeview.js.html">gui/treeview.js</a>, <a href="gui_treeview.js.html#line167">line 167</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>.add({
+     label: "Label",
+     icon: "Optional icon path",
+     value: "something or JSON or whatever",
+     entries: [] // Recurse :)
+  })</code></pre>
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-vbox"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-vbox</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-vbox'
+
+Vertical boxed layout
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line212">line 212</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-vbox-container"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-vbox-container</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-vbox-container'
+
+Vertical boxed layout container
+
+<pre><code>
+  property  base      String        CSS base flexbox property
+  property  grow      integer       CSS grow flexbox property
+  property  shrink    integer       CSS shrink flexbox property
+  property  expand    boolean       Make content expand to full width
+  property  fill      boolean       Make content fill up entire space
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_containers.js.html">gui/containers.js</a>, <a href="gui_containers.js.html#line226">line 226</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+            
+<h4 class="name" id=".gui-video"><span class="type-signature static">static</span>OSjs.GUI.Elements.gui-video</h4>
+
+
+
+
+<div class="description">
+    Element: 'gui-video'
+
+HTML5 Video Element.
+
+<pre><code>
+  getter    src   String        The source (src)
+  setter    src   String        The source (src)
+  property  src   String        The source (src)
+</code></pre>
+</div>
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="gui_visual.js.html">gui/visual.js</a>, <a href="gui_visual.js.html#line104">line 104</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+<hr />
+
+        
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 
