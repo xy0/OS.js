@@ -527,6 +527,8 @@
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -559,6 +561,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The data (JSON by default)</td>
@@ -593,6 +599,10 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">A custom drag event 'type'</td>
         </tr>
@@ -626,8 +636,14 @@
             
 
             
+                <td class="default">
+                
+                    move
+                
+                </td>
+            
 
-            <td class="description last">The draggable effect (cursor) (Default=move)</td>
+            <td class="description last">The draggable effect (cursor)</td>
         </tr>
 
     
@@ -659,8 +675,14 @@
             
 
             
+                <td class="default">
+                
+                    application/json
+                
+                </td>
+            
 
-            <td class="description last">The mime type of content (Default=application/json)</td>
+            <td class="description last">The mime type of content</td>
         </tr>
 
     
@@ -689,6 +711,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Callback when drag started => fn(ev, el, args)</td>
@@ -720,6 +746,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Callback when drag ended => fn(ev, el, args)</td>
@@ -906,6 +936,8 @@
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -941,6 +973,10 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">Accept given drag event 'type'</td>
         </tr>
@@ -974,8 +1010,14 @@
             
 
             
+                <td class="default">
+                
+                    move
+                
+                </td>
+            
 
-            <td class="description last">The draggable effect (cursor) (Default=move)</td>
+            <td class="description last">The draggable effect (cursor)</td>
         </tr>
 
     
@@ -1007,8 +1049,14 @@
             
 
             
+                <td class="default">
+                
+                    application/json
+                
+                </td>
+            
 
-            <td class="description last">The mime type of content (Default=application/json)</td>
+            <td class="description last">The mime type of content</td>
         </tr>
 
     
@@ -1040,8 +1088,14 @@
             
 
             
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
 
-            <td class="description last">Support file drops from OS (Default=true)</td>
+            <td class="description last">Support file drops from OS</td>
         </tr>
 
     
@@ -1070,6 +1124,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Callback when drag entered => fn(ev, el)</td>
@@ -1102,6 +1160,10 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">Callback when drag over => fn(ev, el)</td>
         </tr>
@@ -1132,6 +1194,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Callback when drag leave => fn(ev, el)</td>
@@ -1164,6 +1230,10 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">Callback when drag drop all => fn(ev, el)</td>
         </tr>
@@ -1195,6 +1265,10 @@
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">Callback when drag drop file => fn(ev, el, files, args)</td>
         </tr>
@@ -1225,6 +1299,10 @@
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Callback when drag drop internal object => fn(ev, el, item, args)</td>
@@ -3524,7 +3602,7 @@ If you don't supply a current element, the first one will be taken!
 
     <h4 class="name" id=".setProperty">
             
-    <span class="type-signature static">static</span>OSjs.GUI.Helpers.setProperty<span class="signature">(Node, String, Mixed, String)</span>
+    <span class="type-signature static">static</span>OSjs.GUI.Helpers.setProperty<span class="signature">(el, param, value, <span class="optional">tagName</span>)</span>
     </h4>
 
     
@@ -3556,6 +3634,8 @@ If you don't supply a current element, the first one will be taken!
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -3568,72 +3648,126 @@ If you don't supply a current element, the first one will be taken!
 
         <tr>
             
-                <td class="name"><code>Node</code></td>
+                <td class="name"><code>el</code></td>
             
 
             <td class="type">
             
+                
+<span class="param-type">Node</span>
+
+
+            
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">el            Element</td>
+            <td class="description last">Element</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>String</code></td>
+                <td class="name"><code>param</code></td>
             
 
             <td class="type">
             
+                
+<span class="param-type">String</span>
+
+
+            
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">param         Parameter name</td>
+            <td class="description last">Parameter name</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>Mixed</code></td>
+                <td class="name"><code>value</code></td>
             
 
             <td class="type">
             
+                
+<span class="param-type">Mixed</span>
+
+
+            
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">value         Parameter value</td>
+            <td class="description last">Parameter value</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>String</code></td>
+                <td class="name"><code>tagName</code></td>
             
 
             <td class="type">
             
+                
+<span class="param-type">String</span>
+
+
+            
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">[tagName]     What tagname is in use? Automatic</td>
+            <td class="description last">What tagname is in use? Automatic</td>
         </tr>
 
     
@@ -3734,7 +3868,7 @@ If you don't supply a current element, the first one will be taken!
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 21:56:32 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 22:22:53 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>

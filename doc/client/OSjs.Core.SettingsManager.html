@@ -347,7 +347,7 @@
 
     <h4 class="name" id="clear">
             
-    clear<span class="signature">(pool, save)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.SettingsManager.html">OSjs.Core.SettingsManager</a>}</span>
+    clear<span class="signature">(pool, <span class="optional">save</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.SettingsManager.html">OSjs.Core.SettingsManager</a>}</span>
     </h4>
 
     
@@ -379,7 +379,11 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -404,7 +408,19 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Name of settings pool</td>
@@ -427,10 +443,26 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">(Optional) boolean or callback function for saving (default = true)</td>
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Boolean or callback function for saving</td>
         </tr>
 
     
@@ -528,7 +560,7 @@
 
     <h4 class="name" id="defaults">
             
-    defaults<span class="signature">(pool, default)</span>
+    defaults<span class="signature">(pool, <span class="optional">default</span>)</span>
     </h4>
 
     
@@ -560,6 +592,8 @@
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -585,6 +619,14 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -608,10 +650,20 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) Default settings tree</td>
+            <td class="description last">Default settings tree</td>
         </tr>
 
     
@@ -1021,7 +1073,7 @@ This is run when a user logs in. It will give saved data here
 
     <h4 class="name" id="instance">
             
-    instance<span class="signature">(pool, default)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
+    instance<span class="signature">(pool, <span class="optional">default</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
     </h4>
 
     
@@ -1053,6 +1105,8 @@ This is run when a user logs in. It will give saved data here
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -1078,6 +1132,14 @@ This is run when a user logs in. It will give saved data here
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -1101,10 +1163,20 @@ This is run when a user logs in. It will give saved data here
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) Default settings tree</td>
+            <td class="description last">Default settings tree</td>
         </tr>
 
     
@@ -1393,6 +1465,8 @@ This is run when a user logs in. It will give saved data here
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -1425,6 +1499,10 @@ This is run when a user logs in. It will give saved data here
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Name of settings pool</td>
@@ -1459,6 +1537,10 @@ This is run when a user logs in. It will give saved data here
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">Key entry of tree</td>
         </tr>
@@ -1489,6 +1571,10 @@ This is run when a user logs in. It will give saved data here
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The value (or entire tree if no key given)</td>
@@ -1523,6 +1609,10 @@ This is run when a user logs in. It will give saved data here
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">boolean or callback function for saving</td>
         </tr>
@@ -1556,8 +1646,14 @@ This is run when a user logs in. It will give saved data here
             
 
             
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
 
-            <td class="description last">trigger change event for watchers (default=true)</td>
+            <td class="description last">trigger change event for watchers</td>
         </tr>
 
     
@@ -1993,7 +2089,7 @@ This is run when a user logs in. It will give saved data here
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 21:56:31 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 22:22:53 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>

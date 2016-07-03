@@ -695,7 +695,7 @@
 
     <h4 class="name" id=".call">
             
-    <span class="type-signature static">static</span>OSjs.API.call<span class="signature">(m, a, cb, options)</span>
+    <span class="type-signature static">static</span>OSjs.API.call<span class="signature">(m, a, cb, <span class="optional">options</span>)</span>
     </h4>
 
     
@@ -729,6 +729,8 @@ You can call VFS functions by prefixing your method name with "FS:"
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -754,6 +756,14 @@ You can call VFS functions by prefixing your method name with "FS:"
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -776,6 +786,14 @@ You can call VFS functions by prefixing your method name with "FS:"
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -800,6 +818,14 @@ You can call VFS functions by prefixing your method name with "FS:"
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -823,10 +849,20 @@ You can call VFS functions by prefixing your method name with "FS:"
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) Options to send to the XHR request</td>
+            <td class="description last">Options to send to the XHR request</td>
         </tr>
 
     
@@ -1047,7 +1083,7 @@ You can call VFS functions by prefixing your method name with "FS:"
 
     <h4 class="name" id=".createDialog">
             
-    <span class="type-signature static">static</span>OSjs.API.createDialog<span class="signature">(className, args, callback, parentObj)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
+    <span class="type-signature static">static</span>OSjs.API.createDialog<span class="signature">(className, args, callback, <span class="optional">parentObj</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{<a href="OSjs.Core.Window.html">OSjs.Core.Window</a>}</span>
     </h4>
 
     
@@ -1081,6 +1117,8 @@ You can also pass a function as `className` to return an instance of your own cl
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -1106,6 +1144,14 @@ You can also pass a function as `className` to return an instance of your own cl
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -1128,6 +1174,14 @@ You can also pass a function as `className` to return an instance of your own cl
             
             </td>
 
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
             
 
             
@@ -1152,6 +1206,14 @@ You can also pass a function as `className` to return an instance of your own cl
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -1175,10 +1237,20 @@ You can also pass a function as `className` to return an instance of your own cl
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) A window or app (to make it a child window)</td>
+            <td class="description last">A window or app (to make it a child window)</td>
         </tr>
 
     
@@ -1726,6 +1798,8 @@ Returns an object with the methods `update(precentage)` and `destroy()`
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -1759,6 +1833,10 @@ Returns an object with the methods `update(precentage)` and `destroy()`
             
 
             
+                <td class="default">
+                
+                </td>
+            
 
             <td class="description last">The name to display</td>
         </tr>
@@ -1789,6 +1867,10 @@ Returns an object with the methods `update(precentage)` and `destroy()`
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The icon to display</td>
@@ -1823,8 +1905,14 @@ Returns an object with the methods `update(precentage)` and `destroy()`
             
 
             
+                <td class="default">
+                
+                    Starting
+                
+                </td>
+            
 
-            <td class="description last">The label (default = 'Starting')</td>
+            <td class="description last">The label</td>
         </tr>
 
     
@@ -1855,6 +1943,10 @@ Returns an object with the methods `update(precentage)` and `destroy()`
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The parent element</td>
@@ -2757,7 +2849,7 @@ NOTE: This does not the operating system clipboard (yet...)
 
     <h4 class="name" id=".getConfig">
             
-    <span class="type-signature static">static</span>OSjs.API.getConfig<span class="signature">(path, defaultValue)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Mixed}</span>
+    <span class="type-signature static">static</span>OSjs.API.getConfig<span class="signature">(<span class="optional">path</span>, <span class="optional">defaultValue</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Mixed}</span>
     </h4>
 
     
@@ -2789,6 +2881,8 @@ NOTE: This does not the operating system clipboard (yet...)
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2814,10 +2908,20 @@ NOTE: This does not the operating system clipboard (yet...)
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) Path</td>
+            <td class="description last">Path</td>
         </tr>
 
     
@@ -2837,10 +2941,20 @@ NOTE: This does not the operating system clipboard (yet...)
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) Default value if undefined</td>
+            <td class="description last">Use default value</td>
         </tr>
 
     
@@ -3135,6 +3249,8 @@ NOTE: This does not the operating system clipboard (yet...)
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -3167,6 +3283,10 @@ NOTE: This does not the operating system clipboard (yet...)
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">File Data (see supported types)</td>
@@ -3201,8 +3321,14 @@ NOTE: This does not the operating system clipboard (yet...)
             
 
             
+                <td class="default">
+                
+                    16x16
+                
+                </td>
+            
 
-            <td class="description last">Icon size (default="16x16")</td>
+            <td class="description last">Icon size</td>
         </tr>
 
     
@@ -3233,6 +3359,10 @@ NOTE: This does not the operating system clipboard (yet...)
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Default icon</td>
@@ -3369,6 +3499,8 @@ NOTE: This does not the operating system clipboard (yet...)
         
 
         
+        <th>Default</th>
+        
 
         <th class="last">Description</th>
     </tr>
@@ -3401,6 +3533,10 @@ NOTE: This does not the operating system clipboard (yet...)
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Resource filename</td>
@@ -3435,8 +3571,14 @@ NOTE: This does not the operating system clipboard (yet...)
             
 
             
+                <td class="default">
+                
+                    16x16
+                
+                </td>
+            
 
-            <td class="description last">Icon size (default=16x16)</td>
+            <td class="description last">Icon size</td>
         </tr>
 
     
@@ -3467,6 +3609,10 @@ NOTE: This does not the operating system clipboard (yet...)
                 </td>
             
 
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Application instance reference. Can also be String. For `name` starting with './'</td>
@@ -6933,7 +7079,7 @@ NOTE: This does not set the operating system clipboard (yet...)
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 21:56:31 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 22:22:53 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>

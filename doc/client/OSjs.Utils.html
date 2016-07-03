@@ -1782,7 +1782,7 @@ works sort of like PHPs htmlspecialchars()
 
     <h4 class="name" id=".$index">
             
-    <span class="type-signature static">static</span>OSjs.Utils.$index<span class="signature">(el, parentEl)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
+    <span class="type-signature static">static</span>OSjs.Utils.$index<span class="signature">(el, <span class="optional">parentEl</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Number}</span>
     </h4>
 
     
@@ -1814,6 +1814,8 @@ works sort of like PHPs htmlspecialchars()
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -1839,10 +1841,18 @@ works sort of like PHPs htmlspecialchars()
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">Element to check</td>
+            <td class="description last">The Element to check</td>
         </tr>
 
     
@@ -1862,10 +1872,20 @@ works sort of like PHPs htmlspecialchars()
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">Optional parent (automatically checked)</td>
+            <td class="description last">Parent to end loop in</td>
         </tr>
 
     
@@ -2419,7 +2439,7 @@ works sort of like PHPs htmlspecialchars()
 
     <h4 class="name" id=".$position">
             
-    <span class="type-signature static">static</span>OSjs.Utils.$position<span class="signature">(el, parentEl)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
+    <span class="type-signature static">static</span>OSjs.Utils.$position<span class="signature">(el, <span class="optional">parentEl</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Object}</span>
     </h4>
 
     
@@ -2454,6 +2474,8 @@ See DOM documentation
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -2479,6 +2501,14 @@ See DOM documentation
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -2502,10 +2532,20 @@ See DOM documentation
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">Optional parent to end loop in</td>
+            <td class="description last">Parent to end loop in</td>
         </tr>
 
     
@@ -3569,7 +3609,11 @@ including download/upload and JSONP
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -3594,7 +3638,19 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">The URL</td>
@@ -3617,10 +3673,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">HTTP Call method: (POST/GET, default = GET)</td>
+            
+                <td class="default">
+                
+                    GET
+                
+                </td>
+            
+
+            <td class="description last">HTTP Call method</td>
         </tr>
 
     
@@ -3640,10 +3712,24 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Optional body to send (for POST)</td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Body to send (for POST)</td>
         </tr>
 
     
@@ -3663,10 +3749,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Optional timeout (in milliseconds)</td>
+            
+                <td class="default">
+                
+                    0
+                
+                </td>
+            
+
+            <td class="description last">Timeout (in milliseconds)</td>
         </tr>
 
     
@@ -3686,10 +3788,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">HTTP Response type (default = null)</td>
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last">HTTP Response type</td>
         </tr>
 
     
@@ -3709,10 +3827,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Tuple with headers (default = null)</td>
+            
+                <td class="default">
+                
+                    null
+                
+                </td>
+            
+
+            <td class="description last">Tuple with headers</td>
         </tr>
 
     
@@ -3732,10 +3866,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Handle as a JSON request/response (default = false)</td>
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">Handle as a JSON request/response</td>
         </tr>
 
     
@@ -3755,10 +3905,26 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Handle as a JSONP request (default = false)</td>
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last">Handle as a JSONP request</td>
         </tr>
 
     
@@ -3778,10 +3944,24 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Array of accepted status codes for success signal [arraybuffer] (Optional)</td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Array of accepted status codes for success signal [arraybuffer]</td>
         </tr>
 
     
@@ -3801,7 +3981,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">onerror callback => fn(error, evt, request, url)</td>
@@ -3824,7 +4018,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">onsuccess callback => fn(result, request, url)</td>
@@ -3847,7 +4055,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">oncreated callback => fn(request)</td>
@@ -3870,7 +4092,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">onfailed callback => fn(evt)</td>
@@ -3893,7 +4129,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">oncanceled callback => fn(evt)</td>
@@ -3916,7 +4166,21 @@ including download/upload and JSONP
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">ontimeout callback => fn(evt)</td>
@@ -8888,7 +9152,7 @@ Example: 'CTRL+SHIFT+A'
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 21:56:32 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 22:22:53 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>

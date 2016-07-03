@@ -1355,7 +1355,7 @@ On Lua or Arduino it is called 'server.lua'
 
             
 
-            <td class="description last">Optional argument</td>
+            <td class="description last">Argument</td>
         </tr>
 
     
@@ -2670,7 +2670,7 @@ This is a shortcut for API.getApplicationResource()
 
     <h4 class="name" id="applySettings">
             
-    applySettings<span class="signature">(settings, force, save, triggerWatch)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
+    applySettings<span class="signature">(settings, force, save, <span class="optional">triggerWatch</span>)</span><span class="glyphicon glyphicon-circle-arrow-right"></span><span class="type-signature returnType">{Boolean}</span>
     </h4>
 
     
@@ -2704,7 +2704,11 @@ OVERRIDE THIS IN YOUR WM IMPLEMENTATION
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -2729,7 +2733,19 @@ OVERRIDE THIS IN YOUR WM IMPLEMENTATION
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">JSON Settings</td>
@@ -2752,7 +2768,19 @@ OVERRIDE THIS IN YOUR WM IMPLEMENTATION
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">If forced, no merging will take place</td>
@@ -2775,7 +2803,19 @@ OVERRIDE THIS IN YOUR WM IMPLEMENTATION
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Saves settings</td>
@@ -2798,10 +2838,26 @@ OVERRIDE THIS IN YOUR WM IMPLEMENTATION
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">(Optional) trigger change event for watchers (default=true)</td>
+            
+                <td class="default">
+                
+                    true
+                
+                </td>
+            
+
+            <td class="description last">Trigger change event for watchers</td>
         </tr>
 
     
@@ -3123,7 +3179,7 @@ FOR OPTIONS SEE NotificationAreaItem IN CoreWM !
 
     <h4 class="name" id="createStylesheet">
             
-    createStylesheet<span class="signature">(styles, rawStyles)</span>
+    createStylesheet<span class="signature">(styles, <span class="optional">rawStyles</span>)</span>
     </h4>
 
     
@@ -3161,6 +3217,8 @@ FOR OPTIONS SEE NotificationAreaItem IN CoreWM !
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
         
 
@@ -3186,6 +3244,14 @@ FOR OPTIONS SEE NotificationAreaItem IN CoreWM !
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
@@ -3209,10 +3275,20 @@ FOR OPTIONS SEE NotificationAreaItem IN CoreWM !
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last">(Optional) raw CSS data</td>
+            <td class="description last">Raw CSS data</td>
         </tr>
 
     
@@ -6007,7 +6083,11 @@ THIS IS IMPLEMENTED IN COREWM
         <th>Type</th>
 
         
+        <th>Attributes</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -6032,7 +6112,19 @@ THIS IS IMPLEMENTED IN COREWM
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">What icon to display</td>
@@ -6055,7 +6147,19 @@ THIS IS IMPLEMENTED IN COREWM
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">What title to display</td>
@@ -6078,7 +6182,19 @@ THIS IS IMPLEMENTED IN COREWM
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">What message to display</td>
@@ -6101,10 +6217,26 @@ THIS IS IMPLEMENTED IN COREWM
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last">Timeout (default = 5000)</td>
+            
+                <td class="default">
+                
+                    5000
+                
+                </td>
+            
+
+            <td class="description last">Timeout</td>
         </tr>
 
     
@@ -6124,7 +6256,19 @@ THIS IS IMPLEMENTED IN COREWM
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
             
 
             <td class="description last">Event callback on click => fn(ev)</td>
@@ -7431,7 +7575,7 @@ THIS IS IMPLEMENTED IN COREWM
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 21:56:31 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Sun Jul 03 2016 22:22:53 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>
