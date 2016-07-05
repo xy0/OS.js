@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Index | OS.js Server API Documentation</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - OS.js Client JSDoc</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="OS.js -- Index" />
-    <meta name="keywords" content="OS.js,Documentation,Client,Server,API,Tutorial,Tutorials,Manual,Manuals" />
-    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon-precomposed" href="/favicon.png" />
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+
     <link rel="author" href="https://plus.google.com/101576798387217383063" />
     <link rel="publisher" href="https://plus.google.com/101576798387217383063" />
-
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro" />
-    <link href="/stylesheets/codex.css" rel="stylesheet" type="text/css" />
 
     <script type="text/javascript">
       if ( window.location.hostname === 'andersevenrud.github.io' ) {
@@ -24,9 +23,11 @@
         window.location.protocol = 'https:';
       }
     </script>
-  </head>
-  <body>
-    <header>
+</head>
+
+<body>
+
+<header>
       <img alt="" src="/images/doc/logo.png" />
       <ul>
         <li><a href="/doc/">Index</a></li>
@@ -35,109 +36,44 @@
         <li><a href="/doc/manuals/">Manuals</a></li>
         <li><a href="/doc/tutorials/">Tutorials</a></li>
       </ul>
-    </header>
+</header>
 
-    <nav>
-      <h2>Namespace</h2>
-      <ul>
+<nav>
+    <h3>Classes</h3><ul><li data-name="Core.Handler" data-subs="true"><a href="Core.Handler.html">Core.Handler</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="Core.Handler.html#_checkHasAPIPrivilege">_checkHasAPIPrivilege</a></li><li><a href="Core.Handler.html#_checkHasBlacklistedPackage">_checkHasBlacklistedPackage</a></li><li><a href="Core.Handler.html#_checkHasGroup">_checkHasGroup</a></li><li><a href="Core.Handler.html#_checkHasPackagePrivilege">_checkHasPackagePrivilege</a></li><li><a href="Core.Handler.html#_checkHasSession">_checkHasSession</a></li><li><a href="Core.Handler.html#_checkHasVFSPrivilege">_checkHasVFSPrivilege</a></li><li><a href="Core.Handler.html#checkAPIPrivilege">checkAPIPrivilege</a></li><li><a href="Core.Handler.html#checkPackagePrivilege">checkPackagePrivilege</a></li><li><a href="Core.Handler.html#checkVFSPrivilege">checkVFSPrivilege</a></li><li><a href="Core.Handler.html#getHomePath">getHomePath</a></li><li><a href="Core.Handler.html#getUserBlacklistedPackages">getUserBlacklistedPackages</a></li><li><a href="Core.Handler.html#getUserGroups">getUserGroups</a></li><li><a href="Core.Handler.html#getUserName">getUserName</a></li><li><a href="Core.Handler.html#onLogin">onLogin</a></li><li><a href="Core.Handler.html#onLogout">onLogout</a></li><li><a href="Core.Handler.html#onServerEnd">onServerEnd</a></li><li><a href="Core.Handler.html#onServerStart">onServerStart</a></li><li><a href="Core.Handler.html#onSystemLogin">onSystemLogin</a></li><li><a href="Core.Handler.html#onSystemSettings">onSystemSettings</a></li><li><a href="Core.Handler.html#onVFSRequest">onVFSRequest</a></li><li><a href="Core.Handler.html#setUserData">setUserData</a></li></ul></div></li><li data-name="Core.NWHandler" data-subs="false"><a href="Core.NWHandler.html">Core.NWHandler</a><span class="folder">+</span></li></ul><h3>Namespaces</h3><ul><li data-name="API" data-subs="true"><a href="API.html">API</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="API.html#.application">application</a></li><li><a href="API.html#.curl">curl</a></li><li><a href="API.html#.login">login</a></li><li><a href="API.html#.logout">logout</a></li><li><a href="API.html#.settings">settings</a></li></ul></div></li><li data-name="VFS" data-subs="true"><a href="VFS.html">VFS</a><span class="folder">+</span><div class="sub"><span>Functions</span><ul><li><a href="VFS.html#.copy">copy</a></li><li><a href="VFS.html#.delete">delete</a></li><li><a href="VFS.html#.exists">exists</a></li><li><a href="VFS.html#.fileinfo">fileinfo</a></li><li><a href="VFS.html#.find">find</a></li><li><a href="VFS.html#.freeSpace">freeSpace</a></li><li><a href="VFS.html#.getMime">getMime</a></li><li><a href="VFS.html#.getRealPath">getRealPath</a></li><li><a href="VFS.html#.mkdir">mkdir</a></li><li><a href="VFS.html#.move">move</a></li><li><a href="VFS.html#.read">read</a></li><li><a href="VFS.html#.scandir">scandir</a></li><li><a href="VFS.html#.upload">upload</a></li><li><a href="VFS.html#.write">write</a></li></ul></div></li></ul><h3>Globals</h3><ul><li data-name="init" data-subs="false"><a href="global.html#init">init</a><span class="folder">+</span></li></ul>
+</nav>
 
-<li>http<ul><li><a class="Class" href="srcservernodehttpjs.html#http-close">close</a></li><li><a class="Class" href="srcservernodehttpjs.html#http-listen">listen</a></li></ul></li><li>api<ul><li><a class="Class" href="srcservernodecoreapijs.html#api-application">application</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-curl">curl</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-login">login</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-logout">logout</a></li><li><a class="Class" href="srcservernodecoreapijs.html#api-settings">settings</a></li></ul></li><li>vfs<ul><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-copy">copy</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-delete">delete</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-exists">exists</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-fileinfo">fileinfo</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-find">find</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-freespace">freeSpace</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-getmime">getMime</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-getrealpath">getRealPath</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-mkdir">mkdir</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-move">move</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-read">read</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-scandir">scandir</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-upload">upload</a></li><li><a class="Class" href="srcservernodecorevfsjs.html#vfs-write">write</a></li></ul></li><li>osjs<ul><li><a class="Class" href="srcservernodecoreindexjs.html#osjs-init">init</a></li></ul></li><li>config<ul><li><a class="Class" href="srcservernodecoreconfigjs.html#config-init">init</a></li></ul></li><li>handler<ul><li><a class="Class" href="srcservernodecorehandlerjs.html#handler-handler">Handler</a></li><li><a class="Class" href="srcservernodecorehandlerjs.html#handler-nwhandler">NWHandler</a></li><li><a class="" href="srcservernodecorehandlerjs.html#handler-init">init()</a></li></ul></li>
+<main>
 
-      </ul>
+    <h1 class="page-title">Home</h1>
 
-      <h2>Files</h2>
-      <ul>
-
-<li>src<ul><li>server<ul><li>node<ul><li><a href="srcservernodehttpjs.html">http.js</a></li><li>core<ul><li><a href="srcservernodecoreapijs.html">api.js</a></li><li><a href="srcservernodecorevfsjs.html">vfs.js</a></li><li><a href="srcservernodecoreindexjs.html">index.js</a></li><li><a href="srcservernodecoreconfigjs.html">config.js</a></li><li><a href="srcservernodecorehandlerjs.html">handler.js</a></li></ul></li></ul></li></ul></li></ul></li>
-
-      </ul>
-    </nav>
-
-    <content class="api">
-
-<h1>Server API Documentation</h1>
-<p>
-  The OS.js server is really simple. It consists of Core API (internal functions), Application API (application functions) and VFS (filesystem functions).
-</p>
-<p>
-  Official home page: <a href="https://os.js.org/">https://os.js.org/</a>
-</p>
-<p>
-  Github project page: <a href="https://github.com/os-js/OS.js">https://github.com/os-js/OS.js</a>
-</p>
+    
 
 
-<h2>Overview</h2>
-<div class="indent center">
-  <img alt="Server API graph" style="max-width:100%" src="/images/dia-server-api.png" />
-</div>
 
-<h2>HTTP API Requests</h2>
-<div class="indent">
-  <pre>POST //osjs-host.net/API/{method}</pre>
-  <pre>POST //osjs-host.net/FS/{method}</pre>
+    
 
-  Request example:
-  <pre class="code">
-{
-  "arg": "value"
-}
-  </pre>
 
-  Responds with:
-  <pre class="code">
-{
-  "error": null, // String if error
-  "result": null
-}
-  </pre>
-</div>
+    <h3> </h3>
 
-<h2>HTTP File Requests</h2>
-<div class="indent">
 
-  <h3>Resources</h3>
 
-  Should be handleded by the web-server normally. You just serve files from <i>dist</i> or <i>dist-dev</i> directory.
 
-  Example request:
-  <pre>GET //osjs-host.net/{path}</pre>
 
-  Example Response:
-  <pre class="code">
-Content-Length:7196
-Content-Type:text/plain; charset=utf-8
 
-[RAW FILE DATA]
-  </pre>
 
-  <h3>Downloading</h3>
 
-  <p>
-    OS.js expects a raw file return.
-  </p>
 
-  <p>Example Request:</p>
-  <pre>GET //osjs-host.net/FS/get/{vfs-path}</pre>
 
-  <p>Example Response:</p>
-  <pre class="code">
-Content-Length:7196
-Content-Type:text/plain; charset=utf-8
+    
 
-[RAW FILE DATA]
-  </pre>
 
-  <h3>Uploading</h3>
 
-  <pre>POST //osjs-host.net/FS/upload</pre>
 
-  With form data (multipart/form-data)
-  <pre class="code">
-path: /upload/path
-upload: FILE</pre>
 
-</div>
+
+
+
+
 
 
       <div class="adddshere">
@@ -152,18 +88,46 @@ upload: FILE</pre>
         (adsbygoogle = window.adsbygoogle || []).push({});
         </script>
       </div>
+<main>
 
+<br class="clear">
 
-    </content>
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Jul 05 2016 20:26:11 GMT+0200 (CEST)
+</footer>
 
-    <footer>
-      <img alt="" src="/images/logo-footer.png" />
-      <p>
-        OS.js &copy; Anders Evenrud 2011-2016
-        <br />
-        Hosting by Github
-      </p>
-    </footer>
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+<script>
+(function() {
+  (['HTMLCollection', 'NodeList', 'FileList']).forEach(function(p) {
+    if ( window[p] ) {
+      window[p].prototype.forEacH = Array.prototype.forEach;
+    }
+  });
+
+  var a = location.pathname.split('/')
+  a = a[a.length - 1].replace(/\.html/, '')
+
+  function toggleFold(id, close) {
+    document.querySelectorAll('li[data-name="' + id + '"] .sub').forEach(function(el) {
+      el.style.display = close ? 'none' : 'block';
+    });
+    document.querySelector('li[data-name="' + id + '"] .folder').innerHTML = close ? '+' : '-';
+    document.querySelector('li[data-name="' + id + '"] .folder').setAttribute('data-open', String(!close));
+  }
+
+  document.querySelectorAll('.folder').forEach(function(el) {
+    el.addEventListener('click', function() {
+      toggleFold(el.parentNode.getAttribute('data-name'), this.getAttribute('data-open') === 'true');
+    });
+  });
+
+  toggleFold(a, false);
+
+})();
+</script>
+
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -183,7 +147,5 @@ upload: FILE</pre>
       };
     </script>
     <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-
-
-  </body>
 </body>
+</html>
