@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Namespace: Handlers - OS.js Client JSDoc</title>
+    <title>Class: Class - OS.js Client JSDoc</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -44,7 +44,7 @@
 
 <main>
 
-    <h1 class="page-title">Namespace: Handlers</h1>
+    <h1 class="page-title">Class: Class</h1>
 
     
 
@@ -54,7 +54,8 @@
 <section>
 
     
-        <h2>Handlers</h2>
+        <h2>
+            <span class="ancestors"><a href="OSjs.Helpers.html">.Helpers</a><a href="OSjs.Helpers.ZipArchiver.html">.ZipArchiver</a>.</span>Class</h2>
         
     
 
@@ -63,7 +64,599 @@
     
         
 
+    
+
+    <h4 class="name" id="Class">
+            
+    new OSjs.Helpers.ZipArchiver.Class<span class="signature">()</span>
+    </h4>
+
+    
+    <p class="summary">Helper for handling ZIP files.</p>
+    
+
+
+
+<div class="description">
+    The GoogleAPI wrapper class
+
+<pre><b>
+This is a private class and can only be aquired through
+OSjs.Helpers.ZipArchiver.createInsatance()
+
+Generally you want to create an instance of this helper
+and when successfully created use `window.zip` use the instance helpers.
+</b></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-see">See:</dt>
+    <dd class="tag-see">
+        <ul>
+            <li>OSjs.Helpers.ZipArchiver.createInsatance</li>
+        </ul>
+    </dd>
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>OSjs.Helpers.ZipArchiver.createInstance({}, (err, instance) => {});</code></pre>
+
+
+
+<hr />
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
         
+            
+
+    
+
+    <h4 class="name" id="add">
+            
+    add<span class="signature">(file, add, args)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Add a entry to the ZIP file
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Archive File</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>add</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">File to add</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Arguments
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    /
+                
+                </td>
+            
+
+            <td class="description last">Root path to add to</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>onprogress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Callback on progress => fn(state[, args, ...])</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>oncomplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last">Callback on complete => fn(error, result)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-todo">To Do:</dt>
+    <dd class="tag-todo">
+        <ul>
+            <li>Adding directory does not actually add files inside dirs yet</li>
+        </ul>
+    </dd>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="create">
+            
+    create<span class="signature">(file, cb, <span class="optional">appRef</span>)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Create a new blank ZIP file
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">File to extract</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback function => fn(error)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>appRef</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Application reference</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
 
 
 <dl class="details">
@@ -102,22 +695,654 @@
 </dl>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
         
-    
-    </div>
+            
 
     
 
+    <h4 class="name" id="extract">
+            
+    extract<span class="signature">(file, destination, args)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Extract a File to destination
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">File to extract</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>destination</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Destination path</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>args</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Arguments
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>onprogress</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback on progress => fn(filename, currentIndex, totalIndex)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>oncomplete</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Callback on complete => fn(error, warnings, result)</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>app</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.Core.Application.html">OSjs.Core.Application</a></span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last">Application reference</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
     
 
     
 
-     
+    
+
+    
 
     
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="list">
+            
+    list<span class="signature">(file, cb)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Lists contents of a ZIP file
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">File to extract</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Callback function => fn(error, entries)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
+            
+
+    
+
+    <h4 class="name" id="remove">
+            
+    remove<span class="signature">(file, path, cb)</span>
+    </h4>
+
+    
+
+
+
+<div class="description">
+    Removes an entry from ZIP file
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>file</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="OSjs.VFS.File.html">OSjs.VFS.File</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Archive File</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Path</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Callback function => fn(err, result)</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr />
+
+        
     
 
     
@@ -149,7 +1374,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Jul 05 2016 19:41:15 GMT+0200 (CEST)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0</a> on Tue Jul 05 2016 19:41:16 GMT+0200 (CEST)
 </footer>
 
 <script> prettyPrint(); </script>
