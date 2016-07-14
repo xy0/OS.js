@@ -138,6 +138,7 @@ Disallow: doc/client/srcclientjavascriptutilsmiscjs.html
 Disallow: doc/client/srcclientjavascripthelpersdatejs.html
 Disallow: doc/client/srcclientjavascriptguivisualjs.html
 Disallow: doc/client/srcclientjavascriptdialogsinputjs.html
+Disallow: doc/client/srcclientjavascriptvfsmountsappsjs.html
 Disallow: doc/server/srcservernodecoreapijs.html
 Disallow: doc/server/srcservernodecoreconfigjs.html
 Disallow: doc/server/srcservernodecorehandlerjs.html
