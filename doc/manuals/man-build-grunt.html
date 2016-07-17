@@ -161,27 +161,27 @@ grunt create-package:PACKAGENAME:extension</pre>
     Build and modify config files for server and client.
   </p>
   <pre class="code"># Set a config value
-grunt config:set:PATH:VALUE
-grunt config:set:client.Locale:en_EN
+grunt config --set=PATH --value=VALUE
+grunt config --set=client.Locale --value=en_EN
 
 # Get a config value
-grunt config:get:PATH
-grunt config:get:client.Locale
+grunt config --get=PATH
+grunt config --get=client.Locale
 
 # Get entire config
-grunt config:get
+grunt config --get
 
 # Add a preload (custom library or stylesheet etc)
-grunt config:preload:NAME:PATH:TYPE
-grunt config:preload:mylib:/vendor/mylib.js:javascript
-grunt config:preload:mystyle:/vendor/mystyle.css:stylesheet
+grunt config --preload=NAME --path=PATH --type=TYPE
+grunt config --preload=mylib --path=/vendor/mylib.js --type=javascript
+grunt config --preload=mystyle --path=/vendor/mystyle.css --type=stylesheet
 
 # Add a mountpoint
-grunt config:mount:NAMEHERE:"DESCRIPTION":/path/here
+grunt config --mount=NAMEHERE --description="DESCRIPTION" --path=/path/here
 
 # Add or remove repositories from list
-grunt config:add-repository:NAME
-grunt config:remove-repository:NAME
+grunt config --repository --add=NAME
+grunt config --repository --remove=NAME
 
 # Rebuild config files
 grunt config</pre>
@@ -197,13 +197,13 @@ grunt packages
 grunt packages:REPONAME/PACKAGENAME
 
 # Enables given package
-grunt packages:enable:REPONAME/PACKAGENAME
+grunt packages --enable=REPONAME/PACKAGENAME
 
 # Disables given package
-grunt packages:disable:REPONAME/PACKAGENAME</pre>
+grunt packages --disable=REPONAME/PACKAGENAME</pre>
 
 # List installed packages
-grunt packages:list
+grunt packages --list
 
   <h3>manifest</h3>
   <p>

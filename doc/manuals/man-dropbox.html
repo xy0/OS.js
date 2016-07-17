@@ -109,9 +109,9 @@
 <p>
   Simply update the configuration:
 </p>
-<pre class="code">grunt config:set:client.DropboxAPI.ClientKey:YOUR_CLIENT_KEY
-grunt config:set:client.VFS.Dropbox.Enabled:true
-grunt config:preload:dropbox:/vendor/dropbox.js
+<pre class="code">grunt config --set=client.DropboxAPI.ClientKey --value=YOUR_CLIENT_KEY
+grunt config --set=client.VFS.Dropbox.Enabled --value=true
+grunt config --preload=dropbox --path=/vendor/dropbox.js
 grunt config</pre>
 
 
