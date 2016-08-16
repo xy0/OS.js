@@ -13,6 +13,4 @@ mv deploy-key ~/.ssh/id_rsa
 # System Dependencies
 npm install mocha
 npm install grunt-cli -g
-
-# Package Dependencies
-npm install
+npm install modclean -g
