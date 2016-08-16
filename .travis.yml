@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-- 6
 - 5
 addons:
   ssh_known_hosts: builds.os.js.org
@@ -10,6 +9,3 @@ script:
 - bash bin/ci/build.sh
 after_success:
 - bash bin/ci/deploy.sh
-before_install:
-- openssl aes-256-cbc -K $encrypted_04eba5a2653f_key -iv $encrypted_04eba5a2653f_iv
-  -in deploy-key.enc -out deploy-key -d
