@@ -4,4 +4,8 @@
 #
 set -x # Show the output of the following commands (useful for debugging)
 
+# First build
 grunt
+
+# Then test
+grunt test

@@ -4,7 +4,8 @@
 #
 set -x # Show the output of the following commands (useful for debugging)
 
-if [ $TRAVIS_BRANCH == 'master' ] ; then
+#if [ $TRAVIS_BRANCH == 'master' ] ; then
+if [ $TRAVIS_BRANCH == 'travis-deploy' ] ; then
     mkdir _deploy
     cd _deploy
     git init
