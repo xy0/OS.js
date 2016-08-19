@@ -3,6 +3,7 @@
     "handlers": {
       "pam": {
         "groups": "/etc/osjs/groups.json",
+        "defaultGroups": ["api", "application", "curl", "upload", "fs"],
         "blacklist": "/etc/osjs/blacklist.json",
         "settings": "/home/%USERNAME%/.osjs/settings.json"
       },
