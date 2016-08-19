@@ -594,6 +594,7 @@
    */
   DefaultHandler.prototype.onSystemLogin = function(server, config, login, getUserId, callback) {
     var self = this;
+    var username = /[^\\]*$/.exec(login.username)[0];
 
     function getUserGroups(cb) {
       _fs.readFile(config.groups, function(err, gdata) {
@@ -639,7 +640,7 @@
       self.onLogin(server, {
         userData: {
           id:       data.id,
-          username: login.username,
+          username: username,
           name:     data.name,
           groups:   data.groups
         },
@@ -656,7 +657,7 @@
             done({
               id: uid,
               groups: groups,
-              name: login.username
+              name: username
             }, settings, blacklist);
           });
         });
