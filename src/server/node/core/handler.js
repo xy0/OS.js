@@ -600,6 +600,7 @@
       _fs.readFile(config.groups, function(err, gdata) {
         var list = {};
         var defaultGroups = config.defaultGroups || [];
+
         if ( !err ) {
           try {
             list = JSON.parse(gdata.toString());
