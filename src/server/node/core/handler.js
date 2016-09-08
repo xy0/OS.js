@@ -607,12 +607,12 @@
           } catch ( e ) {}
         }
 
-        cb(list[login.username] || defaultGroups);
+        cb(list[username] || defaultGroups);
       });
     }
 
     function getUserSettings(cb) {
-      _fs.readFile(getSettingsPath(config, login.username), function(err, sdata) {
+      _fs.readFile(getSettingsPath(config, username), function(err, sdata) {
         var settings = {};
         if ( !err && sdata ) {
           try {
@@ -629,7 +629,7 @@
 
         if ( !err && bdata ) {
           try {
-            blacklist = JSON.parse(bdata)[login.username] || [];
+            blacklist = JSON.parse(bdata)[username] || [];
           } catch ( e ) {}
         }
 
