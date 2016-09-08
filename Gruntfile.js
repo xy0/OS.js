@@ -143,7 +143,7 @@
         },
         configs: {
           files: ['src/conf/*.json'],
-          tasks: ['config', 'dist-dev-index']
+          tasks: ['config', 'dist-dev']
         },
         //packages: { // SHOULD BE RUN MANUALLY. CAN BE WAY TO TIME CONSUMING
         //  files: ['src/packages/*/*.js'],
