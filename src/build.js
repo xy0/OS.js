@@ -574,10 +574,20 @@
             if ( json.preload ) {
               json.preload = json.preload.map(function(iter) {
                 if ( typeof iter === 'string' ) {
-                  return {
+                  var niter = {
                     src: iter,
-                    type: iter.match(/\.js/) ? 'javascript' : 'stylesheet'
+                    type: null
                   };
+
+                  if ( iter.match(/\.js/) ) {
+                    niter.type = 'javascript';
+                  } else if ( iter.match(/\.css/) ) {
+                    niter.type = 'stylesheet';
+                  } else if ( iter.match(/\.html/) ) {
+                    niter.type = 'html';
+                  }
+
+                  return niter;
                 }
                 return iter;
               });
@@ -1116,6 +1126,10 @@
         src: 'application',
         cpy: ['api.js', 'main.js', 'main.css', 'metadata.json', 'scheme.html']
       },
+      simple: {
+        src: 'simple-application',
+        cpy: ['api.js', 'main.js', 'main.css', 'metadata.json', 'scheme.html']
+      },
       service: {
         src: 'service',
         cpy: ['api.js', 'main.js', 'metadata.json']
@@ -1192,7 +1206,6 @@
 
   function listPackages(grunt) {
     var packages = readPackageMetadata(grunt, null, true);
-    var epackages = readPackageMetadata(grunt, null, false);
     var currentEnabled = getConfigPath(grunt, 'packages.ForceEnable') || [];
     var currentDisabled = getConfigPath(grunt, 'packages.ForceDisable') || [];
 
@@ -1254,7 +1267,6 @@
    */
   function buildCore(grunt, arg) {
     var cfg = generateBuildConfig(grunt);
-    var header;
 
     function _cleanup(path, type) {
       var src = readFile(path);
@@ -1771,7 +1783,6 @@
 
       Object.keys(packages).forEach(function(p) {
         var manifest = packages[p];
-        var name = p;
         var preload = [];
 
         if ( manifest.preload && manifest.preload.length ) {
