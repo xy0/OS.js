@@ -140,8 +140,6 @@
           var doc = parseDocument(result.body);
           callback(false, doc);
         }
-      }, function(err) {
-        callback(err);
       });
     }
 
@@ -168,14 +166,6 @@
         var list = [];
         var reqpath = resolvePath(item);
         var root = mm.getRootFromPath(item.path);
-
-        if ( item.path !== root ) {
-          list.push({
-            path: root,
-            filename: '..',
-            type: 'dir'
-          });
-        }
 
         doc.children.forEach(function(c) {
           var type = 'file';
@@ -217,21 +207,25 @@
             return size;
           }
 
-          var path = getPath();
-          if ( path.match(/\/$/) ) {
-            type = 'dir';
-            path = path.replace(/\/$/, '') || '/';
-          }
+          try {
+            var path = getPath();
+            if ( path.match(/\/$/) ) {
+              type = 'dir';
+              path = path.replace(/\/$/, '') || '/';
+            }
 
-          if ( path !== reqpath ) {
-            list.push({
-              id: getId(),
-              path: root + path.replace(/^\//, ''),
-              filename: Utils.filename(path),
-              size: getSize(),
-              mime: getMime(),
-              type: type
-            });
+            if ( path !== reqpath ) {
+              list.push({
+                id: getId(),
+                path: root + path.replace(/^\//, ''),
+                filename: Utils.filename(path),
+                size: getSize(),
+                mime: getMime(),
+                type: type
+              });
+            }
+          } catch ( e ) {
+            console.warn('scandir() exception', e, e.stack);
           }
         });
 

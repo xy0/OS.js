@@ -27,7 +27,7 @@
  * @author  Anders Evenrud <andersevenrud@gmail.com>
  * @licence Simplified BSD License
  */
-(function(_path, _fs) {
+(function(_path, _fs, _packagemanager) {
   'use strict';
 
   /**
@@ -85,6 +85,43 @@
   };
 
   /**
+   * Manage Users via the Handler
+   *
+   * @param   {Object}    server          Server object
+   * @param   {Object}    args            API Call Arguments
+   * @param   {String}    args.command    Command name
+   * @param   {Object}    args.args       Command arguments
+   * @param   {Function}  callback        Callback function => fn(error, result)
+   *
+   * @function users
+   * @memberof API
+   */
+  module.exports.users = function(server, args, callback) {
+    callback('No handler assigned', {});
+  };
+
+  /**
+   * Manage Packages
+   *
+   * @param   {Object}    server          Server object
+   * @param   {Object}    args            API Call Arguments
+   * @param   {String}    args.command    Command name
+   * @param   {Object}    args.args       Command arguments
+   * @param   {Function}  callback        Callback function => fn(error, result)
+   *
+   * @function packages
+   * @memberof API
+   */
+  module.exports.packages = function(server, args, callback) {
+    var command = args.command;
+    if ( _packagemanager[command] ) {
+      _packagemanager[command](server, args.args || {}, callback);
+    } else {
+      callback('No such command', {});
+    }
+  };
+
+  /**
    * Application API Call
    *
    * @param   {Object}    server           Server object
@@ -98,6 +135,7 @@
    * @memberof API
    */
   module.exports.application = function(server, args, callback) {
+    /*eslint dot-notation: "off"*/
     var apath = args.path || null;
     var ameth = args.method || null;
     var aargs = args['arguments'] || [];
@@ -236,5 +274,6 @@
 
 })(
   require('path'),
-  require('node-fs-extra')
+  require('node-fs-extra'),
+  require('./packagemanager.js')
 );

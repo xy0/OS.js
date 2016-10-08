@@ -278,6 +278,36 @@
     }
   }
 
+  /**
+   * Creates the '..' entry for scandir if not detected
+   */
+  function createBackLink(item, result, alias, oitem) {
+    var path = Utils.getPathProtocol(item.path);
+    var isOnRoot = path.replace(/\/+/, '/') === '/';
+
+    if ( alias ) {
+      isOnRoot = (oitem.path === alias.root);
+    }
+
+    if ( !isOnRoot ) {
+      var foundBack = result.some(function(iter) {
+        return iter.filename === '..';
+      });
+
+      if ( !foundBack ) {
+        return new VFS.File({
+          filename: '..',
+          path: Utils.dirname(item.path),
+          mime: null,
+          size: 0,
+          type: 'dir'
+        });
+      }
+    }
+
+    return false;
+  }
+
   /////////////////////////////////////////////////////////////////////////////
   // VFS METHODS
   /////////////////////////////////////////////////////////////////////////////
@@ -337,22 +367,25 @@
     item = checkMetadataArgument(item);
 
     requestWrapper([item.path, 'scandir', [item]], 'ERR_VFSMODULE_SCANDIR_FMT', function(error, result) {
+      // Makes sure aliased mounts have correct paths and entries
       if ( alias && result ) {
-        // Makes sure aliased mounts have correct paths and entries
-
         result = result.map(function(iter) {
           var niter = new VFS.File(iter);
-          var path = niter.path.replace(alias.options.alias.replace(/\/?$/, ''), '');
-          niter.path = alias.root + path.replace(/^\//, '');
+          var str = iter.path.replace(/\/?$/, '');
+          var tmp = alias.options.alias.replace(/\/?$/, '');
+
+          niter.path = Utils.pathJoin(alias.root, str.replace(tmp, ''));
+
           return niter;
-        }).filter(function(iter) {
-          if ( oitem.path === alias.root && iter.path === alias.root ) {
-            if ( iter.filename === '..' ) {
-              return false;
-            }
-          }
-          return true;
         });
+      }
+
+      // Inserts the correct '..' entry if missing
+      if ( !error && result instanceof Array ) {
+        var back = createBackLink(item, result, alias, oitem);
+        if ( back ) {
+          result.unshift(back);
+        }
       }
 
       return callback(error, result);
@@ -671,7 +704,7 @@
           if ( error ) {
             error = API._('ERR_VFSMODULE_MOVE_FMT', error);
           }
-          _finished(error, error ? null : response);
+          _finished(error, error ? null : response, dest);
         }, options);
       } else {
         var msrc = mm.getModuleFromPath(src.path);
@@ -689,7 +722,7 @@
             if ( error ) {
               error = API._('ERR_VFS_TRANSFER_FMT', error);
             }
-            _finished(error, result);
+            _finished(error, result, dest);
           }, options);
         });
       }
@@ -744,10 +777,15 @@
     item = checkMetadataArgument(item);
 
     function _checkPath() {
-      var chkdir = new VFS.File(API.getConfig('PackageManager.UserPackages'));
-      var idir = Utils.dirname(item.path);
+      var pkgdir = OSjs.Core.getSettingsManager().instance('PackageManager').get('PackagePaths', []);
 
-      if ( idir === chkdir.path ) {
+      var found = pkgdir.some(function(i) {
+        var chkdir = new VFS.File();
+        var idir = Utils.dirname(item.path);
+        return idir === chkdir.path;
+      });
+
+      if ( found ) {
         Core.getPackageManager().generateUserMetadata(function() {});
       }
     }
@@ -769,9 +807,12 @@
    * @memberof OSjs.VFS
    * @alias OSjs.VFS.unlink
    */
-  VFS['delete'] = function(item, callback) {
-    VFS.unlink.apply(this, arguments);
-  };
+  (function() {
+    /*eslint dot-notation: "off"*/
+    VFS['delete'] = function(item, callback) {
+      VFS.unlink.apply(this, arguments);
+    };
+  })();
 
   /**
    * Create Directory

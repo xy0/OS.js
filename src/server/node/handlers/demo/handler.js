@@ -51,6 +51,21 @@
 
     logout: function(server, args, callback) {
       server.handler.onLogout(server, callback);
+    },
+
+    users: function(server, args, callback) {
+      if ( ['add', 'remove', 'edit', 'passwd'].indexOf(args.command) !== -1 ) {
+        callback(false, true);
+      } else if ( args.command === 'list' ) {
+        callback(false, [{
+          id: 0,
+          username: server.handler.getUserName(server),
+          name: server.handler.getUserName(server),
+          groups: server.handler.getUserGroups(server)
+        }])
+      } else {
+        callback('No such command', {});
+      }
     }
   };
 

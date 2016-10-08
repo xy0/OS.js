@@ -67,6 +67,19 @@
   // GLOBAL EVENTS
   /////////////////////////////////////////////////////////////////////////////
 
+  function checkForbiddenKeyCombo(ev) {
+    return false;
+    /* FIXME: This is not supported in browsers :( (in app mode it should be)
+    var forbiddenCtrl = ['n', 't', 'w'];
+    if ( ev.ctrlKey ) {
+      return forbiddenCtrl.some(function(i) {
+        return String.fromCharCode(ev.keyCode).toLowerCase() === i;
+      });
+    }
+    return false;
+    */
+  }
+
   var events = {
     body_contextmenu: function(ev) {
       ev.stopPropagation();
@@ -86,6 +99,12 @@
         if ( win ) {
           win._blur();
         }
+      }
+    },
+
+    body_touchstart: function(ev) {
+      if ( ev.target.localName !== 'select' ) {
+        ev.preventDefault();
       }
     },
 
@@ -122,25 +141,23 @@
     keydown: function(ev) {
       var wm  = OSjs.Core.getWindowManager();
       var win = wm ? wm.getCurrentWindow() : null;
-
-      function sendKey(special) {
-        if ( wm ) {
-          wm.onKeyDown(ev, win, special);
-          if ( win ) {
-            return win._onKeyEvent(ev, 'keydown', special);
-          }
-        }
-      }
+      var accept = [122, 123];
 
       function checkPrevent() {
         var d = ev.srcElement || ev.target;
         var doPrevent = d.tagName === 'BODY' ? true : false;
 
-        // We don't want backspace and tab triggering default browser events
-        if ( (ev.keyCode === OSjs.Utils.Keys.BACKSPACE) && !OSjs.Utils.$isInput(ev) ) {
+        // What browser default keys we prevent in certain situations
+        if ( (ev.keyCode === OSjs.Utils.Keys.BACKSPACE) && !OSjs.Utils.$isInput(ev) ) { // Backspace
           doPrevent = true;
-        } else if ( (ev.keyCode === OSjs.Utils.Keys.TAB) && OSjs.Utils.$isFormElement(ev) ) {
+        } else if ( (ev.keyCode === OSjs.Utils.Keys.TAB) && OSjs.Utils.$isFormElement(ev) ) { // Tab
           doPrevent = true;
+        } else {
+          if ( accept.indexOf(ev.keyCode) !== -1 ) {
+            doPrevent = false;
+          } else if ( checkForbiddenKeyCombo(ev) ) {
+            doPrevent = true;
+          }
         }
 
         // Only prevent default event if current window is not set up to capture them by force
@@ -151,31 +168,30 @@
         return false;
       }
 
-      function checkShortcut() {
-        if ( ((ev.keyCode === 115 || ev.keyCode === 83) && ev.ctrlKey) || ev.keyCode === 19 ) {
-          if ( ev.shiftKey ) {
-            return 'saveas';
-          } else {
-            return 'save';
+      var reacted = (function() {
+        var combination = null;
+        if ( wm ) {
+          combination = wm.onKeyDown(ev, win);
+          if ( win && !combination ) {
+            win._onKeyEvent(ev, 'keydown');
           }
-        } else if ( (ev.keyCode === 79 || ev.keyCode === 83) && ev.ctrlKey ) {
-          return 'open';
         }
-        return false;
-      }
+        return combination;
+      })();
 
-      var shortcut = checkShortcut();
-      if ( checkPrevent() || shortcut ) {
+      if ( checkPrevent() || reacted ) {
         ev.preventDefault();
       }
 
-      // WindowManager and Window must always recieve events
-      sendKey(shortcut);
-
       return true;
     },
+
     keypress: function(ev) {
       var wm = OSjs.Core.getWindowManager();
+
+      if ( checkForbiddenKeyCombo(ev) ) {
+        ev.preventDefault();
+      }
 
       if ( wm ) {
         var win = wm.getCurrentWindow();
@@ -363,6 +379,7 @@
   function initEvents() {
     console.debug('initEvents()');
 
+    document.body.addEventListener('touchstart', events.body_touchstart);
     document.body.addEventListener('contextmenu', events.body_contextmenu, false);
     document.body.addEventListener('click', events.body_click, false);
     document.addEventListener('keydown', events.keydown, true);
@@ -476,8 +493,26 @@
    * Initializes the PackageManager
    */
   function initPackageManager(cfg, callback) {
-    OSjs.Core.getPackageManager().load(function(result, error) {
-      callback(error, result);
+    OSjs.Core.getPackageManager().load(function(result, error, pm) {
+      if ( error ) {
+        callback(error, result);
+        return;
+      }
+
+      var list = OSjs.API.getConfig('PreloadOnBoot', []);
+      OSjs.Utils.asyncs(list, function(iter, index, next) {
+        var pkg = pm.getPackage(iter);
+        if ( pkg && pkg.preload ) {
+          OSjs.Utils.preload(pkg.preload, next);
+        } else {
+          next();
+        }
+      }, function() {
+        setTimeout(function() {
+          callback(false, true);
+        }, 0);
+      });
+
     });
   }
 
@@ -521,7 +556,7 @@
    */
   function initSession(config, callback) {
     console.debug('initSession()');
-    OSjs.API.playSound('service-login');
+    OSjs.API.playSound('LOGIN');
 
     var list = [];
 
@@ -634,6 +669,9 @@
       initSettingsManager,
       initSearch,
       function(cfg, cb) {
+        OSjs.Core.getMountManager().restore(cb);
+      },
+      function(cfg, cb) {
         return OSjs.GUI.DialogScheme.init(cb);
       }
     ];
@@ -714,6 +752,7 @@
 
     signingOut = true;
 
+    document.body.removeEventListener('touchstart', events.body_touchstart);
     document.body.removeEventListener('contextmenu', events.body_contextmenu, false);
     document.body.removeEventListener('click', events.body_click, false);
     document.removeEventListener('keydown', events.keydown, true);
@@ -803,6 +842,18 @@
    */
   OSjs.Core.getMetadata = OSjs.Core.getMetadata || function() {
     return {};
+  };
+
+  /**
+   * Check if OS.js is shutting down
+   *
+   * @function isShuttingDown
+   * @memberof OSjs.Core
+   *
+   * @return boolean
+   */
+  OSjs.API.isShuttingDown = OSjs.API.isShuttingDown || function() {
+    return signingOut;
   };
 
   /////////////////////////////////////////////////////////////////////////////

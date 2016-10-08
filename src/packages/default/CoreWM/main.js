@@ -59,18 +59,22 @@
 
     WindowManager.apply(this, ['CoreWM', this, args, metadata, defaultSettings(importSettings)]);
 
-    this.scheme           = null;
     this.panels           = [];
     this.switcher         = null;
     this.iconView         = null;
     this.$themeLink       = null;
     this.$themeScript     = null;
     this.$animationLink   = null;
-    this.importedSettings = importSettings;
+    this.importedSettings = Utils.mergeObject(API.getConfig('SettingsManager.CoreWM'), importSettings);
     this.isResponsive     = window.innerWidth <= 800;
 
     this.generatedHotkeyMap = {};
 
+    function _winGenericHotkey(ev, win, wm, hotkey) {
+      if ( win ) {
+        win._onKeyEvent(ev, 'keydown', hotkey);
+      }
+    }
     this.hotkeyMap = {
       SEARCH: function(ev, win, wm) {
         if ( wm ) {
@@ -123,7 +127,10 @@
         if ( win ) {
           win._moveTo('bottom');
         }
-      }
+      },
+      SAVE: _winGenericHotkey,
+      SAVEAS: _winGenericHotkey,
+      OPEN: _winGenericHotkey
     };
 
     this._$notifications    = document.createElement('corewm-notifications');
@@ -186,14 +193,6 @@
       });
     }
 
-    function initScheme(icb) {
-      var schemeUrl = API.getApplicationResource('CoreWM', 'scheme.html');
-      self.scheme = GUI.createScheme(schemeUrl);
-      self.scheme.load(function(err) {
-        icb();
-      });
-    }
-
     this.applySettings(this._settings.get());
 
     this._on('vfs', function(msg, obj) {
@@ -222,17 +221,14 @@
       }
     });
 
-    initScheme(function() {
-      self.initSwitcher();
-      self.initDesktop();
-      self.initPanels();
-      self.initIconView();
+    self.initSwitcher();
+    self.initDesktop();
+    self.initPanels();
+    self.initIconView();
 
-      initNotifications();
+    initNotifications();
 
-      cb();
-    });
-
+    cb();
   };
 
   CoreWM.prototype.destroy = function(force) {
@@ -249,9 +245,6 @@
     }
     if ( this.switcher ) {
       this.switcher.destroy();
-    }
-    if ( this.scheme ) {
-      this.scheme.destroy();
     }
 
     // Reset
@@ -270,7 +263,6 @@
     this.$animationLink = Utils.$remove(this.$animationLink);
     this.switcher = null;
     this.iconView = null;
-    this.scheme = null;
 
     return WindowManager.prototype.destroy.apply(this, []);
   };
@@ -414,7 +406,7 @@
               iter._move(iter._position.x, space.top);
             }
           });
-        }, this.getAnimDuration() + 100);
+        }, 800);
       }
 
       if ( this.iconView ) {
@@ -446,7 +438,7 @@
       if ( self.iconView ) {
         self.iconView.resize(self);
       }
-    }, this.getAnimDuration() + 500);
+    }, 1000);
   };
 
   //
@@ -627,19 +619,21 @@
   };
 
   CoreWM.prototype.onKeyDown = function(ev, win) {
-    if ( !ev ) {
-      return;
-    }
+    var combination = false;
+    var self = this;
 
-    var map = this.generatedHotkeyMap;
-    for ( var i in map ) {
-      if ( map.hasOwnProperty(i) ) {
+    if ( ev ) {
+      var map = this.generatedHotkeyMap;
+      Object.keys(map).some(function(i) {
         if ( Utils.keyCombination(ev, i) ) {
-          map[i](ev, win, this);
-          break;
+          map[i](ev, win, self);
+          combination = i;
+          return true;
         }
-      }
+        return false;
+      });
     }
+    return combination;
   };
 
   CoreWM.prototype.showSettings = function(category) {
@@ -689,6 +683,8 @@
       var timeout    = null;
       var wm         = OSjs.Core.getWindowManager();
 
+      var animationCallback = null;
+
       function _remove() {
         if ( timeout ) {
           clearTimeout(timeout);
@@ -697,6 +693,7 @@
 
         container.onclick = null;
         function _removeDOM() {
+          Utils.$unbind(container);
           if ( container.parentNode ) {
             container.parentNode.removeChild(container);
           }
@@ -709,9 +706,9 @@
         var anim = wm ? wm.getSetting('animations') : false;
         if ( anim ) {
           container.setAttribute('data-hint', 'closing');
-          setTimeout(function() {
+          animationCallback = function() {
             _removeDOM();
-          }, wm.getAnimDuration());
+          };
         } else {
           container.style.display = 'none';
           _removeDOM();
@@ -762,6 +759,20 @@
 
         opts.onClick(ev);
       };
+
+      var preventTimeout;
+      function _onanimationend(ev) {
+        if ( typeof self._animationCallback === 'function') {
+          clearTimeout(preventTimeout);
+          preventTimeout = setTimeout(function() {
+            animationCallback(ev);
+            animationCallback = false;
+          }, 10);
+        }
+      }
+
+      Utils.$bind(container, 'transitionend', _onanimationend);
+      Utils.$bind(container, 'animationend', _onanimationend);
 
       var space = this.getWindowSpace(true);
       this._$notifications.style.marginTop = String(space.top) + 'px';
@@ -890,10 +901,14 @@
       }
     }
 
+    this.generatedHotkeyMap = {};
+
     var keys = this._settings.get('hotkeys');
     Object.keys(keys).forEach(function(k) {
       self.generatedHotkeyMap[keys[k]] = function() {
-        return self.hotkeyMap[k].apply(this, arguments);
+        var args = Array.prototype.slice.call(arguments);
+        args.push(k);
+        return self.hotkeyMap[k].apply(this, args);
       };
     });
 
@@ -963,8 +978,8 @@
 
   CoreWM.prototype.setTheme = function(settings) {
     if ( this.$themeLink ) {
-      if ( settings.theme ) {
-        this.setThemeLink(API.getThemeCSS(settings.theme));
+      if ( settings.styleTheme ) {
+        this.setThemeLink(API.getThemeCSS(settings.styleTheme));
       } else {
         console.warn('NO THEME WAS SELECTED!');
       }
@@ -997,7 +1012,8 @@
   };
 
   CoreWM.prototype.setStyles = function(settings) {
-    /*jshint sub:true*/
+    /*eslint dot-notation: "off"*/
+
     var styles = {};
     var raw = '';
 
@@ -1171,7 +1187,7 @@
   };
 
   CoreWM.prototype.getStyleTheme = function(returnMetadata) {
-    var name = this.getSetting('theme') || null;
+    var name = this.getSetting('styleTheme') || null;
     if ( returnMetadata ) {
       var found = null;
       if ( name ) {
@@ -1179,7 +1195,6 @@
           if ( t && t.name === name ) {
             found = t;
           }
-          return found ? false : true;
         });
       }
       return found;
@@ -1188,11 +1203,16 @@
   };
 
   CoreWM.prototype.getSoundTheme = function() {
-    return this.getSetting('sounds') || 'default';
+    return this.getSetting('soundTheme') || 'default';
   };
 
   CoreWM.prototype.getIconTheme = function() {
-    return this.getSetting('icons') || 'default';
+    return this.getSetting('iconTheme') || 'default';
+  };
+
+  CoreWM.prototype.getSoundFilename = function(k) {
+    var sounds = this.getSetting('sounds') || {};
+    return sounds[k] || null;
   };
 
   /////////////////////////////////////////////////////////////////////////////

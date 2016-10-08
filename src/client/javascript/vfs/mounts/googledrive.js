@@ -28,6 +28,7 @@
  * @licence Simplified BSD License
  */
 (function(Utils, API) {
+  /*eslint no-use-before-define: "off"*/
   'use strict';
 
   /**
@@ -275,7 +276,7 @@
         }
       });
 
-      var resolves = Utils.getRelativeURL(root).replace(/^\/+/, '').split('/');
+      var resolves = Utils.getPathProtocol(root).replace(/^\/+/, '').split('/');
       resolves = resolves.filter(function(el) {
         return el !== '';
       });
@@ -736,7 +737,7 @@
     }
 
     var mm = OSjs.Core.getMountManager();
-    if ( Utils.dirname(dir.path) !== Utils.getRelativeURL(mm.getModuleProperty('GoogleDrive', 'root')) ) {
+    if ( Utils.dirname(dir.path) !== Utils.getPathProtocol(mm.getModuleProperty('GoogleDrive', 'root')) ) {
       getParentPathId(dir, function(error, id) {
         console.debug('GoogleDrive::mkdir()->getParentPathId()', id, 'of', dir);
         if ( error || !id ) {

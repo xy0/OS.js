@@ -79,36 +79,31 @@
       jsonp            : false
     });
 
-    function getResponse(ctype) {
-      var response = request.responseText;
-      if ( args.json && ctype.match(/^application\/json/) ) {
-        response = JSON.parse(response);
-      }
-      return response;
-    }
-
     function onReadyStateChange() {
       var result;
 
       function _onError(error) {
         error = OSjs.API._('ERR_UTILS_XHR_FMT', error);
         console.warn('Utils::ajax()', 'onReadyStateChange()', error);
-        args.onerror(error, result, request, args.url);
+        args.onerror(error, result, this, args.url);
       }
 
-      if ( request.readyState === 4 ) {
+      if ( this.readyState === 4 ) {
+        result = this.responseText;
         try {
-          var ctype = request.getResponseHeader('content-type') || '';
-          result = getResponse(ctype);
+          var ctype = this.getResponseHeader('content-type') || '';
+          if ( args.json && ctype.match(/^application\/json/) ) {
+            result = JSON.parse(this.responseText);
+          }
         } catch (ex) {
-          _onError(ex.toString());
+          _onError.call(this, ex.toString());
           return;
         }
 
-        if ( request.status === 200 || request.status === 201 ) {
-          args.onsuccess(result, request, args.url);
+        if ( this.status === 200 || this.status === 201 ) {
+          args.onsuccess(result, this, args.url);
         } else {
-          _onError(request.status.toString());
+          _onError.call(this, String(this.status));
         }
       }
     }
@@ -148,6 +143,7 @@
       request.onreadystatechange = null;
       request.ontimeut = null;
       request = null;
+      args = null;
     }
 
     function requestJSON() {
@@ -217,12 +213,7 @@
 
     console.debug('Utils::ajax()', args);
 
-    if ( args.jsonp ) {
-      requestJSONP();
-      return;
-    }
-
-    requestJSON();
+    return args.jsonp ? requestJSONP() : requestJSON();
   };
 
   /**
@@ -245,7 +236,7 @@
    *
    * @param   {Array}     list                The list of resources
    * @param   {Function}  ondone              Callback when done => fn(totalCount, failedArray, successArray)
-   * @param   {Function}  onprogress          Callback on progress => fn(currentNumber, totalNumber)
+   * @param   {Function}  onprogress          Callback on progress => fn(current, total, src, succeeded, failed, progress)
    * @param   {Object}    [args]              Set of options
    * @param   {Boolean}   [args.force=false]  Force reloading of file if it was already added
    */
@@ -254,7 +245,7 @@
     var _CACHE = {};
 
     function checkCache(item, args) {
-      if ( _LOADED[item.src] === true ) {
+      if ( item && _LOADED[item.src] === true ) {
         if ( item.force !== true && args.force !== true ) {
           return true;
         }
@@ -340,20 +331,46 @@
       //
       scheme: function createHTML(item, cb, args) {
         var scheme;
+
+        function _cache(err, html) {
+          if ( !err && html ) {
+            _CACHE[item.src] = html;
+          }
+        }
+
+        function _cb() {
+          scheme = null;
+          cb.apply(null, arguments);
+        }
+
         if ( _CACHE[item.src] && item.force !== true && args.force !== true  ) {
           scheme = new OSjs.GUI.Scheme();
           scheme.loadString(_CACHE[item.src]);
-          cb(true, item.src, scheme);
+          _cb(true, item.src, scheme);
         } else {
-          scheme = new OSjs.GUI.Scheme(item.src);
-          scheme.load(function(err, res) {
-            cb(err ? false : true, item.src, scheme);
-          }, function(err, html) {
-            if ( !err && html ) {
-              _CACHE[item.src] = html;
-            }
-          });
+          if ( OSjs.API.isStandalone() ) {
+            scheme = new OSjs.GUI.Scheme();
+
+            preloadTypes.javascript({
+              src: OSjs.Utils.pathJoin(OSjs.Utils.dirname(item.src), '_scheme.js'),
+              type: 'javascript'
+            }, function() {
+              var look = item.src.replace(OSjs.API.getBrowserPath(), '/').replace(/^\/?packages/, '');
+              var html = OSjs.STANDALONE.SCHEMES[look];
+              scheme.loadString(html);
+              _cache(false, html);
+              _cb(true, item.src, scheme);
+            });
+          } else {
+            scheme = new OSjs.GUI.Scheme(item.src);
+            scheme.load(function(err, res) {
+              _cb(err ? false : true, item.src, scheme);
+            }, function(err, html) {
+              _cache(err, html);
+            });
+          }
         }
+
       }
     };
 
@@ -386,6 +403,7 @@
       var succeeded  = [];
       var failed = [];
       var len = list.length;
+      var total = 0;
 
       list = (list || []).map(function(item) {
         if ( typeof item === 'string' ) {
@@ -401,10 +419,11 @@
       console.group('Utils::preload()', len);
 
       var data = [];
-      OSjs.Utils.asyncs(list, function(item, index, next) {
+      OSjs.Utils.asyncp(list, {max: args.max || 1}, function(item, index, next) {
         function _onentryloaded(state, src, setData) {
-          onprogress(index, len, src);
+          total++;
           (state ? succeeded : failed).push(src);
+          onprogress(index, len, src, succeeded, failed, total);
 
           if ( setData ) {
             data.push({
@@ -416,17 +435,19 @@
           next();
         }
 
-        console.debug('->', item);
+        if ( item ) {
+          console.debug('->', item);
 
-        if ( checkCache(item, args) ) {
-          return _onentryloaded(true, item.src);
-        } else {
-          if ( preloadTypes[item.type] ) {
-            return preloadTypes[item.type](item, _onentryloaded, args);
+          if ( checkCache(item, args) ) {
+            return _onentryloaded(true, item.src);
+          } else {
+            if ( preloadTypes[item.type] ) {
+              return preloadTypes[item.type](item, _onentryloaded, args);
+            }
           }
-        }
 
-        failed.push(item.src);
+          failed.push(item.src);
+        }
         return next();
       }, function() {
         console.groupEnd();

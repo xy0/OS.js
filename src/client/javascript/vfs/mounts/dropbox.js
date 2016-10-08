@@ -28,6 +28,7 @@
  * @licence Simplified BSD License
  */
 (function(Utils, API) {
+  /*eslint no-use-before-define: "off"*/
   'use strict';
 
   /**
@@ -115,29 +116,18 @@
     console.info('DropboxVFS::scandir()', item);
 
     var mm = OSjs.Core.getMountManager();
-    var path = Utils.getRelativeURL(item.path);
-    var isOnRoot = path === '/';
+    var path = Utils.getPathProtocol(item.path);
 
     function _finish(entries) {
-      var result = [];
-      if ( !isOnRoot ) {
-        result.push(new OSjs.VFS.File({
-          filename: '..',
-          path: Utils.dirname(item.path),
-          mime: null,
-          size: 0,
-          type: 'dir'
-        }));
-      }
-      entries.forEach(function(iter) {
+      var result = entries.map(function(iter) {
         console.info(iter);
-        result.push(new OSjs.VFS.File({
+        return new OSjs.VFS.File({
           filename: iter.name,
           path: mm.getModuleProperty('Dropbox', 'root').replace(/\/$/, '') + iter.path,
           size: iter.size,
           mime: iter.isFolder ? null : iter.mimeType,
           type: iter.isFolder ? 'dir' : 'file'
-        }));
+        });
       });
       console.info('DropboxVFS::scandir()', item, '=>', result);
 
@@ -157,7 +147,7 @@
   DropboxVFS.prototype.write = function(item, data, callback) {
     console.info('DropboxVFS::write()', item);
 
-    var path = Utils.getRelativeURL(item.path);
+    var path = Utils.getPathProtocol(item.path);
     this.client.writeFile(path, data, function(error, stat) {
       callback(error, true);
     });
@@ -168,7 +158,7 @@
     options.arrayBuffer = true;
 
     console.info('DropboxVFS::read()', item, options);
-    var path = Utils.getRelativeURL(item.path);
+    var path = Utils.getPathProtocol(item.path);
 
     this.client.readFile(path, options, function(error, entries) {
       callback(error, (error ? false : (entries instanceof Array ? entries.join('\n') : entries)));
@@ -177,8 +167,8 @@
 
   DropboxVFS.prototype.copy = function(src, dest, callback) {
     console.info('DropboxVFS::copy()', src, dest);
-    var spath = Utils.getRelativeURL(src.path);
-    var dpath = Utils.getRelativeURL(dest.path);
+    var spath = Utils.getPathProtocol(src.path);
+    var dpath = Utils.getPathProtocol(dest.path);
     this.client.copy(spath, dpath, function(error) {
       callback(error, !error);
     });
@@ -186,8 +176,8 @@
 
   DropboxVFS.prototype.move = function(src, dest, callback) {
     console.info('DropboxVFS::move()', src, dest);
-    var spath = Utils.getRelativeURL(src.path);
-    var dpath = Utils.getRelativeURL(dest.path);
+    var spath = Utils.getPathProtocol(src.path);
+    var dpath = Utils.getPathProtocol(dest.path);
     this.client.move(spath, dpath, function(error) {
       callback(error, !error);
     });
@@ -195,7 +185,7 @@
 
   DropboxVFS.prototype.unlink = function(item, callback) {
     console.info('DropboxVFS::unlink()', item);
-    var path = Utils.getRelativeURL(item.path);
+    var path = Utils.getPathProtocol(item.path);
     this.client.unlink(path, function(error, stat) {
       callback(error, !error);
     });
@@ -203,7 +193,7 @@
 
   DropboxVFS.prototype.mkdir = function(item, callback) {
     console.info('DropboxVFS::mkdir()', item);
-    var path = Utils.getRelativeURL(item.path);
+    var path = Utils.getPathProtocol(item.path);
     this.client.mkdir(path, function(error, stat) {
       callback(error, !error);
     });
@@ -220,7 +210,7 @@
   DropboxVFS.prototype.fileinfo = function(item, callback) {
     console.info('DropboxVFS::fileinfo()', item);
 
-    var path = Utils.getRelativeURL(item.path);
+    var path = Utils.getPathProtocol(item.path);
     this.client.stat(path, path, function(error, response) {
       var fileinfo = null;
       if ( !error && response ) {
@@ -238,7 +228,7 @@
 
   DropboxVFS.prototype.url = function(item, callback) {
     console.info('DropboxVFS::url()', item);
-    var path = (typeof item === 'string') ? Utils.getRelativeURL(item) : Utils.getRelativeURL(item.path);
+    var path = (typeof item === 'string') ? Utils.getPathProtocol(item) : Utils.getPathProtocol(item.path);
     this.client.makeUrl(path, {downloadHack: true}, function(error, url) {
       callback(error, url ? url.url : false);
     });

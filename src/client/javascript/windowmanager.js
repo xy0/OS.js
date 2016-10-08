@@ -429,6 +429,7 @@
     this._stylesheet     = null;
     this._sessionLoaded  = false;
     this._fullyLoaded    = false;
+    this._scheme         = null;
 
     // Important for usage as "Application"
     this.__name    = (name || 'WindowManager');
@@ -456,23 +457,25 @@
 
     this.destroyStylesheet();
 
-    document.removeEventListener('mouseout', function(ev) {
-      self._onMouseLeave(ev);
-    }, false);
-    document.removeEventListener('mouseenter', function(ev) {
-      self._onMouseEnter(ev);
-    }, false);
+    Utils.$unbind(document, 'mouseout:windowmanager');
+    Utils.$unbind(document, 'mouseenter:windowmanager');
 
     // Destroy all windows
     this._windows.forEach(function(win, i) {
       if ( win ) {
-        win.destroy();
+        win.destroy(true);
         self._windows[i] = null;
       }
     });
+
+    if ( this._scheme ) {
+      this._scheme.destroy();
+    }
+
     this._windows = [];
     this._currentWin = null;
     this._lastWin = null;
+    this._scheme = null;
 
     _WM = null;
 
@@ -485,16 +488,19 @@
    * @function init
    * @memberof OSjs.Core.WindowManager#
    */
-  WindowManager.prototype.init = function() {
+  WindowManager.prototype.init = function(metadata, settings, scheme) {
     console.debug('WindowManager::init()');
 
+    this._scheme = scheme;
+
     var self = this;
-    document.addEventListener('mouseout', function(ev) {
+
+    Utils.$bind(document, 'mouseout:windowmanager', function(ev) {
       self._onMouseLeave(ev);
-    }, false);
-    document.addEventListener('mouseenter', function(ev) {
-      self._onMouseEnter(ev);
-    }, false);
+    });
+    Utils.$bind(document, 'mouseenter:windowmanager', function(ev) {
+      self._onMouseLeave(ev);
+    });
   };
 
   /**
@@ -895,6 +901,19 @@
   };
 
   /**
+   * Gets sound filename from key
+   *
+   * @param  {String}     k       Sound name key
+   * @function getSoundName
+   * @memberof OSjs.Core.WindowManager#
+   *
+   * @return  {String}
+   */
+  WindowManager.prototype.getSoundFilename = function(k) {
+    return null;
+  };
+
+  /**
    * Gets current Icon theme
    *
    * @function getIconTheme
@@ -1076,24 +1095,6 @@
    */
   WindowManager.prototype.setLastWindow = function(w) {
     this._lastWin = w || null;
-  };
-
-  /**
-   * Get CSS animation duration
-   *
-   * @function getAnimDuration
-   * @memberof OSjs.Core.WindowManager#
-   *
-   * @return {Number} Duration length in ms
-   */
-  WindowManager.prototype.getAnimDuration = function() {
-    var theme = this.getStyleTheme(true);
-    if ( theme && theme.style && theme.style.animation ) {
-      if ( typeof theme.style.animation.duration === 'number' ) {
-        return theme.style.animation.dudation;
-      }
-    }
-    return 301;
   };
 
   /**

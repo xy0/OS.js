@@ -40,63 +40,6 @@
 
   var notificationWasDisplayed = {};
 
-  function MountWindow(app, metadata, scheme) {
-    Window.apply(this, ['ApplicationFileManagerMountWindow', {
-      icon: metadata.icon,
-      title: metadata.name,
-      width: 400,
-      height: 440
-    }, app, scheme]);
-  }
-
-  MountWindow.prototype = Object.create(Window.prototype);
-  MountWindow.constructor = Window.prototype;
-
-  MountWindow.prototype.init = function(wm, app, scheme) {
-    var root = Window.prototype.init.apply(this, arguments);
-    var self = this;
-
-    // Load and set up scheme (GUI) here
-    scheme.render(this, 'MountWindow', root, null, null, {
-      _: OSjs.Applications.ApplicationFileManager._
-    });
-
-    scheme.find(this, 'ButtonClose').on('click', function() {
-      self._close();
-    });
-
-    scheme.find(this, 'ButtonOK').on('click', function() {
-      var conn = {
-        type: scheme.find(self, 'MountType').get('value'),
-        name: scheme.find(self, 'MountName').get('value'),
-        description: scheme.find(self, 'MountDescription').get('value'),
-        options: {
-          host: scheme.find(self, 'MountHost').get('value'),
-          ns: scheme.find(self, 'MountNamespace').get('value'),
-          username: scheme.find(self, 'MountUsername').get('value'),
-          password: scheme.find(self, 'MountPassword').get('value'),
-          cors: scheme.find(self, 'MountCORS').get('value')
-        }
-      };
-
-      try {
-        VFS.Helpers.createMountpoint(conn);
-      } catch ( e ) {
-        API.error(self._title, 'An error occured while trying to mount', e);
-        console.warn(e.stack, e);
-        return;
-      }
-
-      self._close();
-    });
-
-    return root;
-  };
-
-  MountWindow.prototype.destroy = function() {
-    return Window.prototype.destroy.apply(this, arguments);
-  };
-
   /////////////////////////////////////////////////////////////////////////////
   // WINDOWS
   /////////////////////////////////////////////////////////////////////////////
@@ -203,9 +146,6 @@
       MenuCreateDirectory:function() {
         app.mkdir(self.currentPath, self);
       },
-      MenuMount: function() {
-        app.mount(self);
-      },
       MenuUpload: function() {
         app.upload(self.currentPath, null, self);
       },
@@ -305,7 +245,9 @@
     side.on('activate', function(ev) {
       if ( ev && ev.detail && ev.detail.entries ) {
         var entry = ev.detail.entries[0];
-        self.changePath(entry.data.root);
+        if ( entry ) {
+          self.changePath(entry.data.root);
+        }
       }
     });
 
@@ -638,23 +580,15 @@
       return;
     }
 
-    var self = this;
     var view = this._scheme.find(this, 'FileView');
     var vfsOptions = OSjs.Core.getSettingsManager().instance('VFS');
 
     var opts = {scandir: {}};
     opts.scandir[opt] = toggle;
 
-    vfsOptions.set(null, opts, null, false);
+    vfsOptions.set(null, opts, null, set); // set triggers refresh because of watch
     view.set(key, toggle);
 
-    if ( set ) {
-      vfsOptions.save(function() {
-        setTimeout(function() {
-          self.changePath(null);
-        }, 10);
-      });
-    }
     return toggle;
   };
 
@@ -970,16 +904,6 @@
         }
       }, win);
     }
-  };
-
-  ApplicationFileManager.prototype.mount = function(win) {
-    var found = this._getWindowByName('ApplicationFileManagerMountWindow');
-    if ( found ) {
-      found._focus();
-      return;
-    }
-
-    this._addWindow(new MountWindow(this, this.__metadata, this.__scheme));
   };
 
   ApplicationFileManager.prototype.showStorageNotification = function(type) {

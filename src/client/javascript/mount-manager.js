@@ -98,7 +98,7 @@
        * Creates a valid Mountpoint object from given data
        *
        * @function _create
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param {Mountpoint}  opts                Mounpoint options
        * @return {Mountpoint} With corrections and/or necesarry modifications
@@ -181,7 +181,7 @@
        * Method for adding pre-defined modules like Dropbox and GoogleDrive
        *
        * @function _add
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param {Mountpoint}  opts                Mounpoint options
        * @param {Boolean}     [emitEvent=false]   Emit the internal mount event
@@ -203,7 +203,7 @@
        * Initializes all pre-configured mountpoints
        *
        * @function init
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param {Function} callback Callback when done
        */
@@ -248,6 +248,28 @@
       },
 
       /**
+       * Restores all stored connections
+       *
+       * @function restore
+       * @memberof OSjs.Core.MountManager#
+       *
+       * @param {Function} callback Callback when done
+       */
+      restore: function(callback) {
+        var sm = OSjs.Core.getSettingsManager();
+        Utils.asyncs(sm.instance('VFS').get('mounts', []), function(iter, idx, next) {
+          try {
+            MountManager.add(iter, next);
+          } catch ( e ) {
+            console.warn('MountManager::restore()', e, e.stack);
+            next();
+          }
+        }, function() {
+          callback();
+        });
+      },
+
+      /**
        * Mounts given mountpoint
        *
        * Currently supports: Custom internal methods, webdav/owncloud
@@ -255,7 +277,7 @@
        * If you want to configure default mountpoints, look at the manual linked below.
        *
        * @function add
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        * @throws {Error} If the mountpoint is already mounted or the module is invalid
        *
        * @param {Mountpoint} opts                           Mountpoint options
@@ -292,6 +314,7 @@
 
           return MountManager._create({
             readOnly: opts.readOnly,
+            transport: opts.transport,
             name: opts.name,
             description: opts.description,
             visible: opts.visible,
@@ -301,8 +324,6 @@
 
               API.message('vfs:unmount', opts.name, {source: null});
               (cb || function() {})(false, true);
-
-              delete _modules[opts.name];
             },
             mounted: function() {
               return isMounted;
@@ -339,7 +360,7 @@
        * Only mountpoints mounted via `_create` is supported
        *
        * @function remove
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        * @throws {Error} If the mountpoint does not exist
        *
        * @param   {String}      moduleName        Name of registered module
@@ -349,14 +370,18 @@
         if ( !_modules[moduleName] ) {
           throw new Error(API._('ERR_VFSMODULE_NOT_MOUNTED_FMT', moduleName));
         }
-        _modules[moduleName].unmount(cb);
+
+        _modules[moduleName].unmount(function() {
+          delete _modules[moduleName];
+          cb.apply(MountManager, arguments);
+        });
       },
 
       /**
        * Check if given path is an internal module
        *
        * @function isInternal
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param   {String}    test        Module Name
        *
@@ -386,7 +411,7 @@
        * Checks if internal module is enabled
        *
        * @function isInternalEnabled
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param   {String}    module        Module Name
        *
@@ -406,7 +431,7 @@
        * Returns a list of all enabled VFS modules
        *
        * @function getModules
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param   {Object}    opts                  Options
        * @param   {Boolean}   [opts.visible=true]   All visible modules only
@@ -445,7 +470,7 @@
        * Get module name from path
        *
        * @function getModuleFromPath
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param   {String}    test               Path name
        * @param   {Boolean}   [retdef=true]      Return default upon failure
@@ -477,7 +502,7 @@
        * Get root from path (ex: foo:///)
        *
        * @function getRootFromPath
-       * @memberof OSjs.Core.MountManager
+       * @memberof OSjs.Core.MountManager#
        *
        * @param   {String}    path        Path name
        * @return  {String}

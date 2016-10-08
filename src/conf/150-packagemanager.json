@@ -1,8 +1,19 @@
 {
   "client": {
+    "SettingsManager": {
+      "PackageManager": {
+        "Repositories": [
+          "https://builds.os.js.org/store/packages.json"
+        ],
+        "PackagePaths": [
+          "home:///.packages"
+        ],
+        "Hidden": [
+        ]
+      }
+    },
     "PackageManager": {
-      "UserPackages":  "home:///.packages",
-      "UserMetadata":  "home:///.packages/packages.json"
+      "UseStaticManifest": false
     }
   }
 }

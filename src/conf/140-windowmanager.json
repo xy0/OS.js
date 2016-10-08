@@ -2,7 +2,9 @@
   "client" : {
     "SettingsManager": {
       "CoreWM": {
-        "theme": "default",
+        "styleTheme": "default",
+        "iconTheme": "default",
+        "soundTheme": "default",
         "animations": true,
         "fullscreen": true,
         "desktopMargin": 5,
@@ -11,8 +13,6 @@
         "icon": "osjs-white.png",
         "backgroundColor": "#572a79",
         "fontFamily": "Karla",
-        "icons": "default",
-        "sounds": "default",
         "background": "image-fill",
         "windowCornerSnap": 0,
         "windowSnap": 0,
@@ -32,7 +32,15 @@
           "WINDOW_RESTORE": "ALT+R",
           "WINDOW_MAXIMIZE": "ALT+M",
           "SEARCH": "F3",
-          "SWITCHER": "ALT+TILDE"
+          "SWITCHER": "ALT+TILDE",
+          "SAVEAS": "CTRL+SHIFT+S",
+          "SAVE": "CTRL+S",
+          "OPEN": "CTRL+O"
+        },
+        "sounds": {
+          "LOGOUT": "service-logout",
+          "LOGIN": "service-login",
+          "ERROR": "dialog-warning"
         },
         "panels": [
           {

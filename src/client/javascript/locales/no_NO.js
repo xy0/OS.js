@@ -415,7 +415,7 @@
     'LBL_ICON': 'Ikon',
     'LBL_UNINSTALL': 'Avinstaller',
     'LBL_REGENERATE': 'Regenerer',
-    'LBL_DESKTOP': 'Skrivebort',
+    'LBL_DESKTOP': 'Skrivebord',
     'LBL_WINDOWMANAGER': 'Vindu-håndterer',
     'LBL_HOTKEY': 'Snarknapp',
     'LBL_HOTKEYS': 'Snarknapper',
@@ -441,7 +441,13 @@
     'LBL_MISC': 'Annet',
     'LBL_OTHER': 'Annet',
     'LBL_USERS': 'Brukere',
-    'LBL_FONTS': 'Skrift'
-
+    'LBL_FONTS': 'Skrift',
+    'LBL_BACKGROUND' : 'Bakgrunn',
+    'LBL_PANEL' : 'Panel',
+    'LBL_POSITION' : 'Posisjon',
+    'LBL_OPACITY' : 'Gjennomsiktighet',
+    'LBL_ONTOP' : 'Topp',
+    'LBL_ITEMS' : 'Objekter',
+    'LBL_GENERAL' : 'Generelt'
   };
 })();

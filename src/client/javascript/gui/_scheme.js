@@ -78,12 +78,16 @@
   /**
    * Method for adding children (moving)
    */
-  function addChildren(frag, root) {
+  function addChildren(frag, root, before) {
     if ( frag ) {
       var children = frag.children;
       var i = 0;
       while ( children.length && i < 10000 ) {
-        root.appendChild(children[0]);
+        if ( before ) {
+          root.parentNode.insertBefore(children[0], root);
+        } else {
+          root.appendChild(children[0]);
+        }
         i++;
       }
     }
@@ -92,15 +96,19 @@
   /**
    * Makes sure "include" fragments are rendered correctly
    */
-  function resolveFragments(scheme, node, el) {
+  function resolveFragments(scheme, node) {
     function _resolve() {
       var nodes = node.querySelectorAll('gui-fragment');
       if ( nodes.length ) {
         nodes.forEach(function(el) {
           var id = el.getAttribute('data-fragment-id');
           if ( id ) {
-            var frag = scheme.getFragment(id, 'application-fragment').cloneNode(true);
-            addChildren(frag, el.parentNode);
+            var frag = scheme.getFragment(id, 'application-fragment');
+            if ( frag ) {
+              addChildren(frag.cloneNode(true), el.parentNode);
+            } else {
+              console.warn('Fragment', id, 'not found');
+            }
           }
           Utils.$remove(el); // Or else we'll never get out of the loop!
         });
@@ -118,6 +126,26 @@
   }
 
   /**
+   * Removes self-closing tags from HTML string
+   */
+  function removeSelfClosingTags(str) {
+    var split = (str || '').split('/>');
+    var newhtml = '';
+    for (var i = 0; i < split.length - 1;i++) {
+      var edsplit = split[i].split('<');
+      newhtml += split[i] + '></' + edsplit[edsplit.length - 1].split(' ')[0] + '>';
+    }
+    return newhtml + split[split.length - 1];
+  }
+
+  /**
+   * Cleans a HTML string
+   */
+  function cleanScheme(html) {
+    return Utils.cleanHTML(removeSelfClosingTags(html));
+  }
+
+  /**
    * Makes sure "external include" fragments are rendered correctly.
    *
    * Currently this only supports one level deep.
@@ -130,7 +158,6 @@
     doc.innerHTML = html;
 
     var nodes = doc.querySelectorAll('gui-fragment[data-fragment-external]');
-
     Utils.asyncs(nodes.map(function(el) {
       return {
         element: el,
@@ -143,19 +170,13 @@
         return next();
       }
 
-      var url = Utils.pathJoin(root, uri);
-
       Utils.ajax({
-        url: url,
+        url: Utils.pathJoin(root, uri),
         onsuccess: function(h) {
           var tmp = document.createElement('div');
-          tmp.innerHTML = h;
-
-          addChildren(tmp, iter.element.parentNode);
-          Utils.$remove(iter.element);
-          tmp = null;
-
-          next();
+          tmp.innerHTML = cleanScheme(h);
+          addChildren(tmp, iter.element, iter.element);
+          tmp = next();
         },
         onerror: function() {
           next();
@@ -241,19 +262,9 @@
   };
 
   UIScheme.prototype._load = function(html) {
-    function removeSelfClosingTags(str) {
-      var split = (str || '').split('/>');
-      var newhtml = '';
-      for (var i = 0; i < split.length - 1;i++) {
-        var edsplit = split[i].split('<');
-        newhtml += split[i] + '></' + edsplit[edsplit.length - 1].split(' ')[0] + '>';
-      }
-      return newhtml + split[split.length - 1];
-    }
-
     var doc = document.createDocumentFragment();
     var wrapper = document.createElement('div');
-    wrapper.innerHTML = Utils.cleanHTML(removeSelfClosingTags(html));
+    wrapper.innerHTML = html;
     doc.appendChild(wrapper);
 
     this.scheme = doc.cloneNode(true);
@@ -273,7 +284,7 @@
    */
   UIScheme.prototype.loadString = function(html, cb) {
     console.debug('UIScheme::loadString()');
-    this._load(html);
+    this._load(cleanScheme(html));
     if ( cb ) {
       cb(false, this.scheme);
     }
@@ -291,16 +302,6 @@
   UIScheme.prototype.load = function(cb, cbxhr) {
     cbxhr = cbxhr || function() {};
 
-    if ( window.location.protocol.match(/^file/) ) {
-      var url = this.url;
-      if ( !url.match(/^\//) ) {
-        url = '/' + url;
-      }
-      this._load(OSjs.API.getDefaultSchemes(url.replace(/^\/packages/, '')));
-      cb(false, this.scheme);
-      return;
-    }
-
     console.debug('UIScheme::load()', this.url);
 
     var self = this;
@@ -313,6 +314,8 @@
     Utils.ajax({
       url: src,
       onsuccess: function(html) {
+        html = cleanScheme(html);
+
         resolveExternalFragments(root, html, function(result) {
           // This is normally used for the preloader for caching
           cbxhr(false, result);
@@ -437,6 +440,10 @@
 
     var content = this.parse(id, type, win, onparse, args);
     addChildren(content, root);
+
+    root.querySelectorAll('application-fragment').forEach(function(e) {
+      Utils.$remove(e);
+    });
 
     if ( !win._restored ) {
       setWindowProperties(this.getFragment(id));
@@ -710,6 +717,14 @@
        */
       init: function(cb) {
         if ( dialogScheme ) {
+          cb();
+          return;
+        }
+
+        if ( OSjs.API.isStandalone() ) {
+          var html = OSjs.STANDALONE.SCHEMES['/dialogs.html'];
+          dialogScheme = new OSjs.GUI.Scheme();
+          dialogScheme.loadString(html);
           cb();
           return;
         }

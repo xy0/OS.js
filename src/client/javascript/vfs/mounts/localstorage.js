@@ -28,6 +28,7 @@
  * @licence Simplified BSD License
  */
 (function(Utils, API) {
+  /*eslint no-use-before-define: "off"*/
   'use strict';
 
   /**
@@ -68,7 +69,7 @@
       throw new TypeError('Expected p as String');
     }
 
-    p = Utils.getRelativeURL(p).replace(/\/+/g, '/');
+    p = Utils.getPathProtocol(p).replace(/\/+/g, '/');
 
     var path = par ? (Utils.dirname(p) || '/') : p;
     if ( path !== '/' ) {
@@ -315,16 +316,6 @@
     }).map(function(i) {
       return createMetadata(i, path, item.path);
     });
-
-    if ( ui && Utils.dirname(path) !== path ) {
-      list.unshift({
-        size: 0,
-        mime: null,
-        type: 'dir',
-        filename: '..',
-        path: Utils.dirname(item.path)
-      });
-    }
 
     return list;
   }
