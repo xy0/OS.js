@@ -594,6 +594,8 @@
    */
   DefaultHandler.prototype.onSystemLogin = function(server, config, login, getUserId, callback) {
     var self = this;
+
+    // This removes the domain part of the username for other things to work correctly
     var username = /[^\\]*$/.exec(login.username)[0];
 
     function getUserGroups(cb) {

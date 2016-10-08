@@ -116,7 +116,12 @@
     var self = this;
 
     if ( API.getConfig('Connection.Type') === 'ws' ) {
-      var url = window.location.protocol.replace('http', 'ws') + '//' + window.location.host;
+
+      //var url = window.location.protocol.replace('http', 'ws') + '//' + window.location.host;
+      //
+      // Fix for my Nginx enviroment
+      var url = window.location.protocol.replace('http', 'ws') + '//' + window.location.host + "/ws/";
+      
       var connected = false;
 
       console.info('Using WebSocket', url);
