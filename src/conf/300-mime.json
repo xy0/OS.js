@@ -105,6 +105,8 @@
       ".odraw"  : "osjs/draw",
       ".oproj"  : "osjs/project",
 
+      ".codex"  : "application/json",
+
       "default" : "application/octet-stream"
     }
   }
